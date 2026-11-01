@@ -1,5 +1,7 @@
 # Rime Track 2: literature and architecture
 
+**Current recommendation: [architecture version 3](ARCHITECTURE_V3.md).** The additional pass acquired 16 previously absent papers and completed **ten detailed main-text reviews**, including methods, results, ablations and limitations where present. [Detailed new readings](reviews/round2/DETAILED_REVIEWS.md), [source/reading ledger](reviews/round2/ledger.csv), [new-pass status](reviews/round2/STATUS.json) and [acquisition instructions](reviews/round2/REPRODUCIBILITY.md) record the scope. Six acquired papers remain follow-up leads. This adds depth; it does not turn the earlier broad screening into full-paper readings.
+
 The breadth-first review inspected **296 distinct publication records**, retained **277 relevant works**, and excluded **19** for scope, duplicate lineage, or unusable extraction. **28 core sources have additional scoped checks and interpretation.**
 
 Review depth is explicit: abstracts plus selected full-text passages for the broad pass, with additional methods/results/limitations checks for core sources. This is **not a claim of 277 cover-to-cover readings**. Some automatically selected passages are introductory context or table captions; the dossier records that limitation. No paper experiments were reproduced and no model was trained. The architecture awaits native-language and T4 validation.
@@ -7,15 +9,17 @@ Review depth is explicit: abstracts plus selected full-text passages for the bro
 ## Start here
 
 - [Literature synthesis](LITERATURE_REVIEW.md): findings that change the design.
-- [Recommended architecture, version 2](ARCHITECTURE_V2.md): model shortlist, timed grounding, generation, verified loop, novelty boundaries and compute choices.
-- [Experiments and budget](EXPERIMENTS.md): 4×T4, 256 GB RAM, approximately 1,000 GPU-hours.
+- [Recommended architecture, version 3](ARCHITECTURE_V3.md): hierarchical evidence, independent identity/delivery, bounded claim-risk calibration, source-aware rendering and a falsifiable reciprocal round.
+- [Detailed additional paper reviews](reviews/round2/DETAILED_REVIEWS.md): ten new main-text readings and six explicitly unfinished leads.
+- [Current experiments and 1,000 GPU-hour allocation](ARCHITECTURE_V3.md#7-budget-and-decisive-comparisons); [extended experiment procedures](EXPERIMENTS.md): 4×T4 and 256 GB RAM.
+- [Previous architecture, version 2](ARCHITECTURE_V2.md): preserved first-pass design and implementation-source checks.
 - [Core-paper findings](reviews/CORE_FINDINGS.md): evidence locations, caveats and architecture consequences.
 - [Paper ledger](paper_ledger.csv): all inspected records, exclusions, URLs and snapshot hashes.
 - [Paper-by-paper dossier](reviews/PAPER_BY_PAPER.md): abstracts and inspected evidence passages, with review scope.
 - [Machine-readable evidence](reviews/paper_evidence.jsonl), [BibTeX](references.bib), and [review counts](REVIEW_STATUS.json).
 - [Research protocol](RESEARCH_PROTOCOL.md): original target, search strategy and evidence levels.
 
-The initial [proposal](TRACK2_ARCHITECTURE.md) is preserved for context; version 2 supersedes its backbone ordering. RASMALAI and the verified public Indic Parler model card move description-native Indic Parler-TTS ahead of building new description controls into IndicF5.
+The initial [proposal](TRACK2_ARCHITECTURE.md) and version 2 are preserved for context; version 3 is current. The description-native Indic Parler baseline remains first, subject to eligible access and native tests. The new identity prior and delivery expert are gated experiments, not proven improvements. No additional model training or T4 measurements were performed.
 
 ## Access and reproducibility
 

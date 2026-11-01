@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-01",
+  "previous_pass_records": 296,
+  "previous_pass_retained": 277,
+  "previous_pass_core_scoped_checks": 28,
+  "new_pdfs_acquired": 16,
+  "new_main_text_reviews": 10,
+  "new_followup_acquired_only": 6,
+  "overlap_with_prior_ids": 0,
+  "total_unique_records_across_passes": 312,
+  "scope": "Detailed main text, methods, results, ablations and limitations where present; not exhaustive appendices/visual figure reading or reproductions. Prior broad review counts retain their original depth.",
+  "main_text_reviewed_ids": [
+    "2208.02814",
+    "2210.13248",
+    "2301.12258",
+    "2307.01850",
+    "2309.02285",
+    "2311.16509",
+    "2406.01205",
+    "2406.07203",
+    "2406.07969",
+    "2506.02863"
+  ],
+  "reproduced_experiments": 0,
+  "model_training_run": false,
+  "t4_benchmark_run": false
+}

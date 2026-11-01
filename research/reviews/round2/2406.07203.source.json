@@ -1,0 +1,23 @@
+{
+  "id": "2406.07203",
+  "title": "ParaCLAP -- Towards a general language-audio model for computational paralinguistic tasks",
+  "abstract": "Contrastive language-audio pretraining (CLAP) has recently emerged as a method for making audio analysis more generalisable. Specifically, CLAP-style models are able to `answer' a diverse set of language queries, extending the capabilities of audio models beyond a closed set of labels. However, CLAP relies on a large set of (audio, query) pairs for pretraining. While such sets are available for general audio tasks, like captioning or sound event detection, there are no datasets with matched audio and text queries for computational paralinguistic (CP) tasks. As a result, the community relies on generic CLAP models trained for general audio with limited success. In the present study, we explore training considerations for ParaCLAP, a CLAP-style model suited to CP, including a novel process for creating audio-language queries. We demonstrate its effectiveness on a set of computational paralinguistic tasks, where it is shown to surpass the performance of open-source state-of-the-art models.",
+  "published": "2024-06-11T12:23:01Z",
+  "updated": "2024-06-11T12:23:01Z",
+  "authors": [
+    "Xin Jing",
+    "Andreas Triantafyllopoulos",
+    "Bj\u00f6rn Schuller"
+  ],
+  "topics": [
+    "paralinguistics"
+  ],
+  "new_to_prior_ledger": true,
+  "source_url": "https://arxiv.org/pdf/2406.07203",
+  "sha256": "3f65656507f882857890e215551a7296106dab21da3a6e24eb8a733e1664bfca",
+  "pages": 7,
+  "text_chars": 35458,
+  "status": "acquired",
+  "snapshot_version": "v1",
+  "acquired_on": "2026-11-01"
+}

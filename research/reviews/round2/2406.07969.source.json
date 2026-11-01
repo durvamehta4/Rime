@@ -1,0 +1,25 @@
+{
+  "id": "2406.07969",
+  "title": "LibriTTS-P: A Corpus with Speaking Style and Speaker Identity Prompts for Text-to-Speech and Style Captioning",
+  "abstract": "We introduce LibriTTS-P, a new corpus based on LibriTTS-R that includes utterance-level descriptions (i.e., prompts) of speaking style and speaker-level prompts of speaker characteristics. We employ a hybrid approach to construct prompt annotations: (1) manual annotations that capture human perceptions of speaker characteristics and (2) synthetic annotations on speaking style. Compared to existing English prompt datasets, our corpus provides more diverse prompt annotations for all speakers of LibriTTS-R. Experimental results for prompt-based controllable TTS demonstrate that the TTS model trained with LibriTTS-P achieves higher naturalness than the model using the conventional dataset. Furthermore, the results for style captioning tasks show that the model utilizing LibriTTS-P generates 2.5 times more accurate words than the model using a conventional dataset. Our corpus, LibriTTS-P, is available at https://github.com/line/LibriTTS-P.",
+  "published": "2024-06-12T07:49:21Z",
+  "updated": "2024-06-12T07:49:21Z",
+  "authors": [
+    "Masaya Kawamura",
+    "Ryuichi Yamamoto",
+    "Yuma Shirahata",
+    "Takuya Hasumi",
+    "Kentaro Tachibana"
+  ],
+  "topics": [
+    "paralinguistics"
+  ],
+  "new_to_prior_ledger": true,
+  "source_url": "https://arxiv.org/pdf/2406.07969",
+  "sha256": "3e1df57b417344db08ed172e40939e41a5ac308f58749db8d7b14cc737f7dcf6",
+  "pages": 5,
+  "text_chars": 28101,
+  "status": "acquired",
+  "snapshot_version": "v1",
+  "acquired_on": "2026-11-01"
+}

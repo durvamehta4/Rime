@@ -2,7 +2,7 @@
 
 Status: planned, not executed. Hardware supplied by the user: 4×NVIDIA T4, 256 GB RAM, approximately 1,000 GPU-hours. Confirm actual VRAM and interconnect before execution. A standard T4 has 16 GB; four cards do not form one transparent 64 GB memory pool.
 
-Literature update: compare Indic Parler-TTS's description-native pretrained/fine-tuned releases first, with IndicF5 adapters as the alternative. Prioritize access, native pronunciation, relevant diversity and control tests before selecting the training branch. [Architecture version 2](ARCHITECTURE_V2.md) supersedes the initial ordering. Compute ceilings below are allocations, not measured usage.
+Literature update: [architecture version 3](ARCHITECTURE_V3.md) is current after ten additional detailed main-text readings. Its claim-selection procedure, generator identity interface, reciprocal-direction controls and revised allocation supersede earlier choices here. Compare Indic Parler-TTS's description-native pretrained/fine-tuned releases first, with IndicF5 adapters as the alternative. Prioritize access, native pronunciation, relevant diversity and control tests before selecting the training branch. Compute ceilings below are allocations, not measured usage.
 
 ## Hardware strategy
 
@@ -23,12 +23,13 @@ GPU-hours sum use across cards, including failed runs. Four fully occupied GPUs 
 | Work | GPU-hour ceiling | Output |
 |---|---:|---|
 | Compatibility/memory/throughput pilot and C0/G0 measurements | 50 | Working baselines and measured cost/sample |
-| Cached evidence, labels, optional open teacher | 100 | Versioned training manifests and claim audit |
-| Caption grounding/adaptation development | 130 | Evidence-fusion and calibration choice |
-| G1 description/temporal-control training | 220 | Generator capable of useful targeted examples |
-| Targeted synthesis, verification, C1 training | 140 | One complete recursive improvement round |
-| Matched-budget controlled comparisons | 160 | Causal evidence for targeting and verification |
-| Final real evaluation, all ten generations, profiling | 100 | Round tables, intervals, Pareto plots |
+| Cached evidence and labels | 80 | Versioned training manifests and native claim audit |
+| Caption grounding/adaptation development | 120 | Evidence-fusion and claim-selection choice |
+| G1 description/delivery adaptation | 200 | Generator and equal-compute caption-quality control |
+| Identity conditioning interface and small prior | 100 | Bank/seeds/prior test or documented failure |
+| Targeted synthesis, verification, C1 training | 120 | One complete reciprocal improvement round |
+| Matched-budget controlled comparisons | 150 | Causal evidence for targeting and verification |
+| Final real evaluation, all ten generations, profiling | 80 | Round tables, intervals, Pareto plots |
 | Failure reserve and focused reruns | 100 | Recover from measured implementation failures |
 | **Total** | **1,000** | |
 
@@ -52,13 +53,14 @@ Use the same starting checkpoints, real examples, data order where applicable, t
 |---|---|---|
 | B0 | Frozen C0/G0 | Does a reproducible starting system work at all? |
 | C1 | Captioner with/without measured evidence | Does grounding improve real claim accuracy and timing? |
-| C2 | Calibrated claim selection vs same writer without it | Does it reduce unsupported claims at comparable useful coverage? |
+| C2 | Nested claim selection vs empirical filter on frozen proposals | What is the proxy risk/coverage frontier under the stated calibration assumptions? |
 | G1 | G0 vs same backbone with global description adapters | Does learned conditioning improve instruction following? |
 | G2 | Global-only vs global+temporal controls | Do local timed controls help beyond a longer prompt? |
+| G3 | Rich C0 captions vs simpler measured/global captions, same real audio and compute | Does C→G teaching improve instruction following beyond extra adaptation? |
 | L1 | Extra real replay vs random verified synthesis vs targeted verified synthesis | Is improvement due to targeting rather than training longer or seeing more samples? |
 | L2 | Targeted synthesis with/without independent verification | Does verification prevent wrong synthetic labels? |
 | L3 | Fixed pre-loop generator vs trained G1 for the same target requests | Is the captioner benefit actually due to an improved generator? |
-| D1 | Fixed identity vs compatible per-sample identity sampling | Does relevant diversity increase without within-clip drift? |
+| D1 | Named/bank/decoder seeds vs conditional identity prior | Do distinct passing identities increase without within-clip drift or native CER loss? |
 | R1 | Ordinary held-out real clips and transformation-family holdouts | Is improvement real rather than artefact recognition? |
 
 This matrix is larger than the budget permits at full scale. Use a shared small-scale screening stage and predeclare three headline controlled comparisons: evidence grounding, targeted vs random vs real-replay, and verification on/off. Run generator temporal and identity diagnostics on the same frozen generator if full retraining is unaffordable. Label screened, full-budget, and diagnostic comparisons separately. Do not present an uncontrolled diagnostic as a causal training ablation.

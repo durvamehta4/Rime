@@ -1,0 +1,25 @@
+{
+  "id": "2208.02814",
+  "title": "Conformal Risk Control",
+  "abstract": "We extend conformal prediction to control the expected value of any monotone loss function. The algorithm generalizes split conformal prediction together with its coverage guarantee. Like conformal prediction, the conformal risk control procedure is tight up to an $\\mathcal{O}(1/n)$ factor. We also introduce extensions of the idea to distribution shift, quantile risk control, multiple and adversarial risk control, and expectations of U-statistics. Worked examples from computer vision and natural language processing demonstrate the usage of our algorithm to bound the false negative rate, graph distance, and token-level F1-score.",
+  "published": "2022-08-04T17:59:44Z",
+  "updated": "2025-06-13T18:38:23Z",
+  "authors": [
+    "Anastasios N. Angelopoulos",
+    "Stephen Bates",
+    "Adam Fisch",
+    "Lihua Lei",
+    "Tal Schuster"
+  ],
+  "topics": [
+    "risk"
+  ],
+  "new_to_prior_ledger": true,
+  "source_url": "https://arxiv.org/pdf/2208.02814",
+  "sha256": "32c3b9689cb69dbec96ce87ba8b0fe98293bb1c9a59247480b16dbae6aa37df2",
+  "pages": 19,
+  "text_chars": 48509,
+  "status": "acquired",
+  "snapshot_version": "v4",
+  "acquired_on": "2026-11-01"
+}

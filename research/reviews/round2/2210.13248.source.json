@@ -1,0 +1,30 @@
+{
+  "id": "2210.13248",
+  "title": "Brouhaha: multi-task training for voice activity detection, speech-to-noise ratio, and C50 room acoustics estimation",
+  "abstract": "Most automatic speech processing systems register degraded performance when applied to noisy or reverberant speech. But how can one tell whether speech is noisy or reverberant? We propose Brouhaha, a neural network jointly trained to extract speech/non-speech segments, speech-to-noise ratios, and C50room acoustics from single-channel recordings. Brouhaha is trained using a data-driven approach in which noisy and reverberant audio segments are synthesized. We first evaluate its performance and demonstrate that the proposed multi-task regime is beneficial. We then present two scenarios illustrating how Brouhaha can be used on naturally noisy and reverberant data: 1) to investigate the errors made by a speaker diarization model (pyannote.audio); and 2) to assess the reliability of an automatic speech recognition model (Whisper from OpenAI). Both our pipeline and a pretrained model are open source and shared with the speech community.",
+  "published": "2022-10-24T13:47:36Z",
+  "updated": "2023-05-25T11:34:30Z",
+  "authors": [
+    "Marvin Lavechin",
+    "Marianne M\u00e9tais",
+    "Hadrien Titeux",
+    "Alodie Boissonnet",
+    "Jade Copet",
+    "Morgane Rivi\u00e8re",
+    "Elika Bergelson",
+    "Alejandrina Cristia",
+    "Emmanuel Dupoux",
+    "Herv\u00e9 Bredin"
+  ],
+  "topics": [
+    "paralinguistics"
+  ],
+  "new_to_prior_ledger": true,
+  "source_url": "https://arxiv.org/pdf/2210.13248",
+  "sha256": "dae4cf08b39ea067b18f425a7bf856908ce75b9fbb042e1fbadc75096d4d1904",
+  "pages": 5,
+  "text_chars": 28883,
+  "status": "acquired",
+  "snapshot_version": "v3",
+  "acquired_on": "2026-11-01"
+}

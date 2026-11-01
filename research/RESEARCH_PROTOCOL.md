@@ -1,6 +1,6 @@
 # Protocol for the requested 200+ paper review
 
-**Current status:** the network blocker below is historical and resolved. The breadth-first pass inspected 296 records and retained 277 relevant works, using abstracts and selected full-text passages, with additional scoped checks for 28 core sources. See [current counts](REVIEW_STATUS.json), [ledger](paper_ledger.csv) and [synthesis](LITERATURE_REVIEW.md). This does not claim completion of the original target of 230 exhaustive full-paper reviews. The initial protocol below is retained to make that distinction explicit.
+**Current status:** the network blocker below is historical and resolved. The breadth-first pass inspected 296 records and retained 277 relevant works, using abstracts and selected full-text passages, with additional scoped checks for 28 core sources. A separate pass adds ten detailed main-text readings from 16 newly acquired publications; six are unfinished leads. See [first-pass counts](REVIEW_STATUS.json), [additional-pass counts](reviews/round2/STATUS.json), [ledger](paper_ledger.csv) and [synthesis](LITERATURE_REVIEW.md). This does not claim completion of the original target of 230 exhaustive full-paper reviews. The initial protocol below is retained to make that distinction explicit.
 
 ## Current evidence boundary
 

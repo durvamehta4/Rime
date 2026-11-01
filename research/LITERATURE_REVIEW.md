@@ -1,5 +1,17 @@
 # Literature synthesis for Rime Track 2
 
+The current design is [version 3](ARCHITECTURE_V3.md), following [ten additional detailed main-text reviews](reviews/round2/DETAILED_REVIEWS.md). First-pass counts below retain their original scope. The new pass separately records 16 acquired publications, ten reviewed in detail and six unfinished leads, with no overlap in IDs.
+
+## Additional findings from the deeper pass
+
+- **Explicit variation beats assuming decoder noise creates identities.** PromptTTS 2 motivates a learned missing-variation path; ControlSpeech shows why reference identity and style can conflict. Version 3 budgets a small conditioning-interface/prior experiment, with separate identity and delivery tests.
+- **Delivery requires suitable evidence.** StyleCap's WavLM features outperform speaker x-vectors on delivery factors. LibriTTS-P separates speaker-level descriptions from utterance-level labels. PENN shows why unreliable voicing can hide behind accurate voiced-frame pitch. These motivate a small windowed delivery path and validity masks.
+- **Confidence needs a defined target.** Conformal Risk Control requires a bounded monotone loss and suitable exchangeability. Version 3 freezes proposals and the word budget, then calibrates nested claim removal on a false-claim-count proxy; it does not promise official-score control. ParaCLAP's transfer failures caution against using audio-text similarity as truth.
+- **Event quality needs its own evaluation.** CapSpeech reports low WER alongside weaker event intelligibility. Brouhaha distinguishes source-specific acoustics and measurement windows from output frame rates. Version 3 specifies rendering ownership and separate event/audibility/timing checks.
+- **Synthetic filtering changes coverage.** The MAD study distinguishes fixed, fresh and fully synthetic loops and sampling bias. Its generator/image results motivate mixture and diversity audits, not a universal collapse claim for this one-round captioner loop.
+
+Methods, reported numbers, caveats and exact transfer decisions are in the new reviews. No training or experimental gains are claimed.
+
 ## Scope and evidence
 
 The first pass inspected 296 publication records, retaining 277 relevant works after 19 exclusions. It read abstracts and selected PDF/HTML passages; 28 core sources received additional scoped checks in [CORE_FINDINGS.md](reviews/CORE_FINDINGS.md). This is not 277 exhaustive full-paper readings. The [ledger](paper_ledger.csv) includes exclusions; the [dossier](reviews/PAPER_BY_PAPER.md) exposes the inspected passages. No paper result was independently reproduced.
@@ -41,4 +53,4 @@ Does **calibrated, per-claim verification plus weakness-targeted generation** im
 
 Do not claim schemas, teacher fusion, synthetic transformations, targeting or cycle consistency as individually new. Establish any contribution through precise comparison with the closest prior methods and matched-budget ablations.
 
-The recommendation is [ARCHITECTURE_V2.md](ARCHITECTURE_V2.md). The unresolved evidence is experimental: checkpoint access/compatibility, native quality, timing, T4 throughput, relevant diversity and whether the loop beats its controls. No literature result establishes a guaranteed winning architecture.
+The recommendation is [ARCHITECTURE_V3.md](ARCHITECTURE_V3.md). The unresolved evidence is experimental: checkpoint access/compatibility, native quality, timing, T4 throughput, relevant diversity and whether the loop beats its controls. No literature result establishes a guaranteed winning architecture.

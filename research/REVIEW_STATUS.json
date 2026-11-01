@@ -16,5 +16,7 @@
   },
   "search_cutoff": "2026-11-01",
   "network_blocker_resolved": true,
-  "model_training_run": false
+  "model_training_run": false,
+  "additional_pass_status": "reviews/round2/STATUS.json",
+  "current_architecture": "ARCHITECTURE_V3.md"
 }

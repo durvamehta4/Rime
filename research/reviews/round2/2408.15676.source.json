@@ -1,0 +1,28 @@
+{
+  "id": "2408.15676",
+  "title": "VoxInstruct: Expressive Human Instruction-to-Speech Generation with Unified Multilingual Codec Language Modelling",
+  "abstract": "Recent AIGC systems possess the capability to generate digital multimedia content based on human language instructions, such as text, image and video. However, when it comes to speech, existing methods related to human instruction-to-speech generation exhibit two limitations. Firstly, they require the division of inputs into content prompt (transcript) and description prompt (style and speaker), instead of directly supporting human instruction. This division is less natural in form and does not align with other AIGC models. Secondly, the practice of utilizing an independent description prompt to model speech style, without considering the transcript content, restricts the ability to control speech at a fine-grained level. To address these limitations, we propose VoxInstruct, a novel unified multilingual codec language modeling framework that extends traditional text-to-speech tasks into a general human instruction-to-speech task. Our approach enhances the expressiveness of human instruction-guided speech generation and aligns the speech generation paradigm with other modalities. To enable the model to automatically extract the content of synthesized speech from raw text instructions, we introduce speech semantic tokens as an intermediate representation for instruction-to-content guidance. We also incorporate multiple Classifier-Free Guidance (CFG) strategies into our codec language model, which strengthens the generated speech following human instructions. Furthermore, our model architecture and training strategies allow for the simultaneous support of combining speech prompt and descriptive human instruction for expressive speech synthesis, which is a first-of-its-kind attempt. Codes, models and demos are at: https://github.com/thuhcsi/VoxInstruct.",
+  "published": "2024-08-28T09:57:17Z",
+  "updated": "2024-08-28T09:57:17Z",
+  "authors": [
+    "Yixuan Zhou",
+    "Xiaoyu Qin",
+    "Zeyu Jin",
+    "Shuoyi Zhou",
+    "Shun Lei",
+    "Songtao Zhou",
+    "Zhiyong Wu",
+    "Jia Jia"
+  ],
+  "topics": [
+    "control"
+  ],
+  "new_to_prior_ledger": true,
+  "source_url": "https://arxiv.org/pdf/2408.15676",
+  "sha256": "2909c059e36741ac097185976d0f4c3a560c13906c628e74baf8d71a13054498",
+  "pages": 10,
+  "text_chars": 57490,
+  "status": "acquired",
+  "snapshot_version": "v1",
+  "acquired_on": "2026-11-01"
+}

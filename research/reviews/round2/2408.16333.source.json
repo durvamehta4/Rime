@@ -1,0 +1,25 @@
+{
+  "id": "2408.16333",
+  "title": "Self-Improving Diffusion Models with Synthetic Data",
+  "abstract": "The artificial intelligence (AI) world is running out of real data for training increasingly large generative models, resulting in accelerating pressure to train on synthetic data. Unfortunately, training new generative models with synthetic data from current or past generation models creates an autophagous (self-consuming) loop that degrades the quality and/or diversity of the synthetic data in what has been termed model autophagy disorder (MAD) and model collapse. Current thinking around model autophagy recommends that synthetic data is to be avoided for model training lest the system deteriorate into MADness. In this paper, we take a different tack that treats synthetic data differently from real data. Self-IMproving diffusion models with Synthetic data (SIMS) is a new training concept for diffusion models that uses self-synthesized data to provide negative guidance during the generation process to steer a model's generative process away from the non-ideal synthetic data manifold and towards the real data distribution. We demonstrate that SIMS is capable of self-improvement; it establishes new records based on the Fr\u00e9chet inception distance (FID) metric for CIFAR-10 and ImageNet-64 generation and achieves competitive results on FFHQ-64 and ImageNet-512. Moreover, SIMS is, to the best of our knowledge, the first prophylactic generative AI algorithm that can be iteratively trained on self-generated synthetic data without going MAD. As a bonus, SIMS can adjust a diffusion model's synthetic data distribution to match any desired in-domain target distribution to help mitigate biases and ensure fairness.",
+  "published": "2024-08-29T08:12:18Z",
+  "updated": "2024-08-29T08:12:18Z",
+  "authors": [
+    "Sina Alemohammad",
+    "Ahmed Imtiaz Humayun",
+    "Shruti Agarwal",
+    "John Collomosse",
+    "Richard Baraniuk"
+  ],
+  "topics": [
+    "collapse"
+  ],
+  "new_to_prior_ledger": true,
+  "source_url": "https://arxiv.org/pdf/2408.16333",
+  "sha256": "4b048e057ba0d03df7ce14a866c1236594e96b822982082727946a5a7daaa59c",
+  "pages": 24,
+  "text_chars": 71980,
+  "status": "acquired",
+  "snapshot_version": "v1",
+  "acquired_on": "2026-11-01"
+}

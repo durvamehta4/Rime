@@ -1,0 +1,31 @@
+{
+  "id": "2406.01205",
+  "title": "ControlSpeech: Towards Simultaneous and Independent Zero-shot Speaker Cloning and Zero-shot Language Style Control",
+  "abstract": "In this paper, we present ControlSpeech, a text-to-speech (TTS) system capable of fully cloning the speaker's voice and enabling arbitrary control and adjustment of speaking style. Prior zero-shot TTS models only mimic the speaker's voice without further control and adjustment capabilities while prior controllable TTS models cannot perform speaker-specific voice generation. Therefore, ControlSpeech focuses on a more challenging task: a TTS system with controllable timbre, content, and style at the same time. ControlSpeech takes speech prompts, content prompts, and style prompts as inputs and utilizes bidirectional attention and mask-based parallel decoding to capture codec representations corresponding to timbre, content, and style in a discrete decoupling codec space. Moreover, we analyze the many-to-many issue in textual style control and propose the Style Mixture Semantic Density (SMSD) module, which is based on Gaussian mixture density networks, to resolve this problem. To facilitate empirical validations, we make available a new style controllable dataset called VccmDataset. Our experimental results demonstrate that ControlSpeech exhibits comparable or state-of-the-art (SOTA) performance in terms of controllability, timbre similarity, audio quality, robustness, and generalizability. The relevant code and demo are available at https://github.com/jishengpeng/ControlSpeech .",
+  "published": "2024-06-03T11:15:16Z",
+  "updated": "2025-06-04T06:07:17Z",
+  "authors": [
+    "Shengpeng Ji",
+    "Qian Chen",
+    "Wen Wang",
+    "Jialong Zuo",
+    "Minghui Fang",
+    "Ziyue Jiang",
+    "Hai Huang",
+    "Zehan Wang",
+    "Xize Cheng",
+    "Siqi Zheng",
+    "Zhou Zhao"
+  ],
+  "topics": [
+    "control"
+  ],
+  "new_to_prior_ledger": true,
+  "source_url": "https://arxiv.org/pdf/2406.01205",
+  "sha256": "a7ea98a17ef52e8f3af77e6aa9d07f649eb26405c5fee6ad55815e9d83763433",
+  "pages": 16,
+  "text_chars": 68346,
+  "status": "acquired",
+  "snapshot_version": "v3",
+  "acquired_on": "2026-11-01"
+}

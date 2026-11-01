@@ -1,0 +1,28 @@
+{
+  "id": "2307.01850",
+  "title": "Self-Consuming Generative Models Go MAD",
+  "abstract": "Seismic advances in generative AI algorithms for imagery, text, and other data types has led to the temptation to use synthetic data to train next-generation models. Repeating this process creates an autophagous (self-consuming) loop whose properties are poorly understood. We conduct a thorough analytical and empirical analysis using state-of-the-art generative image models of three families of autophagous loops that differ in how fixed or fresh real training data is available through the generations of training and in whether the samples from previous generation models have been biased to trade off data quality versus diversity. Our primary conclusion across all scenarios is that without enough fresh real data in each generation of an autophagous loop, future generative models are doomed to have their quality (precision) or diversity (recall) progressively decrease. We term this condition Model Autophagy Disorder (MAD), making analogy to mad cow disease.",
+  "published": "2023-07-04T17:59:31Z",
+  "updated": "2023-07-04T17:59:31Z",
+  "authors": [
+    "Sina Alemohammad",
+    "Josue Casco-Rodriguez",
+    "Lorenzo Luzi",
+    "Ahmed Imtiaz Humayun",
+    "Hossein Babaei",
+    "Daniel LeJeune",
+    "Ali Siahkoohi",
+    "Richard G. Baraniuk"
+  ],
+  "topics": [
+    "collapse"
+  ],
+  "new_to_prior_ledger": true,
+  "source_url": "https://arxiv.org/pdf/2307.01850",
+  "sha256": "f50c2c79e77371b196d23ae2488c58403f53131cb412f1d1fa1575ab19c3171c",
+  "pages": 31,
+  "text_chars": 84753,
+  "status": "acquired",
+  "snapshot_version": "v1",
+  "acquired_on": "2026-11-01"
+}
