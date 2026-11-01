@@ -1,0 +1,26 @@
+{
+  "id": "2409.12962",
+  "title": "CLAIR-A: Leveraging Large Language Models to Judge Audio Captions",
+  "abstract": "The Automated Audio Captioning (AAC) task asks models to generate natural language descriptions of an audio input. Evaluating these machine-generated audio captions is a complex task that requires considering diverse factors, among them, auditory scene understanding, sound-object inference, temporal coherence, and the environmental context of the scene. While current methods focus on specific aspects, they often fail to provide an overall score that aligns well with human judgment. In this work, we propose CLAIR-A, a simple and flexible method that leverages the zero-shot capabilities of large language models (LLMs) to evaluate candidate audio captions by directly asking LLMs for a semantic distance score. In our evaluations, CLAIR-A better predicts human judgements of quality compared to traditional metrics, with a 5.8% relative accuracy improvement compared to the domain-specific FENSE metric and up to 11% over the best general-purpose measure on the Clotho-Eval dataset. Moreover, CLAIR-A offers more transparency by allowing the language model to explain the reasoning behind its scores, with these explanations rated up to 30% better by human evaluators than those provided by baseline methods. CLAIR-A is made publicly available at https://github.com/DavidMChan/clair-a.",
+  "published": "2024-09-19T17:59:52Z",
+  "updated": "2025-08-11T16:25:08Z",
+  "authors": [
+    "Tsung-Han Wu",
+    "Joseph E. Gonzalez",
+    "Trevor Darrell",
+    "David M. Chan"
+  ],
+  "topics": [
+    "caption_grounding"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "caption",
+  "pdf_url": "https://arxiv.org/pdf/2409.12962",
+  "sha256": "8365c223b5db01f3e9ba6c22f7905dc5fd7ef93c2af127a4e2fded3ac821bf26",
+  "pages": 7,
+  "text_chars": 32371,
+  "snapshot_version": "v2",
+  "retrieved_utc": "2026-11-01T10:03:54.102148+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

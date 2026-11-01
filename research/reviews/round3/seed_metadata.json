@@ -1,0 +1,851 @@
+[
+  {
+    "id": "2010.15242",
+    "title": "Simulating Plasmon Resonances of Gold Nanoparticles with Bipyramidal Shapes by Boundary Element Methods",
+    "abstract": "Computational modeling and accurate simulations of localized surface plasmon resonance (LSPR) absorption properties are reported for gold nanobipyramids (GNBs), a class of metal nanoparticle that features highly tunable, geometrydependent optical properties. GNB bicone models with spherical tips performed best in reproducing experimental LSPR spectra while the comparison with other geometrical models provided a fundamental understanding of base shapes and tip effects on the optical properties of GNBs. Our results demonstrated the importance of averaging all geometrical parameters determined from transmission electron microscopy images to build representative models of GNBs. By assessing the performances of LSPR absorption spectra simulations based on a quasi-static approximation, we provided an applicability range of this approach as a function of the nanoparticle size, paving the way to the theoretical study of the coupling between molecular electron densities and metal nanoparticles in GNB-based nanohybrid systems, with potential applications in the design of nanomaterials for bioimaging, optics and photocatalysis.",
+    "published": "2020-10-26T17:41:44Z",
+    "updated": "2020-10-26T17:41:44Z",
+    "authors": [
+      "Jacopo Marcheselli",
+      "Denis Chateau",
+      "Frederic Lerouge",
+      "Patrice Baldeck",
+      "Chantal Andraud",
+      "Stephane Parola",
+      "Stefano Baroni",
+      "Stefano Corni",
+      "Marco Garavelli",
+      "Ivan Rivalta"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": true
+  },
+  {
+    "id": "2312.03732",
+    "title": "A Rank Stabilization Scaling Factor for Fine-Tuning with LoRA",
+    "abstract": "As large language models (LLMs) have become increasingly compute and memory intensive, parameter-efficient fine-tuning (PEFT) methods are now a common strategy to fine-tune LLMs. A popular PEFT method is Low-Rank Adapters (LoRA), which adds trainable low-rank \"adapters\" to selected layers. Each adapter consists of a low-rank matrix product, multiplicatively scaled by a rank-dependent factor. This scaling factor, which divides adapters by a factor of the rank, results in slowed learning and stunted performance for LoRA with higher-rank adapters. Consequently, the use of LoRA in practice has generally been limited to very low ranks. In this work, we study the impact of the scaling factor on the learning process and prove that LoRA adapters should be divided by a factor of the square root of the rank. Modifying LoRA with the appropriate scaling factor, which we call the rank-stabilized LoRA (rsLoRA) method, easily provides for a fine-tuning compute/performance trade-off, where larger ranks can be used to trade off increased computational resources during training for better fine-tuning performance, with no change in inference computing cost.",
+    "published": "2023-11-28T03:23:20Z",
+    "updated": "2023-11-28T03:23:20Z",
+    "authors": [
+      "Damjan Kalajdzievski"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": true
+  },
+  {
+    "id": "2211.08983",
+    "title": "Is my automatic audio captioning system so bad? spider-max: a metric to consider several caption candidates",
+    "abstract": "Automatic Audio Captioning (AAC) is the task that aims to describe an audio signal using natural language. AAC systems take as input an audio signal and output a free-form text sentence, called a caption. Evaluating such systems is not trivial, since there are many ways to express the same idea. For this reason, several complementary metrics, such as BLEU, CIDEr, SPICE and SPIDEr, are used to compare a single automatic caption to one or several captions of reference, produced by a human annotator. Nevertheless, an automatic system can produce several caption candidates, either using some randomness in the sentence generation process, or by considering the various competing hypothesized captions during decoding with beam-search, for instance. If we consider an end-user of an AAC system, presenting several captions instead of a single one seems relevant to provide some diversity, similarly to information retrieval systems. In this work, we explore the possibility to consider several predicted captions in the evaluation process instead of one. For this purpose, we propose SPIDEr-max, a metric that takes the maximum SPIDEr value among the scores of several caption candidates. To advocate for our metric, we report experiments on Clotho v2.1 and AudioCaps, with a transformed-based system. On AudioCaps for example, this system reached a SPIDEr-max value (with 5 candidates) close to the SPIDEr human score of reference.",
+    "published": "2022-11-14T19:16:45Z",
+    "updated": "2022-11-14T19:16:45Z",
+    "authors": [
+      "Etienne Labb\u00e9",
+      "Thomas Pellegrini",
+      "Julien Pinquier"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": true
+  },
+  {
+    "id": "2110.05069",
+    "title": "Efficient Training of Audio Transformers with Patchout",
+    "abstract": "The great success of transformer-based models in natural language processing (NLP) has led to various attempts at adapting these architectures to other domains such as vision and audio. Recent work has shown that transformers can outperform Convolutional Neural Networks (CNNs) on vision and audio tasks. However, one of the main shortcomings of transformer models, compared to the well-established CNNs, is the computational complexity. In transformers, the compute and memory complexity is known to grow quadratically with the input length. Therefore, there has been extensive work on optimizing transformers, but often at the cost of degrading predictive performance. In this work, we propose a novel method to optimize and regularize transformers on audio spectrograms. Our proposed models achieve a new state-of-the-art performance on Audioset and can be trained on a single consumer-grade GPU. Furthermore, we propose a transformer model that outperforms CNNs in terms of both performance and training speed. Source code: https://github.com/kkoutini/PaSST",
+    "published": "2021-10-11T08:07:50Z",
+    "updated": "2022-03-29T12:25:02Z",
+    "authors": [
+      "Khaled Koutini",
+      "Jan Schl\u00fcter",
+      "Hamid Eghbal-zadeh",
+      "Gerhard Widmer"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": true
+  },
+  {
+    "id": "2406.18009",
+    "title": "E2 TTS: Embarrassingly Easy Fully Non-Autoregressive Zero-Shot TTS",
+    "abstract": "This paper introduces Embarrassingly Easy Text-to-Speech (E2 TTS), a fully non-autoregressive zero-shot text-to-speech system that offers human-level naturalness and state-of-the-art speaker similarity and intelligibility. In the E2 TTS framework, the text input is converted into a character sequence with filler tokens. The flow-matching-based mel spectrogram generator is then trained based on the audio infilling task. Unlike many previous works, it does not require additional components (e.g., duration model, grapheme-to-phoneme) or complex techniques (e.g., monotonic alignment search). Despite its simplicity, E2 TTS achieves state-of-the-art zero-shot TTS capabilities that are comparable to or surpass previous works, including Voicebox and NaturalSpeech 3. The simplicity of E2 TTS also allows for flexibility in the input representation. We propose several variants of E2 TTS to improve usability during inference. See https://aka.ms/e2tts/ for demo samples.",
+    "published": "2024-06-26T01:38:37Z",
+    "updated": "2024-09-12T17:45:37Z",
+    "authors": [
+      "Sefik Emre Eskimez",
+      "Xiaofei Wang",
+      "Manthan Thakker",
+      "Canrun Li",
+      "Chung-Hsien Tsai",
+      "Zhen Xiao",
+      "Hemin Yang",
+      "Zirun Zhu",
+      "Min Tang",
+      "Xu Tan",
+      "Yanqing Liu",
+      "Sheng Zhao",
+      "Naoyuki Kanda"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2406.04904",
+    "title": "XTTS: a Massively Multilingual Zero-Shot Text-to-Speech Model",
+    "abstract": "Most Zero-shot Multi-speaker TTS (ZS-TTS) systems support only a single language. Although models like YourTTS, VALL-E X, Mega-TTS 2, and Voicebox explored Multilingual ZS-TTS they are limited to just a few high/medium resource languages, limiting the applications of these models in most of the low/medium resource languages. In this paper, we aim to alleviate this issue by proposing and making publicly available the XTTS system. Our method builds upon the Tortoise model and adds several novel modifications to enable multilingual training, improve voice cloning, and enable faster training and inference. XTTS was trained in 16 languages and achieved state-of-the-art (SOTA) results in most of them.",
+    "published": "2024-06-07T12:56:11Z",
+    "updated": "2024-06-07T12:56:11Z",
+    "authors": [
+      "Edresson Casanova",
+      "Kelly Davis",
+      "Eren G\u00f6lge",
+      "G\u00f6rkem G\u00f6knar",
+      "Iulian Gulea",
+      "Logan Hart",
+      "Aya Aljafari",
+      "Joshua Meyer",
+      "Reuben Morais",
+      "Samuel Olayemi",
+      "Julian Weber"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2306.12925",
+    "title": "AudioPaLM: A Large Language Model That Can Speak and Listen",
+    "abstract": "We introduce AudioPaLM, a large language model for speech understanding and generation. AudioPaLM fuses text-based and speech-based language models, PaLM-2 [Anil et al., 2023] and AudioLM [Borsos et al., 2022], into a unified multimodal architecture that can process and generate text and speech with applications including speech recognition and speech-to-speech translation. AudioPaLM inherits the capability to preserve paralinguistic information such as speaker identity and intonation from AudioLM and the linguistic knowledge present only in text large language models such as PaLM-2. We demonstrate that initializing AudioPaLM with the weights of a text-only large language model improves speech processing, successfully leveraging the larger quantity of text training data used in pretraining to assist with the speech tasks. The resulting model significantly outperforms existing systems for speech translation tasks and has the ability to perform zero-shot speech-to-text translation for many languages for which input/target language combinations were not seen in training. AudioPaLM also demonstrates features of audio language models, such as transferring a voice across languages based on a short spoken prompt. We release examples of our method at https://google-research.github.io/seanet/audiopalm/examples",
+    "published": "2023-06-22T14:37:54Z",
+    "updated": "2023-06-22T14:37:54Z",
+    "authors": [
+      "Paul K. Rubenstein",
+      "Chulayuth Asawaroengchai",
+      "Duc Dung Nguyen",
+      "Ankur Bapna",
+      "Zal\u00e1n Borsos",
+      "F\u00e9lix de Chaumont Quitry",
+      "Peter Chen",
+      "Dalia El Badawy",
+      "Wei Han",
+      "Eugene Kharitonov",
+      "Hannah Muckenhirn",
+      "Dirk Padfield",
+      "James Qin",
+      "Danny Rozenberg",
+      "Tara Sainath",
+      "Johan Schalkwyk",
+      "Matt Sharifi",
+      "Michelle Tadmor Ramanovich",
+      "Marco Tagliasacchi",
+      "Alexandru Tudor",
+      "Mihajlo Velimirovi\u0107",
+      "Damien Vincent",
+      "Jiahui Yu",
+      "Yongqiang Wang",
+      "Vicky Zayats",
+      "Neil Zeghidour",
+      "Yu Zhang",
+      "Zhishuai Zhang",
+      "Lukas Zilka",
+      "Christian Frank"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2406.11768",
+    "title": "GAMA: A Large Audio-Language Model with Advanced Audio Understanding and Complex Reasoning Abilities",
+    "abstract": "Perceiving and understanding non-speech sounds and non-verbal speech is essential to making decisions that help us interact with our surroundings. In this paper, we propose GAMA, a novel General-purpose Large Audio-Language Model (LALM) with Advanced Audio Understanding and Complex Reasoning Abilities. We build GAMA by integrating an LLM with multiple types of audio representations, including features from a custom Audio Q-Former, a multi-layer aggregator that aggregates features from multiple layers of an audio encoder. We fine-tune GAMA on a large-scale audio-language dataset, which augments it with audio understanding capabilities. Next, we propose CompA-R (Instruction-Tuning for Complex Audio Reasoning), a synthetically generated instruction-tuning (IT) dataset with instructions that require the model to perform complex reasoning on the input audio. We instruction-tune GAMA with CompA-R to endow it with complex reasoning abilities, where we further add a soft prompt as input with high-level semantic evidence by leveraging event tags of the input audio. Finally, we also propose CompA-R-test, a human-labeled evaluation dataset for evaluating the capabilities of LALMs on open-ended audio question-answering that requires complex reasoning. Through automated and expert human evaluations, we show that GAMA outperforms all other LALMs in literature on diverse audio understanding tasks by margins of 1%-84%. Further, GAMA IT-ed on CompA-R proves to be superior in its complex reasoning and instruction following capabilities.",
+    "published": "2024-06-17T17:31:01Z",
+    "updated": "2024-06-17T17:31:01Z",
+    "authors": [
+      "Sreyan Ghosh",
+      "Sonal Kumar",
+      "Ashish Seth",
+      "Chandra Kiran Reddy Evuru",
+      "Utkarsh Tyagi",
+      "S Sakshi",
+      "Oriol Nieto",
+      "Ramani Duraiswami",
+      "Dinesh Manocha"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": true
+  },
+  {
+    "id": "2202.00874",
+    "title": "HTS-AT: A Hierarchical Token-Semantic Audio Transformer for Sound Classification and Detection",
+    "abstract": "Audio classification is an important task of mapping audio samples into their corresponding labels. Recently, the transformer model with self-attention mechanisms has been adopted in this field. However, existing audio transformers require large GPU memories and long training time, meanwhile relying on pretrained vision models to achieve high performance, which limits the model's scalability in audio tasks. To combat these problems, we introduce HTS-AT: an audio transformer with a hierarchical structure to reduce the model size and training time. It is further combined with a token-semantic module to map final outputs into class featuremaps, thus enabling the model for the audio event detection (i.e. localization in time). We evaluate HTS-AT on three datasets of audio classification where it achieves new state-of-the-art (SOTA) results on AudioSet and ESC-50, and equals the SOTA on Speech Command V2. It also achieves better performance in event localization than the previous CNN-based models. Moreover, HTS-AT requires only 35% model parameters and 15% training time of the previous audio transformer. These results demonstrate the high performance and high efficiency of HTS-AT.",
+    "published": "2022-02-02T04:49:14Z",
+    "updated": "2022-02-02T04:49:14Z",
+    "authors": [
+      "Ke Chen",
+      "Xingjian Du",
+      "Bilei Zhu",
+      "Zejun Ma",
+      "Taylor Berg-Kirkpatrick",
+      "Shlomo Dubnov"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": true
+  },
+  {
+    "id": "2110.13784",
+    "title": "Market Design for Drone Traffic Management",
+    "abstract": "The rapid development of drone technology is leading to more and more use cases being proposed. In response, regulators are drawing up drone traffic management frameworks. However, to design solutions that are efficient, fair, simple, non-manipulable, and scalable, we need market design and AI expertise. To this end, we introduce the drone traffic management problem as a new research challenge to the market design and AI communities. We present five design desiderata that we have derived from our interviews with stakeholders from the regulatory side as well as from public and private enterprises. Finally, we provide an overview of the solution space to point out possible directions for future research.",
+    "published": "2021-10-26T15:37:45Z",
+    "updated": "2022-01-19T08:12:56Z",
+    "authors": [
+      "Sven Seuken",
+      "Paul Friedrich",
+      "Ludwig Dierks"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": true
+  },
+  {
+    "id": "2104.09494",
+    "title": "NISQA: A Deep CNN-Self-Attention Model for Multidimensional Speech Quality Prediction with Crowdsourced Datasets",
+    "abstract": "In this paper, we present an update to the NISQA speech quality prediction model that is focused on distortions that occur in communication networks. In contrast to the previous version, the model is trained end-to-end and the time-dependency modelling and time-pooling is achieved through a Self-Attention mechanism. Besides overall speech quality, the model also predicts the four speech quality dimensions Noisiness, Coloration, Discontinuity, and Loudness, and in this way gives more insight into the cause of a quality degradation. Furthermore, new datasets with over 13,000 speech files were created for training and validation of the model. The model was finally tested on a new, live-talking test dataset that contains recordings of real telephone calls. Overall, NISQA was trained and evaluated on 81 datasets from different sources and showed to provide reliable predictions also for unknown speech samples. The code, model weights, and datasets are open-sourced.",
+    "published": "2021-04-19T17:56:59Z",
+    "updated": "2021-04-19T17:56:59Z",
+    "authors": [
+      "Gabriel Mittag",
+      "Babak Naderi",
+      "Assmaa Chehadi",
+      "Sebastian M\u00f6ller"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2312.15185",
+    "title": "emotion2vec: Self-Supervised Pre-Training for Speech Emotion Representation",
+    "abstract": "We propose emotion2vec, a universal speech emotion representation model. emotion2vec is pre-trained on open-source unlabeled emotion data through self-supervised online distillation, combining utterance-level loss and frame-level loss during pre-training. emotion2vec outperforms state-of-the-art pre-trained universal models and emotion specialist models by only training linear layers for the speech emotion recognition task on the mainstream IEMOCAP dataset. In addition, emotion2vec shows consistent improvements among 10 different languages of speech emotion recognition datasets. emotion2vec also shows excellent results on other emotion tasks, such as song emotion recognition, emotion prediction in conversation, and sentiment analysis. Comparison experiments, ablation experiments, and visualization comprehensively demonstrate the universal capability of the proposed emotion2vec. To the best of our knowledge, emotion2vec is the first universal representation model in various emotion-related tasks, filling a gap in the field.",
+    "published": "2023-12-23T07:46:55Z",
+    "updated": "2023-12-23T07:46:55Z",
+    "authors": [
+      "Ziyang Ma",
+      "Zhisheng Zheng",
+      "Jiaxin Ye",
+      "Jinchao Li",
+      "Zhifu Gao",
+      "Shiliang Zhang",
+      "Xie Chen"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": true
+  },
+  {
+    "id": "2210.13438",
+    "title": "High Fidelity Neural Audio Compression",
+    "abstract": "We introduce a state-of-the-art real-time, high-fidelity, audio codec leveraging neural networks. It consists in a streaming encoder-decoder architecture with quantized latent space trained in an end-to-end fashion. We simplify and speed-up the training by using a single multiscale spectrogram adversary that efficiently reduces artifacts and produce high-quality samples. We introduce a novel loss balancer mechanism to stabilize training: the weight of a loss now defines the fraction of the overall gradient it should represent, thus decoupling the choice of this hyper-parameter from the typical scale of the loss. Finally, we study how lightweight Transformer models can be used to further compress the obtained representation by up to 40%, while staying faster than real time. We provide a detailed description of the key design choices of the proposed model including: training objective, architectural changes and a study of various perceptual loss functions. We present an extensive subjective evaluation (MUSHRA tests) together with an ablation study for a range of bandwidths and audio domains, including speech, noisy-reverberant speech, and music. Our approach is superior to the baselines methods across all evaluated settings, considering both 24 kHz monophonic and 48 kHz stereophonic audio. Code and models are available at github.com/facebookresearch/encodec.",
+    "published": "2022-10-24T17:52:02Z",
+    "updated": "2022-10-24T17:52:02Z",
+    "authors": [
+      "Alexandre D\u00e9fossez",
+      "Jade Copet",
+      "Gabriel Synnaeve",
+      "Yossi Adi"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2310.08659",
+    "title": "LoftQ: LoRA-Fine-Tuning-Aware Quantization for Large Language Models",
+    "abstract": "Quantization is an indispensable technique for serving Large Language Models (LLMs) and has recently found its way into LoRA fine-tuning. In this work we focus on the scenario where quantization and LoRA fine-tuning are applied together on a pre-trained model. In such cases it is common to observe a consistent gap in the performance on downstream tasks between full fine-tuning and quantization plus LoRA fine-tuning approach. In response, we propose LoftQ (LoRA-Fine-Tuning-aware Quantization), a novel quantization framework that simultaneously quantizes an LLM and finds a proper low-rank initialization for LoRA fine-tuning. Such an initialization alleviates the discrepancy between the quantized and full-precision model and significantly improves generalization in downstream tasks. We evaluate our method on natural language understanding, question answering, summarization, and natural language generation tasks. Experiments show that our method is highly effective and outperforms existing quantization methods, especially in the challenging 2-bit and 2/4-bit mixed precision regimes. The code is available on https://github.com/yxli2123/LoftQ.",
+    "published": "2023-10-12T18:34:08Z",
+    "updated": "2023-11-28T16:06:59Z",
+    "authors": [
+      "Yixiao Li",
+      "Yifan Yu",
+      "Chen Liang",
+      "Pengcheng He",
+      "Nikos Karampatziakis",
+      "Weizhu Chen",
+      "Tuo Zhao"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": true
+  },
+  {
+    "id": "2402.09353",
+    "title": "DoRA: Weight-Decomposed Low-Rank Adaptation",
+    "abstract": "Among the widely used parameter-efficient fine-tuning (PEFT) methods, LoRA and its variants have gained considerable popularity because of avoiding additional inference costs. However, there still often exists an accuracy gap between these methods and full fine-tuning (FT). In this work, we first introduce a novel weight decomposition analysis to investigate the inherent differences between FT and LoRA. Aiming to resemble the learning capacity of FT from the findings, we propose Weight-Decomposed Low-Rank Adaptation (DoRA). DoRA decomposes the pre-trained weight into two components, magnitude and direction, for fine-tuning, specifically employing LoRA for directional updates to efficiently minimize the number of trainable parameters. By employing \\ours, we enhance both the learning capacity and training stability of LoRA while avoiding any additional inference overhead. \\ours~consistently outperforms LoRA on fine-tuning LLaMA, LLaVA, and VL-BART on various downstream tasks, such as commonsense reasoning, visual instruction tuning, and image/video-text understanding. Code is available at https://github.com/NVlabs/DoRA.",
+    "published": "2024-02-14T17:59:34Z",
+    "updated": "2024-07-09T05:59:16Z",
+    "authors": [
+      "Shih-Yang Liu",
+      "Chien-Yi Wang",
+      "Hongxu Yin",
+      "Pavlo Molchanov",
+      "Yu-Chiang Frank Wang",
+      "Kwang-Ting Cheng",
+      "Min-Hung Chen"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": true
+  },
+  {
+    "id": "2306.06546",
+    "title": "High-Fidelity Audio Compression with Improved RVQGAN",
+    "abstract": "Language models have been successfully used to model natural signals, such as images, speech, and music. A key component of these models is a high quality neural compression model that can compress high-dimensional natural signals into lower dimensional discrete tokens. To that end, we introduce a high-fidelity universal neural audio compression algorithm that achieves ~90x compression of 44.1 KHz audio into tokens at just 8kbps bandwidth. We achieve this by combining advances in high-fidelity audio generation with better vector quantization techniques from the image domain, along with improved adversarial and reconstruction losses. We compress all domains (speech, environment, music, etc.) with a single universal model, making it widely applicable to generative modeling of all audio. We compare with competing audio compression algorithms, and find our method outperforms them significantly. We provide thorough ablations for every design choice, as well as open-source code and trained model weights. We hope our work can lay the foundation for the next generation of high-fidelity audio modeling.",
+    "published": "2023-06-11T00:13:00Z",
+    "updated": "2023-10-26T22:17:49Z",
+    "authors": [
+      "Rithesh Kumar",
+      "Prem Seetharaman",
+      "Alejandro Luebs",
+      "Ishaan Kumar",
+      "Kundan Kumar"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2006.11477",
+    "title": "wav2vec 2.0: A Framework for Self-Supervised Learning of Speech Representations",
+    "abstract": "We show for the first time that learning powerful representations from speech audio alone followed by fine-tuning on transcribed speech can outperform the best semi-supervised methods while being conceptually simpler. wav2vec 2.0 masks the speech input in the latent space and solves a contrastive task defined over a quantization of the latent representations which are jointly learned. Experiments using all labeled data of Librispeech achieve 1.8/3.3 WER on the clean/other test sets. When lowering the amount of labeled data to one hour, wav2vec 2.0 outperforms the previous state of the art on the 100 hour subset while using 100 times less labeled data. Using just ten minutes of labeled data and pre-training on 53k hours of unlabeled data still achieves 4.8/8.2 WER. This demonstrates the feasibility of speech recognition with limited amounts of labeled data.",
+    "published": "2020-06-20T02:35:02Z",
+    "updated": "2020-10-22T06:09:10Z",
+    "authors": [
+      "Alexei Baevski",
+      "Henry Zhou",
+      "Abdelrahman Mohamed",
+      "Michael Auli"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2110.07205",
+    "title": "SpeechT5: Unified-Modal Encoder-Decoder Pre-Training for Spoken Language Processing",
+    "abstract": "Motivated by the success of T5 (Text-To-Text Transfer Transformer) in pre-trained natural language processing models, we propose a unified-modal SpeechT5 framework that explores the encoder-decoder pre-training for self-supervised speech/text representation learning. The SpeechT5 framework consists of a shared encoder-decoder network and six modal-specific (speech/text) pre/post-nets. After preprocessing the input speech/text through the pre-nets, the shared encoder-decoder network models the sequence-to-sequence transformation, and then the post-nets generate the output in the speech/text modality based on the output of the decoder. Leveraging large-scale unlabeled speech and text data, we pre-train SpeechT5 to learn a unified-modal representation, hoping to improve the modeling capability for both speech and text. To align the textual and speech information into this unified semantic space, we propose a cross-modal vector quantization approach that randomly mixes up speech/text states with latent units as the interface between encoder and decoder. Extensive evaluations show the superiority of the proposed SpeechT5 framework on a wide variety of spoken language processing tasks, including automatic speech recognition, speech synthesis, speech translation, voice conversion, speech enhancement, and speaker identification. We release our code and model at https://github.com/microsoft/SpeechT5.",
+    "published": "2021-10-14T07:59:27Z",
+    "updated": "2022-05-24T08:18:31Z",
+    "authors": [
+      "Junyi Ao",
+      "Rui Wang",
+      "Long Zhou",
+      "Chengyi Wang",
+      "Shuo Ren",
+      "Yu Wu",
+      "Shujie Liu",
+      "Tom Ko",
+      "Qing Li",
+      "Yu Zhang",
+      "Zhihua Wei",
+      "Yao Qian",
+      "Jinyu Li",
+      "Furu Wei"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2110.01052",
+    "title": "Learn then Test: Calibrating Predictive Algorithms to Achieve Risk Control",
+    "abstract": "We introduce a framework for calibrating machine learning models so that their predictions satisfy explicit, finite-sample statistical guarantees. Our calibration algorithms work with any underlying model and (unknown) data-generating distribution and do not require model refitting. The framework addresses, among other examples, false discovery rate control in multi-label classification, intersection-over-union control in instance segmentation, and the simultaneous control of the type-1 error of outlier detection and confidence set coverage in classification or regression. Our main insight is to reframe the risk-control problem as multiple hypothesis testing, enabling techniques and mathematical arguments different from those in the previous literature. We use the framework to provide new calibration methods for several core machine learning tasks, with detailed worked examples in computer vision and tabular medical data.",
+    "published": "2021-10-03T17:42:03Z",
+    "updated": "2022-09-29T23:51:57Z",
+    "authors": [
+      "Anastasios N. Angelopoulos",
+      "Stephen Bates",
+      "Emmanuel J. Cand\u00e8s",
+      "Michael I. Jordan",
+      "Lihua Lei"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": true
+  },
+  {
+    "id": "2205.12446",
+    "title": "FLEURS: Few-shot Learning Evaluation of Universal Representations of Speech",
+    "abstract": "We introduce FLEURS, the Few-shot Learning Evaluation of Universal Representations of Speech benchmark. FLEURS is an n-way parallel speech dataset in 102 languages built on top of the machine translation FLoRes-101 benchmark, with approximately 12 hours of speech supervision per language. FLEURS can be used for a variety of speech tasks, including Automatic Speech Recognition (ASR), Speech Language Identification (Speech LangID), Translation and Retrieval. In this paper, we provide baselines for the tasks based on multilingual pre-trained models like mSLAM. The goal of FLEURS is to enable speech technology in more languages and catalyze research in low-resource speech understanding.",
+    "published": "2022-05-25T02:29:03Z",
+    "updated": "2022-05-25T02:29:03Z",
+    "authors": [
+      "Alexis Conneau",
+      "Min Ma",
+      "Simran Khanuja",
+      "Yu Zhang",
+      "Vera Axelrod",
+      "Siddharth Dalmia",
+      "Jason Riesa",
+      "Clara Rivera",
+      "Ankur Bapna"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2204.02152",
+    "title": "UTMOS: UTokyo-SaruLab System for VoiceMOS Challenge 2022",
+    "abstract": "We present the UTokyo-SaruLab mean opinion score (MOS) prediction system submitted to VoiceMOS Challenge 2022. The challenge is to predict the MOS values of speech samples collected from previous Blizzard Challenges and Voice Conversion Challenges for two tracks: a main track for in-domain prediction and an out-of-domain (OOD) track for which there is less labeled data from different listening tests. Our system is based on ensemble learning of strong and weak learners. Strong learners incorporate several improvements to the previous fine-tuning models of self-supervised learning (SSL) models, while weak learners use basic machine-learning methods to predict scores from SSL features. In the Challenge, our system had the highest score on several metrics for both the main and OOD tracks. In addition, we conducted ablation studies to investigate the effectiveness of our proposed methods.",
+    "published": "2022-04-05T12:23:51Z",
+    "updated": "2022-06-29T13:42:05Z",
+    "authors": [
+      "Takaaki Saeki",
+      "Detai Xin",
+      "Wataru Nakata",
+      "Tomoki Koriyama",
+      "Shinnosuke Takamichi",
+      "Hiroshi Saruwatari"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2305.13516",
+    "title": "Scaling Speech Technology to 1,000+ Languages",
+    "abstract": "Expanding the language coverage of speech technology has the potential to improve access to information for many more people. However, current speech technology is restricted to about one hundred languages which is a small fraction of the over 7,000 languages spoken around the world. The Massively Multilingual Speech (MMS) project increases the number of supported languages by 10-40x, depending on the task. The main ingredients are a new dataset based on readings of publicly available religious texts and effectively leveraging self-supervised learning. We built pre-trained wav2vec 2.0 models covering 1,406 languages, a single multilingual automatic speech recognition model for 1,107 languages, speech synthesis models for the same number of languages, as well as a language identification model for 4,017 languages. Experiments show that our multilingual speech recognition model more than halves the word error rate of Whisper on 54 languages of the FLEURS benchmark while being trained on a small fraction of the labeled data.",
+    "published": "2023-05-22T22:09:41Z",
+    "updated": "2023-05-22T22:09:41Z",
+    "authors": [
+      "Vineel Pratap",
+      "Andros Tjandra",
+      "Bowen Shi",
+      "Paden Tomasello",
+      "Arun Babu",
+      "Sayani Kundu",
+      "Ali Elkahky",
+      "Zhaoheng Ni",
+      "Apoorv Vyas",
+      "Maryam Fazel-Zarandi",
+      "Alexei Baevski",
+      "Yossi Adi",
+      "Xiaohui Zhang",
+      "Wei-Ning Hsu",
+      "Alexis Conneau",
+      "Michael Auli"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2305.10790",
+    "title": "Listen, Think, and Understand",
+    "abstract": "The ability of artificial intelligence (AI) systems to perceive and comprehend audio signals is crucial for many applications. Although significant progress has been made in this area since the development of AudioSet, most existing models are designed to map audio inputs to pre-defined, discrete sound label sets. In contrast, humans possess the ability to not only classify sounds into general categories, but also to listen to the finer details of the sounds, explain the reason for the predictions, think about what the sound infers, and understand the scene and what action needs to be taken, if any. Such capabilities beyond perception are not yet present in existing audio models. On the other hand, modern large language models (LLMs) exhibit emerging reasoning ability but they lack audio perception capabilities. Therefore, we ask the question: can we build a model that has both audio perception and a reasoning ability? In this paper, we propose a new audio foundation model, called LTU (Listen, Think, and Understand). To train LTU, we created a new OpenAQA-5M dataset consisting of 1.9 million closed-ended and 3.7 million open-ended, diverse (audio, question, answer) tuples, and have used an autoregressive training framework with a perception-to-understanding curriculum. LTU demonstrates strong performance and generalization ability on conventional audio tasks such as classification and captioning. More importantly, it exhibits emerging audio reasoning and comprehension abilities that are absent in existing audio models. To the best of our knowledge, LTU is one of the first multimodal large language models that focus on general audio (rather than just speech) understanding.",
+    "published": "2023-05-18T08:03:37Z",
+    "updated": "2024-02-19T23:51:49Z",
+    "authors": [
+      "Yuan Gong",
+      "Hongyin Luo",
+      "Alexander H. Liu",
+      "Leonid Karlinsky",
+      "James Glass"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": true
+  },
+  {
+    "id": "2207.04658",
+    "title": "Automatic Quantization for Physics-Based Simulation",
+    "abstract": "Quantization has proven effective in high-resolution and large-scale simulations, which benefit from bit-level memory saving. However, identifying a quantization scheme that meets the requirement of both precision and memory efficiency requires trial and error. In this paper, we propose a novel framework to allow users to obtain a quantization scheme by simply specifying either an error bound or a memory compression rate. Based on the error propagation theory, our method takes advantage of auto-diff to estimate the contributions of each quantization operation to the total error. We formulate the task as a constrained optimization problem, which can be efficiently solved with analytical formulas derived for the linearized objective function. Our workflow extends the Taichi compiler and introduces dithering to improve the precision of quantized simulations. We demonstrate the generality and efficiency of our method via several challenging examples of physics-based simulation, which achieves up to 2.5x memory compression without noticeable degradation of visual quality in the results. Our code and data are available at https://github.com/Hanke98/AutoQuantizer.",
+    "published": "2022-07-11T06:38:16Z",
+    "updated": "2022-07-14T06:41:41Z",
+    "authors": [
+      "Jiafeng Liu",
+      "Haoyang Shi",
+      "Siyuan Zhang",
+      "Yin Yang",
+      "Chongyang Ma",
+      "Weiwei Xu"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": true
+  },
+  {
+    "id": "2212.09058",
+    "title": "BEATs: Audio Pre-Training with Acoustic Tokenizers",
+    "abstract": "The massive growth of self-supervised learning (SSL) has been witnessed in language, vision, speech, and audio domains over the past few years. While discrete label prediction is widely adopted for other modalities, the state-of-the-art audio SSL models still employ reconstruction loss for pre-training. Compared with reconstruction loss, semantic-rich discrete label prediction encourages the SSL model to abstract the high-level audio semantics and discard the redundant details as in human perception. However, a semantic-rich acoustic tokenizer for general audio pre-training is usually not straightforward to obtain, due to the continuous property of audio and unavailable phoneme sequences like speech. To tackle this challenge, we propose BEATs, an iterative audio pre-training framework to learn Bidirectional Encoder representation from Audio Transformers, where an acoustic tokenizer and an audio SSL model are optimized by iterations. In the first iteration, we use random projection as the acoustic tokenizer to train an audio SSL model in a mask and label prediction manner. Then, we train an acoustic tokenizer for the next iteration by distilling the semantic knowledge from the pre-trained or fine-tuned audio SSL model. The iteration is repeated with the hope of mutual promotion of the acoustic tokenizer and audio SSL model. The experimental results demonstrate our acoustic tokenizers can generate discrete labels with rich audio semantics and our audio SSL models achieve state-of-the-art results across various audio classification benchmarks, even outperforming previous models that use more training data and model parameters significantly. Specifically, we set a new state-of-the-art mAP 50.6% on AudioSet-2M for audio-only models without using any external data, and 98.1% accuracy on ESC-50. The code and pre-trained models are available at https://aka.ms/beats.",
+    "published": "2022-12-18T10:41:55Z",
+    "updated": "2022-12-18T10:41:55Z",
+    "authors": [
+      "Sanyuan Chen",
+      "Yu Wu",
+      "Chengyi Wang",
+      "Shujie Liu",
+      "Daniel Tompkins",
+      "Zhuo Chen",
+      "Furu Wei"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2304.09116",
+    "title": "NaturalSpeech 2: Latent Diffusion Models are Natural and Zero-Shot Speech and Singing Synthesizers",
+    "abstract": "Scaling text-to-speech (TTS) to large-scale, multi-speaker, and in-the-wild datasets is important to capture the diversity in human speech such as speaker identities, prosodies, and styles (e.g., singing). Current large TTS systems usually quantize speech into discrete tokens and use language models to generate these tokens one by one, which suffer from unstable prosody, word skipping/repeating issue, and poor voice quality. In this paper, we develop NaturalSpeech 2, a TTS system that leverages a neural audio codec with residual vector quantizers to get the quantized latent vectors and uses a diffusion model to generate these latent vectors conditioned on text input. To enhance the zero-shot capability that is important to achieve diverse speech synthesis, we design a speech prompting mechanism to facilitate in-context learning in the diffusion model and the duration/pitch predictor. We scale NaturalSpeech 2 to large-scale datasets with 44K hours of speech and singing data and evaluate its voice quality on unseen speakers. NaturalSpeech 2 outperforms previous TTS systems by a large margin in terms of prosody/timbre similarity, robustness, and voice quality in a zero-shot setting, and performs novel zero-shot singing synthesis with only a speech prompt. Audio samples are available at https://speechresearch.github.io/naturalspeech2.",
+    "published": "2023-04-18T16:31:59Z",
+    "updated": "2023-05-30T16:09:10Z",
+    "authors": [
+      "Kai Shen",
+      "Zeqian Ju",
+      "Xu Tan",
+      "Yanqing Liu",
+      "Yichong Leng",
+      "Lei He",
+      "Tao Qin",
+      "Sheng Zhao",
+      "Jiang Bian"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2303.14448",
+    "title": "Noisy dynamical systems evolve error correcting codes and modularity",
+    "abstract": "Noise is a ubiquitous feature of the physical world. As a result, the first prerequisite of life is fault tolerance: maintaining integrity of state despite external bombardment. Recent experimental advances have revealed that biological systems achieve fault tolerance by implementing mathematically intricate error-correcting codes and by organizing in a modular fashion that physically separates functionally distinct subsystems. These elaborate structures represent a vanishing volume in the massive genetic configuration space. How is it possible that the primitive process of evolution, by which all biological systems evolved, achieved such unusual results? In this work, through experiments in Boolean networks, we show that the simultaneous presence of error correction and modularity in biological systems is no coincidence. Rather, it is a typical co-occurrence in noisy dynamic systems undergoing evolution. From this, we deduce the principle of error correction enhanced evolvability: systems possessing error-correcting codes are more effectively improved by evolution than those without.",
+    "published": "2023-03-25T11:54:18Z",
+    "updated": "2023-04-12T22:16:35Z",
+    "authors": [
+      "Trevor McCourt",
+      "Ila R. Fiete",
+      "Isaac L. Chuang"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": true
+  },
+  {
+    "id": "2305.11000",
+    "title": "SpeechGPT: Empowering Large Language Models with Intrinsic Cross-Modal Conversational Abilities",
+    "abstract": "Multi-modal large language models are regarded as a crucial step towards Artificial General Intelligence (AGI) and have garnered significant interest with the emergence of ChatGPT. However, current speech-language models typically adopt the cascade paradigm, preventing inter-modal knowledge transfer. In this paper, we propose SpeechGPT, a large language model with intrinsic cross-modal conversational abilities, capable of perceiving and generating multi-model content. With discrete speech representations, we first construct SpeechInstruct, a large-scale cross-modal speech instruction dataset. Additionally, we employ a three-stage training strategy that includes modality-adaptation pre-training, cross-modal instruction fine-tuning, and chain-of-modality instruction fine-tuning. The experimental results demonstrate that SpeechGPT has an impressive capacity to follow multi-modal human instructions and highlight the potential of handling multiple modalities with one model. Demos are shown in https://0nutation.github.io/SpeechGPT.github.io/.",
+    "published": "2023-05-18T14:23:25Z",
+    "updated": "2023-05-19T14:41:16Z",
+    "authors": [
+      "Dong Zhang",
+      "Shimin Li",
+      "Xin Zhang",
+      "Jun Zhan",
+      "Pengyu Wang",
+      "Yaqian Zhou",
+      "Xipeng Qiu"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2306.15687",
+    "title": "Voicebox: Text-Guided Multilingual Universal Speech Generation at Scale",
+    "abstract": "Large-scale generative models such as GPT and DALL-E have revolutionized the research community. These models not only generate high fidelity outputs, but are also generalists which can solve tasks not explicitly taught. In contrast, speech generative models are still primitive in terms of scale and task generalization. In this paper, we present Voicebox, the most versatile text-guided generative model for speech at scale. Voicebox is a non-autoregressive flow-matching model trained to infill speech, given audio context and text, trained on over 50K hours of speech that are not filtered or enhanced. Similar to GPT, Voicebox can perform many different tasks through in-context learning, but is more flexible as it can also condition on future context. Voicebox can be used for mono or cross-lingual zero-shot text-to-speech synthesis, noise removal, content editing, style conversion, and diverse sample generation. In particular, Voicebox outperforms the state-of-the-art zero-shot TTS model VALL-E on both intelligibility (5.9% vs 1.9% word error rates) and audio similarity (0.580 vs 0.681) while being up to 20 times faster. Audio samples can be found in \\url{https://voicebox.metademolab.com}.",
+    "published": "2023-06-23T16:23:24Z",
+    "updated": "2023-10-19T13:23:28Z",
+    "authors": [
+      "Matthew Le",
+      "Apoorv Vyas",
+      "Bowen Shi",
+      "Brian Karrer",
+      "Leda Sari",
+      "Rashel Moritz",
+      "Mary Williamson",
+      "Vimal Manohar",
+      "Yossi Adi",
+      "Jay Mahadeokar",
+      "Wei-Ning Hsu"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2307.05695",
+    "title": "ReLoRA: High-Rank Training Through Low-Rank Updates",
+    "abstract": "Despite the dominance and effectiveness of scaling, resulting in large networks with hundreds of billions of parameters, the necessity to train overparameterized models remains poorly understood, while training costs grow exponentially. In this paper, we explore parameter-efficient training techniques as an approach to training large neural networks. We introduce a novel method called ReLoRA, which utilizes low-rank updates to train high-rank networks. We apply ReLoRA to training transformer language models with up to 1.3B parameters and demonstrate comparable performance to regular neural network training. ReLoRA saves up to 5.5Gb of RAM per GPU and improves training speed by 9-40% depending on the model size and hardware setup. Our findings show the potential of parameter-efficient techniques for large-scale pre-training.",
+    "published": "2023-07-11T18:02:09Z",
+    "updated": "2023-12-10T16:21:29Z",
+    "authors": [
+      "Vladislav Lialin",
+      "Namrata Shivagunde",
+      "Sherin Muckatira",
+      "Anna Rumshisky"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": true
+  },
+  {
+    "id": "2206.04769",
+    "title": "CLAP: Learning Audio Concepts From Natural Language Supervision",
+    "abstract": "Mainstream Audio Analytics models are trained to learn under the paradigm of one class label to many recordings focusing on one task. Learning under such restricted supervision limits the flexibility of models because they require labeled audio for training and can only predict the predefined categories. Instead, we propose to learn audio concepts from natural language supervision. We call our approach Contrastive Language-Audio Pretraining (CLAP), which learns to connect language and audio by using two encoders and a contrastive learning to bring audio and text descriptions into a joint multimodal space. We trained CLAP with 128k audio and text pairs and evaluated it on 16 downstream tasks across 8 domains, such as Sound Event Classification, Music tasks, and Speech-related tasks. Although CLAP was trained with significantly less pairs than similar computer vision models, it establishes SoTA for Zero-Shot performance. Additionally, we evaluated CLAP in a supervised learning setup and achieve SoTA in 5 tasks. Hence, CLAP's Zero-Shot capability removes the need of training with class labels, enables flexible class prediction at inference time, and generalizes to multiple downstream tasks.",
+    "published": "2022-06-09T21:16:10Z",
+    "updated": "2022-06-09T21:16:10Z",
+    "authors": [
+      "Benjamin Elizalde",
+      "Soham Deshmukh",
+      "Mahmoud Al Ismail",
+      "Huaming Wang"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2207.06405",
+    "title": "Masked Autoencoders that Listen",
+    "abstract": "This paper studies a simple extension of image-based Masked Autoencoders (MAE) to self-supervised representation learning from audio spectrograms. Following the Transformer encoder-decoder design in MAE, our Audio-MAE first encodes audio spectrogram patches with a high masking ratio, feeding only the non-masked tokens through encoder layers. The decoder then re-orders and decodes the encoded context padded with mask tokens, in order to reconstruct the input spectrogram. We find it beneficial to incorporate local window attention in the decoder, as audio spectrograms are highly correlated in local time and frequency bands. We then fine-tune the encoder with a lower masking ratio on target datasets. Empirically, Audio-MAE sets new state-of-the-art performance on six audio and speech classification tasks, outperforming other recent models that use external supervised pre-training. The code and models will be at https://github.com/facebookresearch/AudioMAE.",
+    "published": "2022-07-13T17:59:55Z",
+    "updated": "2023-01-12T05:22:31Z",
+    "authors": [
+      "Po-Yao Huang",
+      "Hu Xu",
+      "Juncheng Li",
+      "Alexei Baevski",
+      "Michael Auli",
+      "Wojciech Galuba",
+      "Florian Metze",
+      "Christoph Feichtenhofer"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": true
+  },
+  {
+    "id": "2106.07447",
+    "title": "HuBERT: Self-Supervised Speech Representation Learning by Masked Prediction of Hidden Units",
+    "abstract": "Self-supervised approaches for speech representation learning are challenged by three unique problems: (1) there are multiple sound units in each input utterance, (2) there is no lexicon of input sound units during the pre-training phase, and (3) sound units have variable lengths with no explicit segmentation. To deal with these three problems, we propose the Hidden-Unit BERT (HuBERT) approach for self-supervised speech representation learning, which utilizes an offline clustering step to provide aligned target labels for a BERT-like prediction loss. A key ingredient of our approach is applying the prediction loss over the masked regions only, which forces the model to learn a combined acoustic and language model over the continuous inputs. HuBERT relies primarily on the consistency of the unsupervised clustering step rather than the intrinsic quality of the assigned cluster labels. Starting with a simple k-means teacher of 100 clusters, and using two iterations of clustering, the HuBERT model either matches or improves upon the state-of-the-art wav2vec 2.0 performance on the Librispeech (960h) and Libri-light (60,000h) benchmarks with 10min, 1h, 10h, 100h, and 960h fine-tuning subsets. Using a 1B parameter model, HuBERT shows up to 19% and 13% relative WER reduction on the more challenging dev-other and test-other evaluation subsets.",
+    "published": "2021-06-14T14:14:28Z",
+    "updated": "2021-06-14T14:14:28Z",
+    "authors": [
+      "Wei-Ning Hsu",
+      "Benjamin Bolte",
+      "Yao-Hung Hubert Tsai",
+      "Kushal Lakhotia",
+      "Ruslan Salakhutdinov",
+      "Abdelrahman Mohamed"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2404.02948",
+    "title": "PiSSA: Principal Singular Values and Singular Vectors Adaptation of Large Language Models",
+    "abstract": "To parameter-efficiently fine-tune (PEFT) large language models (LLMs), the low-rank adaptation (LoRA) method approximates the model changes $\u0394W \\in \\mathbb{R}^{m \\times n}$ through the product of two matrices $A \\in \\mathbb{R}^{m \\times r}$ and $B \\in \\mathbb{R}^{r \\times n}$, where $r \\ll \\min(m, n)$, $A$ is initialized with Gaussian noise, and $B$ with zeros. LoRA freezes the original model $W$ and updates the \"Noise & Zero\" adapter, which may lead to slow convergence. To overcome this limitation, we introduce Principal Singular values and Singular vectors Adaptation (PiSSA). PiSSA shares the same architecture as LoRA, but initializes the adaptor matrices $A$ and $B$ with the principal components of the original matrix $W$, and put the remaining components into a residual matrix $W^{res} \\in \\mathbb{R}^{m \\times n}$ which is frozen during fine-tuning. Compared to LoRA, PiSSA updates the principal components while freezing the \"residual\" parts, allowing faster convergence and enhanced performance. Comparative experiments of PiSSA and LoRA across 12 different models, ranging from 184M to 70B, encompassing 5 NLG and 8 NLU tasks, reveal that PiSSA consistently outperforms LoRA under identical experimental setups. On the GSM8K benchmark, Mistral-7B fine-tuned with PiSSA achieves an accuracy of 72.86%, surpassing LoRA's 67.7% by 5.16%. Due to the same architecture, PiSSA is also compatible with quantization to further reduce the memory requirement of fine-tuning. Compared to QLoRA, QPiSSA exhibits smaller quantization errors in the initial stages. Fine-tuning LLaMA-3-70B on GSM8K, QPiSSA attains an accuracy of 86.05%, exceeding the performances of QLoRA at 81.73%. Leveraging a fast SVD technique, PiSSA can be initialized in only a few seconds, presenting a negligible cost for transitioning from LoRA to PiSSA. Code is available at https://github.com/GraphPKU/PiSSA.",
+    "published": "2024-04-03T15:06:43Z",
+    "updated": "2025-04-09T06:54:20Z",
+    "authors": [
+      "Fanxu Meng",
+      "Zhaohui Wang",
+      "Muhan Zhang"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": true
+  },
+  {
+    "id": "2308.03303",
+    "title": "LoRA-FA: Efficient and Effective Low Rank Representation Fine-tuning",
+    "abstract": "Fine-tuning large language models (LLMs) is crucial for improving their performance on downstream tasks, but full-parameter fine-tuning (Full-FT) is computationally expensive and memory-intensive. Parameter-efficient fine-tuning (PEFT) methods, such as Low-Rank Adaptation (LoRA), address this by optimizing only a small subset of parameters. However, LoRA may underperform Full-FT in certain scenarios due to the intrinsic limitations of its low-rank gradients. In this work, we reveal an asymmetric, collapsible structure in LoRA's update: the low-rank modification to W can be reformulated as a single-layer linear regression, implying that one of the LoRA factors can be frozen without sacrificing expressivity. Leveraging this insight, we introduce LoRA-FA, which freezes the projection-down matrix A and trains only the projection-up matrix B. We further close the gap to Full-FT by deriving closed-form gradient corrections that minimize the discrepancy between the induced low-rank gradient and the full gradient. Through extensive experiments on diverse benchmarks, including GLUE, GSM8K, MT-Bench, and HumanEval, we demonstrate that LoRA-FA consistently achieves comparable performance to existing PEFT methods and Full-FT. Experiments on system efficiency show that LoRA-FA significantly reduces activation memory consumption and computational workload in fine-tuning. Our code is available at https://github.com/huggingface/peft.",
+    "published": "2023-08-07T05:12:27Z",
+    "updated": "2026-05-09T05:30:15Z",
+    "authors": [
+      "Longteng Zhang",
+      "Lin Zhang",
+      "Shaohuai Shi",
+      "Xiaowen Chu",
+      "Bo Li"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": true
+  },
+  {
+    "id": "2211.06687",
+    "title": "Large-scale Contrastive Language-Audio Pretraining with Feature Fusion and Keyword-to-Caption Augmentation",
+    "abstract": "Contrastive learning has shown remarkable success in the field of multimodal representation learning. In this paper, we propose a pipeline of contrastive language-audio pretraining to develop an audio representation by combining audio data with natural language descriptions. To accomplish this target, we first release LAION-Audio-630K, a large collection of 633,526 audio-text pairs from different data sources. Second, we construct a contrastive language-audio pretraining model by considering different audio encoders and text encoders. We incorporate the feature fusion mechanism and keyword-to-caption augmentation into the model design to further enable the model to process audio inputs of variable lengths and enhance the performance. Third, we perform comprehensive experiments to evaluate our model across three tasks: text-to-audio retrieval, zero-shot audio classification, and supervised audio classification. The results demonstrate that our model achieves superior performance in text-to-audio retrieval task. In audio classification tasks, the model achieves state-of-the-art performance in the zero-shot setting and is able to obtain performance comparable to models' results in the non-zero-shot setting. LAION-Audio-630K and the proposed model are both available to the public.",
+    "published": "2022-11-12T15:25:20Z",
+    "updated": "2024-03-21T21:35:04Z",
+    "authors": [
+      "Yusong Wu",
+      "Ke Chen",
+      "Tianyu Zhang",
+      "Yuchen Hui",
+      "Marianna Nezhurina",
+      "Taylor Berg-Kirkpatrick",
+      "Shlomo Dubnov"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2303.10512",
+    "title": "AdaLoRA: Adaptive Budget Allocation for Parameter-Efficient Fine-Tuning",
+    "abstract": "Fine-tuning large pre-trained language models on downstream tasks has become an important paradigm in NLP. However, common practice fine-tunes all of the parameters in a pre-trained model, which becomes prohibitive when a large number of downstream tasks are present. Therefore, many fine-tuning methods are proposed to learn incremental updates of pre-trained weights in a parameter efficient way, e.g., low-rank increments. These methods often evenly distribute the budget of incremental updates across all pre-trained weight matrices, and overlook the varying importance of different weight parameters. As a consequence, the fine-tuning performance is suboptimal. To bridge this gap, we propose AdaLoRA, which adaptively allocates the parameter budget among weight matrices according to their importance score. In particular, AdaLoRA parameterizes the incremental updates in the form of singular value decomposition. Such a novel approach allows us to effectively prune the singular values of unimportant updates, which is essentially to reduce their parameter budget but circumvent intensive exact SVD computations. We conduct extensive experiments with several pre-trained models on natural language processing, question answering, and natural language generation to validate the effectiveness of AdaLoRA. Results demonstrate that AdaLoRA manifests notable improvement over baselines, especially in the low budget settings. Our code is publicly available at https://github.com/QingruZhang/AdaLoRA .",
+    "published": "2023-03-18T22:36:25Z",
+    "updated": "2023-12-20T20:56:14Z",
+    "authors": [
+      "Qingru Zhang",
+      "Minshuo Chen",
+      "Alexander Bukharin",
+      "Nikos Karampatziakis",
+      "Pengcheng He",
+      "Yu Cheng",
+      "Weizhu Chen",
+      "Tuo Zhao"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": true
+  },
+  {
+    "id": "2212.04356",
+    "title": "Robust Speech Recognition via Large-Scale Weak Supervision",
+    "abstract": "We study the capabilities of speech processing systems trained simply to predict large amounts of transcripts of audio on the internet. When scaled to 680,000 hours of multilingual and multitask supervision, the resulting models generalize well to standard benchmarks and are often competitive with prior fully supervised results but in a zero-shot transfer setting without the need for any fine-tuning. When compared to humans, the models approach their accuracy and robustness. We are releasing models and inference code to serve as a foundation for further work on robust speech processing.",
+    "published": "2022-12-06T18:46:04Z",
+    "updated": "2022-12-06T18:46:04Z",
+    "authors": [
+      "Alec Radford",
+      "Jong Wook Kim",
+      "Tao Xu",
+      "Greg Brockman",
+      "Christine McLeavey",
+      "Ilya Sutskever"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2005.07143",
+    "title": "ECAPA-TDNN: Emphasized Channel Attention, Propagation and Aggregation in TDNN Based Speaker Verification",
+    "abstract": "Current speaker verification techniques rely on a neural network to extract speaker representations. The successful x-vector architecture is a Time Delay Neural Network (TDNN) that applies statistics pooling to project variable-length utterances into fixed-length speaker characterizing embeddings. In this paper, we propose multiple enhancements to this architecture based on recent trends in the related fields of face verification and computer vision. Firstly, the initial frame layers can be restructured into 1-dimensional Res2Net modules with impactful skip connections. Similarly to SE-ResNet, we introduce Squeeze-and-Excitation blocks in these modules to explicitly model channel interdependencies. The SE block expands the temporal context of the frame layer by rescaling the channels according to global properties of the recording. Secondly, neural networks are known to learn hierarchical features, with each layer operating on a different level of complexity. To leverage this complementary information, we aggregate and propagate features of different hierarchical levels. Finally, we improve the statistics pooling module with channel-dependent frame attention. This enables the network to focus on different subsets of frames during each of the channel's statistics estimation. The proposed ECAPA-TDNN architecture significantly outperforms state-of-the-art TDNN based systems on the VoxCeleb test sets and the 2019 VoxCeleb Speaker Recognition Challenge.",
+    "published": "2020-05-14T17:02:15Z",
+    "updated": "2020-08-10T13:50:24Z",
+    "authors": [
+      "Brecht Desplanques",
+      "Jenthe Thienpondt",
+      "Kris Demuynck"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": true
+  },
+  {
+    "id": "2110.13900",
+    "title": "WavLM: Large-Scale Self-Supervised Pre-Training for Full Stack Speech Processing",
+    "abstract": "Self-supervised learning (SSL) achieves great success in speech recognition, while limited exploration has been attempted for other speech processing tasks. As speech signal contains multi-faceted information including speaker identity, paralinguistics, spoken content, etc., learning universal representations for all speech tasks is challenging. To tackle the problem, we propose a new pre-trained model, WavLM, to solve full-stack downstream speech tasks. WavLM jointly learns masked speech prediction and denoising in pre-training. By this means, WavLM does not only keep the speech content modeling capability by the masked speech prediction, but also improves the potential to non-ASR tasks by the speech denoising. In addition, WavLM employs gated relative position bias for the Transformer structure to better capture the sequence ordering of input speech. We also scale up the training dataset from 60k hours to 94k hours. WavLM Large achieves state-of-the-art performance on the SUPERB benchmark, and brings significant improvements for various speech processing tasks on their representative benchmarks. The code and pre-trained models are available at https://aka.ms/wavlm.",
+    "published": "2021-10-26T17:55:19Z",
+    "updated": "2022-06-17T05:44:33Z",
+    "authors": [
+      "Sanyuan Chen",
+      "Chengyi Wang",
+      "Zhengyang Chen",
+      "Yu Wu",
+      "Shujie Liu",
+      "Zhuo Chen",
+      "Jinyu Li",
+      "Naoyuki Kanda",
+      "Takuya Yoshioka",
+      "Xiong Xiao",
+      "Jian Wu",
+      "Long Zhou",
+      "Shuo Ren",
+      "Yanmin Qian",
+      "Yao Qian",
+      "Jian Wu",
+      "Michael Zeng",
+      "Xiangzhan Yu",
+      "Furu Wei"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2408.16532",
+    "title": "WavTokenizer: an Efficient Acoustic Discrete Codec Tokenizer for Audio Language Modeling",
+    "abstract": "Language models have been effectively applied to modeling natural signals, such as images, video, speech, and audio. A crucial component of these models is the codec tokenizer, which compresses high-dimensional natural signals into lower-dimensional discrete tokens. In this paper, we introduce WavTokenizer, which offers several advantages over previous SOTA acoustic codec models in the audio domain: 1)extreme compression. By compressing the layers of quantizers and the temporal dimension of the discrete codec, one-second audio of 24kHz sampling rate requires only a single quantizer with 40 or 75 tokens. 2)improved subjective quality. Despite the reduced number of tokens, WavTokenizer achieves state-of-the-art reconstruction quality with outstanding UTMOS scores and inherently contains richer semantic information. Specifically, we achieve these results by designing a broader VQ space, extended contextual windows, and improved attention networks, as well as introducing a powerful multi-scale discriminator and an inverse Fourier transform structure. We conducted extensive reconstruction experiments in the domains of speech, audio, and music. WavTokenizer exhibited strong performance across various objective and subjective metrics compared to state-of-the-art models. We also tested semantic information, VQ utilization, and adaptability to generative models. Comprehensive ablation studies confirm the necessity of each module in WavTokenizer. The related code, demos, and pre-trained models are available at https://github.com/jishengpeng/WavTokenizer.",
+    "published": "2024-08-29T13:43:36Z",
+    "updated": "2025-02-25T11:45:12Z",
+    "authors": [
+      "Shengpeng Ji",
+      "Ziyue Jiang",
+      "Wen Wang",
+      "Yifu Chen",
+      "Minghui Fang",
+      "Jialong Zuo",
+      "Qian Yang",
+      "Xize Cheng",
+      "Zehan Wang",
+      "Ruiqi Li",
+      "Ziang Zhang",
+      "Xiaoda Yang",
+      "Rongjie Huang",
+      "Yidi Jiang",
+      "Qian Chen",
+      "Siqi Zheng",
+      "Zhou Zhao"
+    ],
+    "topics": [
+      "verified_seed"
+    ],
+    "new_to_prior_corpus": true
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "id": "1901.09192",
+  "title": "SelectiveNet: A Deep Neural Network with an Integrated Reject Option",
+  "abstract": "We consider the problem of selective prediction (also known as reject option) in deep neural networks, and introduce SelectiveNet, a deep neural architecture with an integrated reject option. Existing rejection mechanisms are based mostly on a threshold over the prediction confidence of a pre-trained network. In contrast, SelectiveNet is trained to optimize both classification (or regression) and rejection simultaneously, end-to-end. The result is a deep neural network that is optimized over the covered domain. In our experiments, we show a consistently improved risk-coverage trade-off over several well-known classification and regression datasets, thus reaching new state-of-the-art results for deep selective classification.",
+  "published": "2019-01-26T10:09:16Z",
+  "updated": "2019-06-26T18:55:09Z",
+  "authors": [
+    "Yonatan Geifman",
+    "Ran El-Yaniv"
+  ],
+  "topics": [
+    "risk_selection"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "risk",
+  "pdf_url": "https://arxiv.org/pdf/1901.09192",
+  "sha256": "70c911da4c620285d643f13332ba2dd5bf4743581a1f05f960ba4423cceec8d6",
+  "pages": 10,
+  "text_chars": 38211,
+  "snapshot_version": "v4",
+  "retrieved_utc": "2026-11-01T10:06:39.070018+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

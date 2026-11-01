@@ -1,0 +1,27 @@
+{
+  "id": "1911.09645",
+  "title": "Prosody Transfer in Neural Text to Speech Using Global Pitch and Loudness Features",
+  "abstract": "This paper presents a simple yet effective method to achieve prosody transfer from a reference speech signal to synthesized speech. The main idea is to incorporate well-known acoustic correlates of prosody such as pitch and loudness contours of the reference speech into a modern neural text-to-speech (TTS) synthesizer such as Tacotron2 (TC2). More specifically, a small set of acoustic features are extracted from reference audio and then used to condition a TC2 synthesizer. The trained model is evaluated using subjective listening tests and a novel objective evaluation of prosody transfer is proposed. Listening tests show that the synthesized speech is rated as highly natural and that prosody is successfully transferred from the reference speech signal to the synthesized signal.",
+  "published": "2019-11-21T18:04:47Z",
+  "updated": "2020-05-15T20:46:24Z",
+  "authors": [
+    "Siddharth Gururani",
+    "Kilol Gupta",
+    "Dhaval Shah",
+    "Zahra Shakeri",
+    "Jervis Pinto"
+  ],
+  "topics": [
+    "prosody"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "prosody",
+  "pdf_url": "https://arxiv.org/pdf/1911.09645",
+  "sha256": "062b09093919304419d0987c60dfdf194528742d319b6e1a75bfc939c7b5ea28",
+  "pages": 5,
+  "text_chars": 28924,
+  "snapshot_version": "v2",
+  "retrieved_utc": "2026-11-01T10:02:34.489940+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

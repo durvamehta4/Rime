@@ -1,0 +1,30 @@
+{
+  "id": "2005.09629",
+  "title": "Improved Noisy Student Training for Automatic Speech Recognition",
+  "abstract": "Recently, a semi-supervised learning method known as \"noisy student training\" has been shown to improve image classification performance of deep networks significantly. Noisy student training is an iterative self-training method that leverages augmentation to improve network performance. In this work, we adapt and improve noisy student training for automatic speech recognition, employing (adaptive) SpecAugment as the augmentation method. We find effective methods to filter, balance and augment the data generated in between self-training iterations. By doing so, we are able to obtain word error rates (WERs) 4.2%/8.6% on the clean/noisy LibriSpeech test sets by only using the clean 100h subset of LibriSpeech as the supervised set and the rest (860h) as the unlabeled set. Furthermore, we are able to achieve WERs 1.7%/3.4% on the clean/noisy LibriSpeech test sets by using the unlab-60k subset of LibriLight as the unlabeled set for LibriSpeech 960h. We are thus able to improve upon the previous state-of-the-art clean/noisy test WERs achieved on LibriSpeech 100h (4.74%/12.20%) and LibriSpeech (1.9%/4.1%).",
+  "published": "2020-05-19T17:57:29Z",
+  "updated": "2020-10-29T23:26:24Z",
+  "authors": [
+    "Daniel S. Park",
+    "Yu Zhang",
+    "Ye Jia",
+    "Wei Han",
+    "Chung-Cheng Chiu",
+    "Bo Li",
+    "Yonghui Wu",
+    "Quoc V. Le"
+  ],
+  "topics": [
+    "synthetic_loop"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "loop",
+  "pdf_url": "https://arxiv.org/pdf/2005.09629",
+  "sha256": "3376e2a137b490ae311265735a9c78e5af5d8f245bd506a506b462386e8f2f9a",
+  "pages": 5,
+  "text_chars": 29546,
+  "snapshot_version": "v2",
+  "retrieved_utc": "2026-11-01T10:06:05.947438+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

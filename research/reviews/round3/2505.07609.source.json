@@ -1,0 +1,25 @@
+{
+  "id": "2505.07609",
+  "title": "TACOS: Temporally-aligned Audio CaptiOnS for Language-Audio Pretraining",
+  "abstract": "Learning to associate audio with textual descriptions is valuable for a range of tasks, including pretraining, zero-shot classification, audio retrieval, audio captioning, and text-conditioned audio generation. Existing contrastive language-audio pretrained models are typically trained using global, clip-level descriptions, which provide only weak temporal supervision. We hypothesize that CLAP-like language-audio models - particularly, if they are expected to produce frame-level embeddings - can benefit from a stronger temporal supervision. To confirm our hypothesis, we curate a novel dataset of approximately 12,000 audio recordings from Freesound, each annotated with single-sentence free-text descriptions linked to a specific temporal segment in an audio recording. We use large language models to clean these annotations by removing references to non-audible events, transcribed speech, typos, and annotator language bias. We further propose a frame-wise contrastive training strategy that learns to align text descriptions with temporal regions in an audio recording and demonstrate that our model has better temporal text-audio alignment abilities compared to models trained only on global captions when evaluated on the AudioSet Strong benchmark. The dataset and our source code are available on Zenodo and GitHub, respectively.",
+  "published": "2025-05-12T14:30:39Z",
+  "updated": "2025-05-12T14:30:39Z",
+  "authors": [
+    "Paul Primus",
+    "Florian Schmid",
+    "Gerhard Widmer"
+  ],
+  "topics": [
+    "caption_grounding"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "caption",
+  "pdf_url": "https://arxiv.org/pdf/2505.07609",
+  "sha256": "9cff3304883b7a479712b8057b5f856ca5759b8b7923cecd88a75048b1da6724",
+  "pages": 6,
+  "text_chars": 35171,
+  "snapshot_version": "v1",
+  "retrieved_utc": "2026-11-01T10:03:37.429635+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

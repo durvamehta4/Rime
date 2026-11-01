@@ -1,0 +1,25 @@
+{
+  "id": "2306.17199",
+  "title": "Learning Multilingual Expressive Speech Representation for Prosody Prediction without Parallel Data",
+  "abstract": "We propose a method for speech-to-speech emotionpreserving translation that operates at the level of discrete speech units. Our approach relies on the use of multilingual emotion embedding that can capture affective information in a language-independent manner. We show that this embedding can be used to predict the pitch and duration of speech units in a target language, allowing us to resynthesize the source speech signal with the same emotional content. We evaluate our approach to English and French speech signals and show that it outperforms a baseline method that does not use emotional information, including when the emotion embedding is extracted from a different language. Even if this preliminary study does not address directly the machine translation issue, our results demonstrate the effectiveness of our approach for cross-lingual emotion preservation in the context of speech resynthesis.",
+  "published": "2023-06-29T08:06:54Z",
+  "updated": "2023-06-29T08:06:54Z",
+  "authors": [
+    "Jarod Duret",
+    "Titouan Parcollet",
+    "Yannick Est\u00e8ve"
+  ],
+  "topics": [
+    "prosody"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "prosody",
+  "pdf_url": "https://arxiv.org/pdf/2306.17199",
+  "sha256": "7a4584f241a16698ee5331daa6e1c083f825b1b3330a001e2526e205758b0f5e",
+  "pages": 7,
+  "text_chars": 37295,
+  "snapshot_version": "v1",
+  "retrieved_utc": "2026-11-01T10:02:18.186108+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

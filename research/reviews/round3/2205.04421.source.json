@@ -1,0 +1,36 @@
+{
+  "id": "2205.04421",
+  "title": "NaturalSpeech: End-to-End Text to Speech Synthesis with Human-Level Quality",
+  "abstract": "Text to speech (TTS) has made rapid progress in both academia and industry in recent years. Some questions naturally arise that whether a TTS system can achieve human-level quality, how to define/judge that quality and how to achieve it. In this paper, we answer these questions by first defining the human-level quality based on the statistical significance of subjective measure and introducing appropriate guidelines to judge it, and then developing a TTS system called NaturalSpeech that achieves human-level quality on a benchmark dataset. Specifically, we leverage a variational autoencoder (VAE) for end-to-end text to waveform generation, with several key modules to enhance the capacity of the prior from text and reduce the complexity of the posterior from speech, including phoneme pre-training, differentiable duration modeling, bidirectional prior/posterior modeling, and a memory mechanism in VAE. Experiment evaluations on popular LJSpeech dataset show that our proposed NaturalSpeech achieves -0.01 CMOS (comparative mean opinion score) to human recordings at the sentence level, with Wilcoxon signed rank test at p-level p >> 0.05, which demonstrates no statistically significant difference from human recordings for the first time on this dataset.",
+  "published": "2022-05-09T16:57:35Z",
+  "updated": "2022-05-10T15:25:20Z",
+  "authors": [
+    "Xu Tan",
+    "Jiawei Chen",
+    "Haohe Liu",
+    "Jian Cong",
+    "Chen Zhang",
+    "Yanqing Liu",
+    "Xi Wang",
+    "Yichong Leng",
+    "Yuanhao Yi",
+    "Lei He",
+    "Frank Soong",
+    "Tao Qin",
+    "Sheng Zhao",
+    "Tie-Yan Liu"
+  ],
+  "topics": [
+    "tts_backbones"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "backbones",
+  "pdf_url": "https://arxiv.org/pdf/2205.04421",
+  "sha256": "66355daaf5d459a2031975ea82f0b0de4d83516075609976004f0d67e47157b1",
+  "pages": 19,
+  "text_chars": 64597,
+  "snapshot_version": "v2",
+  "retrieved_utc": "2026-11-01T10:04:50.164187+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

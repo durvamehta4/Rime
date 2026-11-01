@@ -1,0 +1,27 @@
+{
+  "id": "2010.11221",
+  "title": "Learning Speaker Embedding from Text-to-Speech",
+  "abstract": "Zero-shot multi-speaker Text-to-Speech (TTS) generates target speaker voices given an input text and the corresponding speaker embedding. In this work, we investigate the effectiveness of the TTS reconstruction objective to improve representation learning for speaker verification. We jointly trained end-to-end Tacotron 2 TTS and speaker embedding networks in a self-supervised fashion. We hypothesize that the embeddings will contain minimal phonetic information since the TTS decoder will obtain that information from the textual input. TTS reconstruction can also be combined with speaker classification to enhance these embeddings further. Once trained, the speaker encoder computes representations for the speaker verification task, while the rest of the TTS blocks are discarded. We investigated training TTS from either manual or ASR-generated transcripts. The latter allows us to train embeddings on datasets without manual transcripts. We compared ASR transcripts and Kaldi phone alignments as TTS inputs, showing that the latter performed better due to their finer resolution. Unsupervised TTS embeddings improved EER by 2.06\\% absolute with regard to i-vectors for the LibriTTS dataset. TTS with speaker classification loss improved EER by 0.28\\% and 0.73\\% absolutely from a model using only speaker classification loss in LibriTTS and Voxceleb1 respectively.",
+  "published": "2020-10-21T18:03:16Z",
+  "updated": "2020-10-21T18:03:16Z",
+  "authors": [
+    "Jaejin Cho",
+    "Piotr Zelasko",
+    "Jesus Villalba",
+    "Shinji Watanabe",
+    "Najim Dehak"
+  ],
+  "topics": [
+    "voice_design"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "identity",
+  "pdf_url": "https://arxiv.org/pdf/2010.11221",
+  "sha256": "d87c9aab4103703e3780902a225004afdbfe17ddb7c6430ba250fa61bf450998",
+  "pages": 5,
+  "text_chars": 31738,
+  "snapshot_version": "v1",
+  "retrieved_utc": "2026-11-01T10:01:18.890585+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

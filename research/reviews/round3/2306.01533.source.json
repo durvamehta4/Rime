@@ -1,0 +1,26 @@
+{
+  "id": "2306.01533",
+  "title": "Enhance Temporal Relations in Audio Captioning with Sound Event Detection",
+  "abstract": "Automated audio captioning aims at generating natural language descriptions for given audio clips, not only detecting and classifying sounds, but also summarizing the relationships between audio events. Recent research advances in audio captioning have introduced additional guidance to improve the accuracy of audio events in generated sentences. However, temporal relations between audio events have received little attention while revealing complex relations is a key component in summarizing audio content. Therefore, this paper aims to better capture temporal relationships in caption generation with sound event detection (SED), a task that locates events' timestamps. We investigate the best approach to integrate temporal information in a captioning model and propose a temporal tag system to transform the timestamps into comprehensible relations. Results evaluated by the proposed temporal metrics suggest that great improvement is achieved in terms of temporal relation generation.",
+  "published": "2023-06-02T13:36:34Z",
+  "updated": "2024-07-18T07:07:08Z",
+  "authors": [
+    "Zeyu Xie",
+    "Xuenan Xu",
+    "Mengyue Wu",
+    "Kai Yu"
+  ],
+  "topics": [
+    "caption_grounding"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "caption",
+  "pdf_url": "https://arxiv.org/pdf/2306.01533",
+  "sha256": "ad218fda840629112c94f7de3d1be28b5660db4b5063bd313876eda00c951f5a",
+  "pages": 5,
+  "text_chars": 27380,
+  "snapshot_version": "v2",
+  "retrieved_utc": "2026-11-01T10:03:40.860705+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

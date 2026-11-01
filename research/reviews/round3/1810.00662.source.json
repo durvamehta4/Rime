@@ -1,0 +1,25 @@
+{
+  "id": "1810.00662",
+  "title": "Hindi-English Code-Switching Speech Corpus",
+  "abstract": "Code-switching refers to the usage of two languages within a sentence or discourse. It is a global phenomenon among multilingual communities and has emerged as an independent area of research. With the increasing demand for the code-switching automatic speech recognition (ASR) systems, the development of a code-switching speech corpus has become highly desirable. However, for training such systems, very limited code-switched resources are available as yet. In this work, we present our first efforts in building a code-switching ASR system in the Indian context. For that purpose, we have created a Hindi-English code-switching speech database. The database not only contains the speech utterances with code-switching properties but also covers the session and the speaker variations like pronunciation, accent, age, gender, etc. This database can be applied in several speech signal processing applications, such as code-switching ASR, language identification, language modeling, speech synthesis etc. This paper mainly presents an analysis of the statistics of the collected code-switching speech corpus. Later, the performance results for the ASR task have been reported for the created database.",
+  "published": "2018-09-24T03:39:47Z",
+  "updated": "2018-09-24T03:39:47Z",
+  "authors": [
+    "Ganji Sreeram",
+    "Kunal Dhawan",
+    "Rohit Sinha"
+  ],
+  "topics": [
+    "native_expressive"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "native",
+  "pdf_url": "https://arxiv.org/pdf/1810.00662",
+  "sha256": "85fd65f98c299b018c300237ddfb18d0f8c66d1714b6f99ab7afb7b075d768b4",
+  "pages": 6,
+  "text_chars": 27124,
+  "snapshot_version": "v1",
+  "retrieved_utc": "2026-11-01T10:05:52.628872+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

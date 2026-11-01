@@ -1,0 +1,25 @@
+{
+  "id": "2205.15439",
+  "title": "StyleTTS: A Style-Based Generative Model for Natural and Diverse Text-to-Speech Synthesis",
+  "abstract": "Text-to-Speech (TTS) has recently seen great progress in synthesizing high-quality speech owing to the rapid development of parallel TTS systems, but producing speech with naturalistic prosodic variations, speaking styles and emotional tones remains challenging. Moreover, since duration and speech are generated separately, parallel TTS models still have problems finding the best monotonic alignments that are crucial for naturalistic speech synthesis. Here, we propose StyleTTS, a style-based generative model for parallel TTS that can synthesize diverse speech with natural prosody from a reference speech utterance. With novel Transferable Monotonic Aligner (TMA) and duration-invariant data augmentation schemes, our method significantly outperforms state-of-the-art models on both single and multi-speaker datasets in subjective tests of speech naturalness and speaker similarity. Through self-supervised learning of the speaking styles, our model can synthesize speech with the same prosodic and emotional tone as any given reference speech without the need for explicitly labeling these categories.",
+  "published": "2022-05-30T21:34:40Z",
+  "updated": "2023-11-20T04:31:13Z",
+  "authors": [
+    "Yinghao Aaron Li",
+    "Cong Han",
+    "Nima Mesgarani"
+  ],
+  "topics": [
+    "tts_backbones"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "backbones",
+  "pdf_url": "https://arxiv.org/pdf/2205.15439",
+  "sha256": "7564c0f6df16ba238c2f45bd8a6d52effa1e4f541d8c32dd378cd53ca63ffe96",
+  "pages": 14,
+  "text_chars": 70490,
+  "snapshot_version": "v2",
+  "retrieved_utc": "2026-11-01T10:04:54.238027+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

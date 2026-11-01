@@ -1,0 +1,29 @@
+{
+  "id": "2402.09353",
+  "title": "DoRA: Weight-Decomposed Low-Rank Adaptation",
+  "abstract": "Among the widely used parameter-efficient fine-tuning (PEFT) methods, LoRA and its variants have gained considerable popularity because of avoiding additional inference costs. However, there still often exists an accuracy gap between these methods and full fine-tuning (FT). In this work, we first introduce a novel weight decomposition analysis to investigate the inherent differences between FT and LoRA. Aiming to resemble the learning capacity of FT from the findings, we propose Weight-Decomposed Low-Rank Adaptation (DoRA). DoRA decomposes the pre-trained weight into two components, magnitude and direction, for fine-tuning, specifically employing LoRA for directional updates to efficiently minimize the number of trainable parameters. By employing \\ours, we enhance both the learning capacity and training stability of LoRA while avoiding any additional inference overhead. \\ours~consistently outperforms LoRA on fine-tuning LLaMA, LLaVA, and VL-BART on various downstream tasks, such as commonsense reasoning, visual instruction tuning, and image/video-text understanding. Code is available at https://github.com/NVlabs/DoRA.",
+  "published": "2024-02-14T17:59:34Z",
+  "updated": "2024-07-09T05:59:16Z",
+  "authors": [
+    "Shih-Yang Liu",
+    "Chien-Yi Wang",
+    "Hongxu Yin",
+    "Pavlo Molchanov",
+    "Yu-Chiang Frank Wang",
+    "Kwang-Ting Cheng",
+    "Min-Hung Chen"
+  ],
+  "topics": [
+    "verified_seed"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "efficiency",
+  "pdf_url": "https://arxiv.org/pdf/2402.09353",
+  "sha256": "f048986e4d0b1c5b0a3f6c3c709ab245a5bcb993aa92704d6170304b413f08a4",
+  "pages": 23,
+  "text_chars": 74221,
+  "snapshot_version": "v6",
+  "retrieved_utc": "2026-11-01T10:06:42.928872+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

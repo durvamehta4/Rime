@@ -1,0 +1,26 @@
+{
+  "id": "2403.18572",
+  "title": "ACES: Evaluating Automated Audio Captioning Models on the Semantics of Sounds",
+  "abstract": "Automated Audio Captioning is a multimodal task that aims to convert audio content into natural language. The assessment of audio captioning systems is typically based on quantitative metrics applied to text data. Previous studies have employed metrics derived from machine translation and image captioning to evaluate the quality of generated audio captions. Drawing inspiration from auditory cognitive neuroscience research, we introduce a novel metric approach -- Audio Captioning Evaluation on Semantics of Sound (ACES). ACES takes into account how human listeners parse semantic information from sounds, providing a novel and comprehensive evaluation perspective for automated audio captioning systems. ACES combines semantic similarities and semantic entity labeling. ACES outperforms similar automated audio captioning metrics on the Clotho-Eval FENSE benchmark in two evaluation categories.",
+  "published": "2024-03-27T13:54:17Z",
+  "updated": "2024-03-27T13:54:17Z",
+  "authors": [
+    "Gijs Wijngaard",
+    "Elia Formisano",
+    "Bruno L. Giordano",
+    "Michel Dumontier"
+  ],
+  "topics": [
+    "caption_grounding"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "caption",
+  "pdf_url": "https://arxiv.org/pdf/2403.18572",
+  "sha256": "53aefc7bf5d8f3a03cae27c5b74d34786ce8aacf2bdd545f6e60f782412a8532",
+  "pages": 9,
+  "text_chars": 43242,
+  "snapshot_version": "v1",
+  "retrieved_utc": "2026-11-01T10:03:34.054766+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

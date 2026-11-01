@@ -1,0 +1,29 @@
+{
+  "id": "2310.08659",
+  "title": "LoftQ: LoRA-Fine-Tuning-Aware Quantization for Large Language Models",
+  "abstract": "Quantization is an indispensable technique for serving Large Language Models (LLMs) and has recently found its way into LoRA fine-tuning. In this work we focus on the scenario where quantization and LoRA fine-tuning are applied together on a pre-trained model. In such cases it is common to observe a consistent gap in the performance on downstream tasks between full fine-tuning and quantization plus LoRA fine-tuning approach. In response, we propose LoftQ (LoRA-Fine-Tuning-aware Quantization), a novel quantization framework that simultaneously quantizes an LLM and finds a proper low-rank initialization for LoRA fine-tuning. Such an initialization alleviates the discrepancy between the quantized and full-precision model and significantly improves generalization in downstream tasks. We evaluate our method on natural language understanding, question answering, summarization, and natural language generation tasks. Experiments show that our method is highly effective and outperforms existing quantization methods, especially in the challenging 2-bit and 2/4-bit mixed precision regimes. The code is available on https://github.com/yxli2123/LoftQ.",
+  "published": "2023-10-12T18:34:08Z",
+  "updated": "2023-11-28T16:06:59Z",
+  "authors": [
+    "Yixiao Li",
+    "Yifan Yu",
+    "Chen Liang",
+    "Pengcheng He",
+    "Nikos Karampatziakis",
+    "Weizhu Chen",
+    "Tuo Zhao"
+  ],
+  "topics": [
+    "verified_seed"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "efficiency",
+  "pdf_url": "https://arxiv.org/pdf/2310.08659",
+  "sha256": "3d214938f89fd5451236506ce288d1729e5cde805a82e3ddfc60da739be52f6d",
+  "pages": 23,
+  "text_chars": 48857,
+  "snapshot_version": "v4",
+  "retrieved_utc": "2026-11-01T10:06:45.826280+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

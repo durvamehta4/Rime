@@ -2,7 +2,7 @@
 
 Status: planned, not executed. Hardware supplied by the user: 4×NVIDIA T4, 256 GB RAM, approximately 1,000 GPU-hours. Confirm actual VRAM and interconnect before execution. A standard T4 has 16 GB; four cards do not form one transparent 64 GB memory pool.
 
-Literature update: [architecture version 3](ARCHITECTURE_V3.md) is current after ten additional detailed main-text readings. Its claim-selection procedure, generator identity interface, reciprocal-direction controls and revised allocation supersede earlier choices here. Compare Indic Parler-TTS's description-native pretrained/fine-tuned releases first, with IndicF5 adapters as the alternative. Prioritize access, native pronunciation, relevant diversity and control tests before selecting the training branch. Compute ceilings below are allocations, not measured usage.
+Literature update: [architecture v4](ARCHITECTURE_V4.md) is current after [103 new scoped full-text critical reviews](reviews/round3/README.md). V4 supersedes earlier choices and the allocation below is synchronized with it. Compare native description-conditioned Indic Parler releases first, then the IndicF5 alternative if needed. Start with shared frozen-encoder readouts and add a specialist only for a measured native gap. Compute ceilings are allocations, not measured usage. No training or T4 benchmark was run during the literature review.
 
 ## Hardware strategy
 
@@ -26,8 +26,8 @@ GPU-hours sum use across cards, including failed runs. Four fully occupied GPUs 
 | Cached evidence and labels | 80 | Versioned training manifests and native claim audit |
 | Caption grounding/adaptation development | 120 | Evidence-fusion and claim-selection choice |
 | G1 description/delivery adaptation | 200 | Generator and equal-compute caption-quality control |
-| Identity conditioning interface and small prior | 100 | Bank/seeds/prior test or documented failure |
-| Targeted synthesis, verification, C1 training | 120 | One complete reciprocal improvement round |
+| Identity conditioning interface and small prior | 80 | Bank/seeds/prior test or documented failure |
+| Targeted synthesis, verification, C1 training | 140 | One complete reciprocal improvement round |
 | Matched-budget controlled comparisons | 150 | Causal evidence for targeting and verification |
 | Final real evaluation, all ten generations, profiling | 80 | Round tables, intervals, Pareto plots |
 | Failure reserve and focused reruns | 100 | Recover from measured implementation failures |
@@ -52,16 +52,18 @@ Use the same starting checkpoints, real examples, data order where applicable, t
 | ID | Comparison | Question answered |
 |---|---|---|
 | B0 | Frozen C0/G0 | Does a reproducible starting system work at all? |
-| C1 | Captioner with/without measured evidence | Does grounding improve real claim accuracy and timing? |
-| C2 | Nested claim selection vs empirical filter on frozen proposals | What is the proxy risk/coverage frontier under the stated calibration assumptions? |
+| C1 | No readouts vs shared-encoder readouts vs one frozen specialist | Does grounding improve real native facts/timing enough to justify its extra compute? |
+| C2 | Empirical selection vs nested CRC proxy vs optional LTT over fixed policies | Which useful risk/coverage frontier is supported, and can the stated loss be certified with available independent units? |
 | G1 | G0 vs same backbone with global description adapters | Does learned conditioning improve instruction following? |
-| G2 | Global-only vs global+temporal controls | Do local timed controls help beyond a longer prompt? |
+| G2 | Global-only vs supported aligned local controls | Do requested local changes occur while identity and native phonetic distinctions survive? |
 | G3 | Rich C0 captions vs simpler measured/global captions, same real audio and compute | Does C→G teaching improve instruction following beyond extra adaptation? |
 | L1 | Extra real replay vs random verified synthesis vs targeted verified synthesis | Is improvement due to targeting rather than training longer or seeing more samples? |
 | L2 | Targeted synthesis with/without independent verification | Does verification prevent wrong synthetic labels? |
 | L3 | Fixed pre-loop generator vs trained G1 for the same target requests | Is the captioner benefit actually due to an improved generator? |
 | D1 | Named/bank/decoder seeds vs conditional identity prior | Do distinct passing identities increase without within-clip drift or native CER loss? |
 | R1 | Ordinary held-out real clips and transformation-family holdouts | Is improvement real rather than artefact recognition? |
+| R2 | Learned-only vs explicit vs hybrid recording ecology | Are effects audible with correct source/room ownership and no double processing? |
+| C3 | Negation, actor, order/overlap, text-delivery and channel-source minimal pairs | Does the system verify the specific claim rather than a correlated caption or teacher cue? |
 
 This matrix is larger than the budget permits at full scale. Use a shared small-scale screening stage and predeclare three headline controlled comparisons: evidence grounding, targeted vs random vs real-replay, and verification on/off. Run generator temporal and identity diagnostics on the same frozen generator if full retraining is unaffordable. Label screened, full-budget, and diagnostic comparisons separately. Do not present an uncontrolled diagnostic as a causal training ablation.
 
@@ -73,7 +75,7 @@ Use native-listener-checked real clips with local development rubrics covering A
 
 - Weighted supported coverage, false-claim weight, and final clipped rubric-style score.
 - Claim precision/recall and omission count, to prevent an empty caption from appearing good because it hallucinates nothing.
-- Event onset/offset errors and proportion within a PS-inspired tolerance; retain raw intervals. A local temporal matching rule is a proxy until organizers confirm their exact rule.
+- Event onset/offset diagnostic errors plus the PS placement rule: a timed item must be placed inside its rubric span widened by 250 ms per side. Retain raw intervals and do not replace this with an MAE threshold. Local rubrics are still proxies for hidden official items.
 - Pitch/rate/pause error where human/tool reference measurements are reliable.
 - Word count, fraction truncated, axis/type coverage, and confidence reliability curves.
 - Performance on audio/text contradictions: same transcript with different delivery; altered transcript context with unchanged acoustics; audio-only, transcript-only, and shuffled-audio controls.
@@ -87,7 +89,7 @@ Intent judgments need bilingual/native review and uncertainty labels. Blindly in
 - Official-model native-script CER once the specified IndicConformer checkpoint and preprocessing are confirmed. Alternative ASR is a diagnostic and must be labeled as such. CER may exceed 1 before score flooring.
 - Speaker diversity among passing samples using the specified verification protocol once available. Until then use a separately labeled local verifier and show threshold sensitivity.
 - Within-clip speaker drift, alignment failures, missing/repeated text, clipping, event realism, and output sample rate.
-- All ten generated outputs per description, not only best-of-ten. A failed or empty output remains in the denominator under the applicable rules.
+- All ten predetermined final outputs per description. The PS final window forbids choosing between generations: no best-of-N, rejection-resampling or replacing weak outputs. Training-data filtering is separate. A failed or empty output remains in the applicable denominator.
 
 CLAP can be an auxiliary retrieval/similarity diagnostic. It cannot establish exact transcript correctness, event timing, intent, or speaker identity and must not replace them. Likewise, agreement with the training captioner is not an independent quality measurement.
 
@@ -95,9 +97,18 @@ CLAP can be an auxiliary retrieval/similarity diagnostic. It cannot establish ex
 
 Use paired resampling of the same items for baseline/system comparisons and stratify by language. Ten generations of one prompt are clustered observations, not ten independent prompts. For multi-clip speakers, include a speaker-cluster sensitivity analysis. Use the organizers' prescribed Track 2 bootstrap procedure if supplied; do not assume Track 1-specific keys automatically apply.
 
-Until clarified, predeclare a local 1,000-replicate item/prompt bootstrap with fixed seed and percentile intervals, label it a local proxy, and retain all per-item measurements. Report effect sizes and uncertainty rather than significance based only on aggregate means.
+Appendix A specifies 1,000 SHA-256-based replicates: sort item IDs in ascending UTF-8 byte order, draw index `int(sha256(seed|bootstrap|measure|r|j),16) mod n`, and use sorted replicate values at zero-based positions 24 and 974, without interpolation. Paired comparisons share draws. Its table does not specify Track 2 measure keys or all Track 2 aggregation details. Declare local development keys, keep every per-item result, and use organizer-supplied Track 2 details when available. Do not label local choices exact official scoring. Keep all ten generations clustered within their request, and add speaker-cluster sensitivity analyses for repeated speakers. Team development listening does not replace organizer-run scored listening.
 
 For each checkpoint report total parameters, trainable parameters, weight precision, peak memory, model size on disk, inference GPU-hours/clip, training GPU-hours, annotation/synthesis/verifier GPU-hours, and all failed-run costs. Plot measured quality against both size and cumulative compute; keep non-dominated candidates instead of assuming largest is best.
+
+## New failure checks from the 103-paper review
+
+- Unknown, absent, normal, requested-only and realized labels remain distinct. Caption omission never supplies a negative label, and rendered assertions retain source, polarity and interval scope.
+- A frozen/EMA second model is not independent evidence by definition. Audit shared teacher errors and compare verification policies at matched accepted coverage, including omitted difficult groups.
+- Original/restored/transformed audio siblings share a split. Restored speech can support clean generator training but cannot retain ecology labels about noise removed from the original.
+- Native CER and identity/delivery metrics remain separate. Score text/style conflicts, whispers, same-speaker laughter, code-switch regions and native short-duration phonetic distinctions. Keep the official verifier threshold; supplementary invariant embeddings are diagnostics.
+- One layer of 1,500×1,280 FP16 frames is 3.84 MB per clip. Four such layers across 100,000 clips use ~1.54 TB before metadata. Check disk and cache invalidation, not just available RAM.
+- CRC false-count/fixed-M loss and LTT retained-claim FDP are different experiments. Do not apply monotonic CRC to the variable-denominator FDP. Freeze policy families/order before calibration; report insufficient data or no certified policy rather than a guarantee unsupported by the sample.
 
 ## Acceptance gates
 
@@ -107,7 +118,7 @@ For each checkpoint report total parameters, trainable parameters, weight precis
 4. **Generator:** targeted requested controls are realized often enough to make synthesis economical; compare real vs synthetic artefacts.
 5. **Loop:** C1 improves useful grounded description quality on real development clips over matched controls, without unexplained language regressions. Predeclare promotion thresholds after measuring baseline variance, before running comparisons.
 6. **Audit:** selected C1/G1 are assessed once on the final real audit set and all ten outputs are retained. Report negative results if the loop fails to improve.
-7. **Freeze:** code/checkpoint hashes, dependencies, prompts, seeds, data provenance, and exact commands reproduce outputs. No manual post-selection.
+7. **Freeze:** code/checkpoint hashes, dependencies, prompts, seeds, data provenance, and exact commands reproduce outputs. No manual editing or final generator candidate selection; retain all ten seeded outputs.
 
 ## Milestones, without inventing a deadline
 

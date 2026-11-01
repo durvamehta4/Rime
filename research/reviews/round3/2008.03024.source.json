@@ -1,0 +1,26 @@
+{
+  "id": "2008.03024",
+  "title": "Disentangled speaker and nuisance attribute embedding for robust speaker verification",
+  "abstract": "Over the recent years, various deep learning-based embedding methods have been proposed and have shown impressive performance in speaker verification. However, as in most of the classical embedding techniques, the deep learning-based methods are known to suffer from severe performance degradation when dealing with speech samples with different conditions (e.g., recording devices, emotional states). In this paper, we propose a novel fully supervised training method for extracting a speaker embedding vector disentangled from the variability caused by the nuisance attributes. The proposed framework was compared with the conventional deep learning-based embedding methods using the RSR2015 and VoxCeleb1 dataset. Experimental results show that the proposed approach can extract speaker embeddings robust to channel and emotional variability.",
+  "published": "2020-08-07T07:31:21Z",
+  "updated": "2020-08-07T07:31:21Z",
+  "authors": [
+    "Woo Hyun Kang",
+    "Sung Hwan Mun",
+    "Min Hyun Han",
+    "Nam Soo Kim"
+  ],
+  "topics": [
+    "speaker_metrics"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "identity",
+  "pdf_url": "https://arxiv.org/pdf/2008.03024",
+  "sha256": "d14aed6444698c015cee4c09b6c9cb8f586ad43369e758056b40ebdd212bfd49",
+  "pages": 12,
+  "text_chars": 56395,
+  "snapshot_version": "v1",
+  "retrieved_utc": "2026-11-01T10:01:39.044043+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

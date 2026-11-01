@@ -1,0 +1,25 @@
+{
+  "id": "2406.00294",
+  "title": "Creative Text-to-Audio Generation via Synthesizer Programming",
+  "abstract": "Neural audio synthesis methods now allow specifying ideas in natural language. However, these methods produce results that cannot be easily tweaked, as they are based on large latent spaces and up to billions of uninterpretable parameters. We propose a text-to-audio generation method that leverages a virtual modular sound synthesizer with only 78 parameters. Synthesizers have long been used by skilled sound designers for media like music and film due to their flexibility and intuitive controls. Our method, CTAG, iteratively updates a synthesizer's parameters to produce high-quality audio renderings of text prompts that can be easily inspected and tweaked. Sounds produced this way are also more abstract, capturing essential conceptual features over fine-grained acoustic details, akin to how simple sketches can vividly convey visual concepts. Our results show how CTAG produces sounds that are distinctive, perceived as artistic, and yet similarly identifiable to recent neural audio synthesis models, positioning it as a valuable and complementary tool.",
+  "published": "2024-06-01T04:08:31Z",
+  "updated": "2024-06-01T04:08:31Z",
+  "authors": [
+    "Manuel Cherep",
+    "Nikhil Singh",
+    "Jessica Shand"
+  ],
+  "topics": [
+    "scene_generation"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "scene",
+  "pdf_url": "https://arxiv.org/pdf/2406.00294",
+  "sha256": "5de00e4ea5772ad10b50c7542985db07917872e3bd1e97b4b1f23e292ba1c5ef",
+  "pages": 16,
+  "text_chars": 54955,
+  "snapshot_version": "v1",
+  "retrieved_utc": "2026-11-01T10:04:33.763676+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

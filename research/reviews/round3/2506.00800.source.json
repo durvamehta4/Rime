@@ -1,0 +1,28 @@
+{
+  "id": "2506.00800",
+  "title": "CLAP-ART: Automated Audio Captioning with Semantic-rich Audio Representation Tokenizer",
+  "abstract": "Automated Audio Captioning (AAC) aims to describe the semantic contexts of general sounds, including acoustic events and scenes, by leveraging effective acoustic features. To enhance performance, an AAC method, EnCLAP, employed discrete tokens from EnCodec as an effective input for fine-tuning a language model BART. However, EnCodec is designed to reconstruct waveforms rather than capture the semantic contexts of general sounds, which AAC should describe. To address this issue, we propose CLAP-ART, an AAC method that utilizes ``semantic-rich and discrete'' tokens as input. CLAP-ART computes semantic-rich discrete tokens from pre-trained audio representations through vector quantization. We experimentally confirmed that CLAP-ART outperforms baseline EnCLAP on two AAC benchmarks, indicating that semantic-rich discrete tokens derived from semantically rich AR are beneficial for AAC.",
+  "published": "2025-06-01T03:01:16Z",
+  "updated": "2025-06-01T03:01:16Z",
+  "authors": [
+    "Daiki Takeuchi",
+    "Binh Thien Nguyen",
+    "Masahiro Yasuda",
+    "Yasunori Ohishi",
+    "Daisuke Niizumi",
+    "Noboru Harada"
+  ],
+  "topics": [
+    "caption_grounding"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "caption",
+  "pdf_url": "https://arxiv.org/pdf/2506.00800",
+  "sha256": "11bc963623859d64af3f2fdc5658d2fbb910df3d8913f6761875cce7304da780",
+  "pages": 5,
+  "text_chars": 31216,
+  "snapshot_version": "v1",
+  "retrieved_utc": "2026-11-01T10:04:03.837922+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

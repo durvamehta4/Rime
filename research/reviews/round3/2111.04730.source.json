@@ -1,0 +1,25 @@
+{
+  "id": "2111.04730",
+  "title": "Emotional Prosody Control for Speech Generation",
+  "abstract": "Machine-generated speech is characterized by its limited or unnatural emotional variation. Current text to speech systems generates speech with either a flat emotion, emotion selected from a predefined set, average variation learned from prosody sequences in training data or transferred from a source style. We propose a text to speech(TTS) system, where a user can choose the emotion of generated speech from a continuous and meaningful emotion space (Arousal-Valence space). The proposed TTS system can generate speech from the text in any speaker's style, with fine control of emotion. We show that the system works on emotion unseen during training and can scale to previously unseen speakers given his/her speech sample. Our work expands the horizon of the state-of-the-art FastSpeech2 backbone to a multi-speaker setting and gives it much-coveted continuous (and interpretable) affective control, without any observable degradation in the quality of the synthesized speech.",
+  "published": "2021-11-07T08:52:04Z",
+  "updated": "2021-11-07T08:52:04Z",
+  "authors": [
+    "Sarath Sivaprasad",
+    "Saiteja Kosgi",
+    "Vineet Gandhi"
+  ],
+  "topics": [
+    "prosody"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "prosody",
+  "pdf_url": "https://arxiv.org/pdf/2111.04730",
+  "sha256": "9c76d95993111780c58afbc02faec2135670b33cd9f34f18ea4c216ec49212c5",
+  "pages": 5,
+  "text_chars": 29313,
+  "snapshot_version": "v1",
+  "retrieved_utc": "2026-11-01T10:02:01.693352+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "2406.00022",
+  "title": "Multilingual Prosody Transfer: Comparing Supervised & Transfer Learning",
+  "abstract": "The field of prosody transfer in speech synthesis systems is rapidly advancing. This research is focused on evaluating learning methods for adapting pre-trained monolingual text-to-speech (TTS) models to multilingual conditions, i.e., Supervised Fine-Tuning (SFT) and Transfer Learning (TL). This comparison utilizes three distinct metrics: Mean Opinion Score (MOS), Recognition Accuracy (RA), and Mel Cepstral Distortion (MCD). Results demonstrate that, in comparison to SFT, TL leads to significantly enhanced performance, with an average MOS higher by 1.53 points, a 37.5% increase in RA, and approximately a 7.8-point improvement in MCD. These findings are instrumental in helping build TTS models for low-resource languages.",
+  "published": "2024-05-23T20:43:24Z",
+  "updated": "2024-06-18T05:14:21Z",
+  "authors": [
+    "Arnav Goel",
+    "Medha Hira",
+    "Anubha Gupta"
+  ],
+  "topics": [
+    "prosody"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "prosody",
+  "pdf_url": "https://arxiv.org/pdf/2406.00022",
+  "sha256": "909c573352ecbbd3763b16f74d9b349101ed58684afd3562048346bf62fe5c5b",
+  "pages": 7,
+  "text_chars": 17527,
+  "snapshot_version": "v2",
+  "retrieved_utc": "2026-11-01T10:01:55.020410+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

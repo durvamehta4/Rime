@@ -1,10 +1,10 @@
 # Protocol for the requested 200+ paper review
 
-**Current status:** the network blocker below is historical and resolved. The breadth-first pass inspected 296 records and retained 277 relevant works, using abstracts and selected full-text passages, with additional scoped checks for 28 core sources. A separate pass adds ten detailed main-text readings from 16 newly acquired publications; six are unfinished leads. See [first-pass counts](REVIEW_STATUS.json), [additional-pass counts](reviews/round2/STATUS.json), [ledger](paper_ledger.csv) and [synthesis](LITERATURE_REVIEW.md). This does not claim completion of the original target of 230 exhaustive full-paper reviews. The initial protocol below is retained to make that distinction explicit.
+**Current status:** the network blocker below is historical and resolved. The original breadth-first pass inspected 296 records and retained 277, with 28 additional core scoped checks. Round 2 added ten main-text reviews and six acquired-only leads. [Round 3](reviews/round3/README.md) adds 103 distinct scoped full-text critical reviews, giving 415 distinct records across passes and 113 detailed reviews across the two additional passes with separately declared scopes. No pass is represented as exhaustive cover-to-cover/appendix reading. [V4](ARCHITECTURE_V4.md) is current. See the original [counts](REVIEW_STATUS.json), round-2 [status](reviews/round2/STATUS.json), and round-3 [status/locators](reviews/round3/STATUS.json). The original target below is preserved; it is not a claim of 230 exhaustive readings.
 
-## Current evidence boundary
+## Historical evidence boundary at initial setup
 
-Full research papers reviewed: **0**. The uploaded PS and official repository documentation/selected code were consulted. None of these repository reads is counted as full-paper reading. The architecture is a hypothesis to refine with the requested review and experiments.
+At initial setup, full research papers reviewed: **0**. This paragraph records the initial blocker, not the current review count. The uploaded PS and official repository documentation/selected code were consulted. None of these repository reads is counted as full-paper reading. The architecture is a hypothesis to refine with the requested review and experiments.
 
 The first scholarly-index requests failed with HTTP CONNECT 403. This is a network-policy blocker, not evidence that papers do not exist. Draft additions were saved for arxiv.org, export.arxiv.org, api.openalex.org, api.semanticscholar.org, aclanthology.org, openreview.net, api2.openreview.net, and huggingface.co. Preserve existing presets/custom rules. Review/save and publish through environment settings before treating these as accessible. Some PDFs or publisher redirects may need additional destinations after observing actual failures.
 
@@ -69,9 +69,9 @@ The final review should produce:
 
 The architecture cannot honestly be called literature-complete until this evidence exists. Even a completed review cannot establish “best possible” without task-specific controlled tests.
 
-## Core sources already identified from official documentation
+## Historical core-source leads at initial setup
 
-These are bibliographic leads with repository evidence; they have **not** been read as full papers here:
+These were bibliographic leads at setup, before the review passes. Current reading scope is given by each pass's ledger; this historical list does not override it:
 
 - Qwen3-Omni Technical Report — arXiv:2509.17765.
 - Qwen3-TTS report — arXiv:2601.15621; verify canonical title from the paper.

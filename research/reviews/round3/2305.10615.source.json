@@ -1,0 +1,33 @@
+{
+  "id": "2305.10615",
+  "title": "ML-SUPERB: Multilingual Speech Universal PERformance Benchmark",
+  "abstract": "Speech processing Universal PERformance Benchmark (SUPERB) is a leaderboard to benchmark the performance of Self-Supervised Learning (SSL) models on various speech processing tasks. However, SUPERB largely considers English speech in its evaluation. This paper presents multilingual SUPERB (ML-SUPERB), covering 143 languages (ranging from high-resource to endangered), and considering both automatic speech recognition and language identification. Following the concept of SUPERB, ML-SUPERB utilizes frozen SSL features and employs a simple framework for multilingual tasks by learning a shallow downstream model. Similar to the SUPERB benchmark, we find speech SSL models can significantly improve performance compared to FBANK features. Furthermore, we find that multilingual models do not always perform better than their monolingual counterparts. We will release ML-SUPERB as a challenge with organized datasets and reproducible training scripts for future multilingual representation research.",
+  "published": "2023-05-18T00:01:27Z",
+  "updated": "2025-02-24T18:06:55Z",
+  "authors": [
+    "Jiatong Shi",
+    "Dan Berrebbi",
+    "William Chen",
+    "Ho-Lam Chung",
+    "En-Pei Hu",
+    "Wei Ping Huang",
+    "Xuankai Chang",
+    "Shang-Wen Li",
+    "Abdelrahman Mohamed",
+    "Hung-yi Lee",
+    "Shinji Watanabe"
+  ],
+  "topics": [
+    "audio_models"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "representations",
+  "pdf_url": "https://arxiv.org/pdf/2305.10615",
+  "sha256": "a431318a429d278e885a311215a776009566509d2fa414726c46bb5d75b19836",
+  "pages": 6,
+  "text_chars": 30071,
+  "snapshot_version": "v3",
+  "retrieved_utc": "2026-11-01T10:05:33.127744+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

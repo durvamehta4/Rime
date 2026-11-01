@@ -1,0 +1,27 @@
+{
+  "id": "2207.12262",
+  "title": "Transplantation of Conversational Speaking Style with Interjections in Sequence-to-Sequence Speech Synthesis",
+  "abstract": "Sequence-to-Sequence Text-to-Speech architectures that directly generate low level acoustic features from phonetic sequences are known to produce natural and expressive speech when provided with adequate amounts of training data. Such systems can learn and transfer desired speaking styles from one seen speaker to another (in multi-style multi-speaker settings), which is highly desirable for creating scalable and customizable Human-Computer Interaction systems. In this work we explore one-to-many style transfer from a dedicated single-speaker conversational corpus with style nuances and interjections. We elaborate on the corpus design and explore the feasibility of such style transfer when assisted with Voice-Conversion-based data augmentation. In a set of subjective listening experiments, this approach resulted in high-fidelity style transfer with no quality degradation. However, a certain voice persona shift was observed, requiring further improvements in voice conversion.",
+  "published": "2022-07-25T15:32:47Z",
+  "updated": "2022-07-25T15:32:47Z",
+  "authors": [
+    "Raul Fernandez",
+    "David Haws",
+    "Guy Lorberbom",
+    "Slava Shechtman",
+    "Alexander Sorin"
+  ],
+  "topics": [
+    "expressive"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "style",
+  "pdf_url": "https://arxiv.org/pdf/2207.12262",
+  "sha256": "303e6db4fa0006851f40eb6216dc3273a3b4d256995d72b73e7e8863814af650",
+  "pages": 5,
+  "text_chars": 32137,
+  "snapshot_version": "v1",
+  "retrieved_utc": "2026-11-01T10:03:07.617243+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

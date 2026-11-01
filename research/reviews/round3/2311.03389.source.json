@@ -1,0 +1,26 @@
+{
+  "id": "2311.03389",
+  "title": "Learning Disentangled Speech Representations",
+  "abstract": "Disentangled representation learning in speech processing has lagged behind other domains, largely due to the lack of datasets with annotated generative factors for robust evaluation. To address this, we propose SynSpeech, a novel large-scale synthetic speech dataset specifically designed to enable research on disentangled speech representations. SynSpeech includes controlled variations in speaker identity, spoken text, and speaking style, with three dataset versions to support experimentation at different levels of complexity. In this study, we present a comprehensive framework to evaluate disentangled representation learning techniques, applying both linear probing and established supervised disentanglement metrics to assess the modularity, compactness, and informativeness of the representations learned by a state-of-the-art model. Using the RAVE model as a test case, we find that SynSpeech facilitates benchmarking across a range of factors, achieving promising disentanglement of simpler features like gender and speaking style, while highlighting challenges in isolating complex attributes like speaker identity. This benchmark dataset and evaluation framework fills a critical gap, supporting the development of more robust and interpretable speech representation learning methods.",
+  "published": "2023-11-04T04:54:17Z",
+  "updated": "2025-01-11T06:05:41Z",
+  "authors": [
+    "Yusuf Brima",
+    "Ulf Krumnack",
+    "Simone Pika",
+    "Gunther Heidemann"
+  ],
+  "topics": [
+    "prosody"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "prosody",
+  "pdf_url": "https://arxiv.org/pdf/2311.03389",
+  "sha256": "91056efed4910d145f578407f09b63e4075a4113c5bd3583c54aa992ae4ad80a",
+  "pages": 15,
+  "text_chars": 44425,
+  "snapshot_version": "v4",
+  "retrieved_utc": "2026-11-01T10:01:51.780171+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

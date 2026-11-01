@@ -18,5 +18,10 @@
   "network_blocker_resolved": true,
   "model_training_run": false,
   "additional_pass_status": "reviews/round2/STATUS.json",
-  "current_architecture": "ARCHITECTURE_V3.md"
+  "current_architecture": "ARCHITECTURE_V4.md",
+  "latest_pass_status": "reviews/round3/STATUS.json",
+  "latest_pass_new_scoped_fulltext_reviews": 103,
+  "all_passes_unique_records": 415,
+  "additional_passes_detailed_reviews_separate_scopes": 113,
+  "historical_counts_above_are_first_pass_only": true
 }

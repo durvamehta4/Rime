@@ -1,0 +1,25 @@
+{
+  "id": "2411.14972",
+  "title": "Open-Amp: Synthetic Data Framework for Audio Effect Foundation Models",
+  "abstract": "This paper introduces Open-Amp, a synthetic data framework for generating large-scale and diverse audio effects data. Audio effects are relevant to many musical audio processing and Music Information Retrieval (MIR) tasks, such as modelling of analog audio effects, automatic mixing, tone matching and transcription. Existing audio effects datasets are limited in scope, usually including relatively few audio effects processors and a limited amount of input audio signals. Our proposed framework overcomes these issues, by crowdsourcing neural network emulations of guitar amplifiers and effects, created by users of open-source audio effects emulation software. This allows users of Open-Amp complete control over the input signals to be processed by the effects models, as well as providing high-quality emulations of hundreds of devices. Open-Amp can render audio online during training, allowing great flexibility in data augmentation. Our experiments show that using Open-Amp to train a guitar effects encoder achieves new state-of-the-art results on multiple guitar effects classification tasks. Furthermore, we train a one-to-many guitar effects model using Open-Amp, and use it to emulate unseen analog effects via manipulation of its learned latent space, indicating transferability to analog guitar effects data.",
+  "published": "2024-11-22T14:27:59Z",
+  "updated": "2024-11-22T14:27:59Z",
+  "authors": [
+    "Alec Wright",
+    "Alistair Carson",
+    "Lauri Juvela"
+  ],
+  "topics": [
+    "synthetic_loop"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "scene",
+  "pdf_url": "https://arxiv.org/pdf/2411.14972",
+  "sha256": "d3080894a96c31568b2c3eb60a2f145169bba059d53bd6f30133f41249d37711",
+  "pages": 5,
+  "text_chars": 31203,
+  "snapshot_version": "v1",
+  "retrieved_utc": "2026-11-01T10:04:37.119236+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "2307.04123",
+  "title": "Towards cross-language prosody transfer for dialog",
+  "abstract": "Speech-to-speech translation systems today do not adequately support use for dialog purposes. In particular, nuances of speaker intent and stance can be lost due to improper prosody transfer. We present an exploration of what needs to be done to overcome this. First, we developed a data collection protocol in which bilingual speakers re-enact utterances from an earlier conversation in their other language, and used this to collect an English-Spanish corpus, so far comprising 1871 matched utterance pairs. Second, we developed a simple prosodic dissimilarity metric based on Euclidean distance over a broad set of prosodic features. We then used these to investigate cross-language prosodic differences, measure the likely utility of three simple baseline models, and identify phenomena which will require more powerful modeling. Our findings should inform future research on cross-language prosody and the design of speech-to-speech translation systems capable of effective prosody transfer.",
+  "published": "2023-07-09T08:32:14Z",
+  "updated": "2023-07-09T08:32:14Z",
+  "authors": [
+    "Jonathan E. Avila",
+    "Nigel G. Ward"
+  ],
+  "topics": [
+    "prosody"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "prosody",
+  "pdf_url": "https://arxiv.org/pdf/2307.04123",
+  "sha256": "a9db4a7d9a10f0f4566c17599594eff944f731b74bdd745400cef4b1e73214bd",
+  "pages": 5,
+  "text_chars": 30617,
+  "snapshot_version": "v1",
+  "retrieved_utc": "2026-11-01T10:02:04.820107+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

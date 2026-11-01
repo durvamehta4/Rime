@@ -1,0 +1,31 @@
+{
+  "id": "2406.11768",
+  "title": "GAMA: A Large Audio-Language Model with Advanced Audio Understanding and Complex Reasoning Abilities",
+  "abstract": "Perceiving and understanding non-speech sounds and non-verbal speech is essential to making decisions that help us interact with our surroundings. In this paper, we propose GAMA, a novel General-purpose Large Audio-Language Model (LALM) with Advanced Audio Understanding and Complex Reasoning Abilities. We build GAMA by integrating an LLM with multiple types of audio representations, including features from a custom Audio Q-Former, a multi-layer aggregator that aggregates features from multiple layers of an audio encoder. We fine-tune GAMA on a large-scale audio-language dataset, which augments it with audio understanding capabilities. Next, we propose CompA-R (Instruction-Tuning for Complex Audio Reasoning), a synthetically generated instruction-tuning (IT) dataset with instructions that require the model to perform complex reasoning on the input audio. We instruction-tune GAMA with CompA-R to endow it with complex reasoning abilities, where we further add a soft prompt as input with high-level semantic evidence by leveraging event tags of the input audio. Finally, we also propose CompA-R-test, a human-labeled evaluation dataset for evaluating the capabilities of LALMs on open-ended audio question-answering that requires complex reasoning. Through automated and expert human evaluations, we show that GAMA outperforms all other LALMs in literature on diverse audio understanding tasks by margins of 1%-84%. Further, GAMA IT-ed on CompA-R proves to be superior in its complex reasoning and instruction following capabilities.",
+  "published": "2024-06-17T17:31:01Z",
+  "updated": "2024-06-17T17:31:01Z",
+  "authors": [
+    "Sreyan Ghosh",
+    "Sonal Kumar",
+    "Ashish Seth",
+    "Chandra Kiran Reddy Evuru",
+    "Utkarsh Tyagi",
+    "S Sakshi",
+    "Oriol Nieto",
+    "Ramani Duraiswami",
+    "Dinesh Manocha"
+  ],
+  "topics": [
+    "verified_seed"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "backbones",
+  "pdf_url": "https://arxiv.org/pdf/2406.11768",
+  "sha256": "779efee71f49307c3a8c68f55f85eef5b877b90b0eeeeda4aa3f18428a0afb3e",
+  "pages": 25,
+  "text_chars": 110920,
+  "snapshot_version": "v1",
+  "retrieved_utc": "2026-11-01T10:05:17.354226+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

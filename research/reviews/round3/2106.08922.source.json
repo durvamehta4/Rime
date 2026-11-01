@@ -1,0 +1,26 @@
+{
+  "id": "2106.08922",
+  "title": "Momentum Pseudo-Labeling for Semi-Supervised Speech Recognition",
+  "abstract": "Pseudo-labeling (PL) has been shown to be effective in semi-supervised automatic speech recognition (ASR), where a base model is self-trained with pseudo-labels generated from unlabeled data. While PL can be further improved by iteratively updating pseudo-labels as the model evolves, most of the previous approaches involve inefficient retraining of the model or intricate control of the label update. We present momentum pseudo-labeling (MPL), a simple yet effective strategy for semi-supervised ASR. MPL consists of a pair of online and offline models that interact and learn from each other, inspired by the mean teacher method. The online model is trained to predict pseudo-labels generated on the fly by the offline model. The offline model maintains a momentum-based moving average of the online model. MPL is performed in a single training process and the interaction between the two models effectively helps them reinforce each other to improve the ASR performance. We apply MPL to an end-to-end ASR model based on the connectionist temporal classification. The experimental results demonstrate that MPL effectively improves over the base model and is scalable to different semi-supervised scenarios with varying amounts of data or domain mismatch.",
+  "published": "2021-06-16T16:24:55Z",
+  "updated": "2021-06-16T16:24:55Z",
+  "authors": [
+    "Yosuke Higuchi",
+    "Niko Moritz",
+    "Jonathan Le Roux",
+    "Takaaki Hori"
+  ],
+  "topics": [
+    "synthetic_loop"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "loop",
+  "pdf_url": "https://arxiv.org/pdf/2106.08922",
+  "sha256": "b29e9fb6cac92f6fe06cf01374f374129bca6e0e6963ac8368df2e23376e21f4",
+  "pages": 5,
+  "text_chars": 33154,
+  "snapshot_version": "v1",
+  "retrieved_utc": "2026-11-01T10:06:15.756286+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

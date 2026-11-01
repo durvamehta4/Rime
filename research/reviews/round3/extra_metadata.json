@@ -1,0 +1,91 @@
+[
+  {
+    "id": "2304.01448",
+    "title": "TorchAudio-Squim: Reference-less Speech Quality and Intelligibility measures in TorchAudio",
+    "abstract": "Measuring quality and intelligibility of a speech signal is usually a critical step in development of speech processing systems. To enable this, a variety of metrics to measure quality and intelligibility under different assumptions have been developed. Through this paper, we introduce tools and a set of models to estimate such known metrics using deep neural networks. These models are made available in the well-established TorchAudio library, the core audio and speech processing library within the PyTorch deep learning framework. We refer to it as TorchAudio-Squim, TorchAudio-Speech QUality and Intelligibility Measures. More specifically, in the current version of TorchAudio-squim, we establish and release models for estimating PESQ, STOI and SI-SDR among objective metrics and MOS among subjective metrics. We develop a novel approach for objective metric estimation and use a recently developed approach for subjective metric estimation. These models operate in a ``reference-less\" manner, that is they do not require the corresponding clean speech as reference for speech assessment. Given the unavailability of clean speech and the effortful process of subjective evaluation in real-world situations, such easy-to-use tools would greatly benefit speech processing research and development.",
+    "published": "2023-04-04T01:44:24Z",
+    "updated": "2023-04-04T01:44:24Z",
+    "authors": [
+      "Anurag Kumar",
+      "Ke Tan",
+      "Zhaoheng Ni",
+      "Pranay Manocha",
+      "Xiaohui Zhang",
+      "Ethan Henderson",
+      "Buye Xu"
+    ],
+    "topics": [
+      "quality"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2401.16812",
+    "title": "SpeechBERTScore: Reference-Aware Automatic Evaluation of Speech Generation Leveraging NLP Evaluation Metrics",
+    "abstract": "While subjective assessments have been the gold standard for evaluating speech generation, there is a growing need for objective metrics that are highly correlated with human subjective judgments due to their cost efficiency. This paper proposes reference-aware automatic evaluation methods for speech generation inspired by evaluation metrics in natural language processing. The proposed SpeechBERTScore computes the BERTScore for self-supervised dense speech features of the generated and reference speech, which can have different sequential lengths. We also propose SpeechBLEU and SpeechTokenDistance, which are computed on speech discrete tokens. The evaluations on synthesized speech show that our method correlates better with human subjective ratings than mel cepstral distortion and a recent mean opinion score prediction model. Also, they are effective in noisy speech evaluation and have cross-lingual applicability.",
+    "published": "2024-01-30T08:26:28Z",
+    "updated": "2024-09-01T14:34:27Z",
+    "authors": [
+      "Takaaki Saeki",
+      "Soumi Maiti",
+      "Shinnosuke Takamichi",
+      "Shinji Watanabe",
+      "Hiroshi Saruwatari"
+    ],
+    "topics": [
+      "quality"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2010.15258",
+    "title": "DNSMOS: A Non-Intrusive Perceptual Objective Speech Quality metric to evaluate Noise Suppressors",
+    "abstract": "Human subjective evaluation is the gold standard to evaluate speech quality optimized for human perception. Perceptual objective metrics serve as a proxy for subjective scores. The conventional and widely used metrics require a reference clean speech signal, which is unavailable in real recordings. The no-reference approaches correlate poorly with human ratings and are not widely adopted in the research community. One of the biggest use cases of these perceptual objective metrics is to evaluate noise suppression algorithms. This paper introduces a multi-stage self-teaching based perceptual objective metric that is designed to evaluate noise suppressors. The proposed method generalizes well in challenging test conditions with a high correlation to human ratings.",
+    "published": "2020-10-28T22:19:51Z",
+    "updated": "2021-02-10T22:37:29Z",
+    "authors": [
+      "Chandan K A Reddy",
+      "Vishak Gopal",
+      "Ross Cutler"
+    ],
+    "topics": [
+      "quality"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2606.26903",
+    "title": "DNSMOS-C: Improving End-to-end Speech Quality Models via Contrastive Learning",
+    "abstract": "We introduce DNSMOS-C, a compact end-to-end speech quality assessment model that extends the DNSMOS Pro framework by integrating a MOS-guided triplet-based contrastive loss. Applied directly to the intermediate embeddings, this contrastive supervision encourages the latent space to be better organized with respect to perceptual quality while preserving the simplicity and efficiency of DNSMOS Pro. Unlike prior methods that depend on large pre-trained self-supervised learning (SSL) encoders and multi-stage training, DNSMOS-C jointly learns speech representations and MOS regression within a single, unified framework. Experiments on multiple datasets show that DNSMOS-C consistently improves correlation metrics over DNSMOS Pro and achieves better generalization on challenging out-of-domain test sets. Furthermore, latent space analyses indicate that our approach learns representations that exhibit an emergent low-dimensional quality ordering, which enhances interpretability and improves training stability. These findings demonstrate that MOS-guided contrastive learning enables more robust and accurate quality predictions without incurring additional computational overhead.",
+    "published": "2026-06-25T11:35:12Z",
+    "updated": "2026-06-25T11:35:12Z",
+    "authors": [
+      "Xinyu Liang",
+      "Fredrik Cumlin",
+      "Victor Ungureanu",
+      "Chandan K. A. Reddy",
+      "Christian Schuldt",
+      "Saikat Chatterjee"
+    ],
+    "topics": [
+      "quality"
+    ],
+    "new_to_prior_corpus": false
+  },
+  {
+    "id": "2110.01763",
+    "title": "DNSMOS P.835: A Non-Intrusive Perceptual Objective Speech Quality Metric to Evaluate Noise Suppressors",
+    "abstract": "Human subjective evaluation is the gold standard to evaluate speech quality optimized for human perception. Perceptual objective metrics serve as a proxy for subjective scores. We have recently developed a non-intrusive speech quality metric called Deep Noise Suppression Mean Opinion Score (DNSMOS) using the scores from ITU-T Rec. P.808 subjective evaluation. The P.808 scores reflect the overall quality of the audio clip. ITU-T Rec. P.835 subjective evaluation framework gives the standalone quality scores of speech and background noise in addition to the overall quality. In this work, we train an objective metric based on P.835 human ratings that outputs 3 scores: i) speech quality (SIG), ii) background noise quality (BAK), and iii) the overall quality (OVRL) of the audio. The developed metric is highly correlated with human ratings, with a Pearson's Correlation Coefficient (PCC)=0.94 for SIG and PCC=0.98 for BAK and OVRL. This is the first non-intrusive P.835 predictor we are aware of. DNSMOS P.835 is made publicly available as an Azure service.",
+    "published": "2021-10-05T00:42:13Z",
+    "updated": "2022-02-04T06:56:16Z",
+    "authors": [
+      "Chandan K A Reddy",
+      "Vishak Gopal",
+      "Ross Cutler"
+    ],
+    "topics": [
+      "quality"
+    ],
+    "new_to_prior_corpus": false
+  }
+]

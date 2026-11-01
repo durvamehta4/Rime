@@ -1,0 +1,31 @@
+{
+  "id": "1803.09047",
+  "title": "Towards End-to-End Prosody Transfer for Expressive Speech Synthesis with Tacotron",
+  "abstract": "We present an extension to the Tacotron speech synthesis architecture that learns a latent embedding space of prosody, derived from a reference acoustic representation containing the desired prosody. We show that conditioning Tacotron on this learned embedding space results in synthesized audio that matches the prosody of the reference signal with fine time detail even when the reference and synthesis speakers are different. Additionally, we show that a reference prosody embedding can be used to synthesize text that is different from that of the reference utterance. We define several quantitative and subjective metrics for evaluating prosody transfer, and report results with accompanying audio samples from single-speaker and 44-speaker Tacotron models on a prosody transfer task.",
+  "published": "2018-03-24T02:52:58Z",
+  "updated": "2018-03-24T02:52:58Z",
+  "authors": [
+    "RJ Skerry-Ryan",
+    "Eric Battenberg",
+    "Ying Xiao",
+    "Yuxuan Wang",
+    "Daisy Stanton",
+    "Joel Shor",
+    "Ron J. Weiss",
+    "Rob Clark",
+    "Rif A. Saurous"
+  ],
+  "topics": [
+    "prosody"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "prosody",
+  "pdf_url": "https://arxiv.org/pdf/1803.09047",
+  "sha256": "1c1675aa1a6e7c73414d9e900fb0c5ffdaa76ad5187e070cc0d79c46c7ec5c28",
+  "pages": 11,
+  "text_chars": 43216,
+  "snapshot_version": "v1",
+  "retrieved_utc": "2026-11-01T10:02:24.780119+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

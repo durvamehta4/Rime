@@ -1,8 +1,24 @@
 # Literature synthesis for Rime Track 2
 
-The current design is [version 3](ARCHITECTURE_V3.md), following [ten additional detailed main-text reviews](reviews/round2/DETAILED_REVIEWS.md). First-pass counts below retain their original scope. The new pass separately records 16 acquired publications, ten reviewed in detail and six unfinished leads, with no overlap in IDs.
+The current design is [version 4](ARCHITECTURE_V4.md), incorporating [103 additional scoped full-text critical reviews](reviews/round3/README.md) beyond the prior 312-record corpus. The [decision matrix](reviews/round3/DECISIONS.md) connects new supporting/conflicting evidence to implementation gates. These are selected method/result/limitation passage reviews, not 103 exhaustive full-paper/appendix readings. No experiments were reproduced or model improvements measured. The earlier pass counts below retain their original depth.
 
-## Additional findings from the deeper pass
+## Findings from the 103-paper pass
+
+**Use shared features before buying more encoders.** FCC shows useful intermediate Whisper features and factor-first captions, while emotion2vec and Dynamic-SUPERB expose task-dependent rankings. GAMA supports representation diversity but does not establish that every extra encoder pays its cost on native claims. V4 tests small layer-weighted local/global readouts first and adds one specialist only after a measured native gap.
+
+**Unknown is neither normal nor absent.** SpeechCaps/FCC supervision and the negation studies expose problems when metadata, omitted captions or requested descriptions become acoustic truth. Preserve source, polarity, time and requested-versus-realized provenance. CLAP-ART, ACES, FENSE and CLAIRA support separating grammar/semantic similarity from fact verification. SED captioning's sequential-word gains do not prove interval placement; TACOS's local grounding does not establish the PS's narrower temporal rule.
+
+**Identity priors have direct prior art and real tradeoffs.** TacoSpawn already fits stopped-gradient mixtures to TTS speaker embeddings. Disentanglement penalties can destroy speaker information, and emotion/channel changes can make one person look like multiple voices. YourTTS discusses copied recording distortion inflating identity similarity. V4 requires a trained compatible conditioning interface, fixed identity across phrases/vocal events, official-threshold diversity plus confound diagnostics, and an 80-hour prior gate rather than another foundation-model project.
+
+**Native acoustics and source control require separate tests.** Vistaar, Indian alignment/duration studies and code-switch resources show substantial language/domain dependence. WhisperX alignment does not validate an incorrect transcript. FLEURS-R supports a generator-clean data view, not replacing the original audio for ecology labels. Whisper/laughter/Lombard studies motivate trained source/effort behavior; gain and pitch edits are insufficient. Background generation is a separate tiered path, not a replacement for exact native speech.
+
+**Calibration and recursion need precise claims.** Learn then Test can handle a fixed policy family's bounded nonmonotonic FDP loss, unlike the monotonic CRC proxy used in v3. Neither controls unknown official weights. Non-exchangeable CRC has an additional shift term; similarity weighting is not a free guarantee. DUST's shift failure shows confidently agreeing pseudo-labels can be wrong. Multilingual pseudo-labeling and SynthASR motivate per-language replay and rollback. Accumulation theory is supporting evidence, not a safety theorem for this capped speech loop.
+
+**Sampling protocol matters.** Conformal Language Modeling guarantees that a candidate set contains an acceptable response, not which response is correct. SPIDEr-max oracle gains are not deployed caption gains. VALL-E 2 reports single- and multiple-sampling settings separately. Independently, the PS final-window rule forbids choosing between generations: v4 retains every one of ten predetermined outputs. Filtering/retries are training-data operations only.
+
+**Count all memory and compute.** StyleTTS-ZS's decoder cost and LoRA-FA's activation discussion motivate full-pipeline profiling. rsLoRA, DoRA and LoftQ are bounded adapter alternatives, not guaranteed audio improvements. Feature caches can exceed a terabyte even with 256 GB RAM. V4 holds the total at 1,000 GPU-hours and shifts 20 hours from identity exploration to verified synthesis/C1.
+
+## Historical findings from the ten-paper deeper pass
 
 - **Explicit variation beats assuming decoder noise creates identities.** PromptTTS 2 motivates a learned missing-variation path; ControlSpeech shows why reference identity and style can conflict. Version 3 budgets a small conditioning-interface/prior experiment, with separate identity and delivery tests.
 - **Delivery requires suitable evidence.** StyleCap's WavLM features outperform speaker x-vectors on delivery factors. LibriTTS-P separates speaker-level descriptions from utterance-level labels. PENN shows why unreliable voicing can hide behind accurate voiced-frame pitch. These motivate a small windowed delivery path and validity masks.
@@ -53,4 +69,4 @@ Does **calibrated, per-claim verification plus weakness-targeted generation** im
 
 Do not claim schemas, teacher fusion, synthetic transformations, targeting or cycle consistency as individually new. Establish any contribution through precise comparison with the closest prior methods and matched-budget ablations.
 
-The recommendation is [ARCHITECTURE_V3.md](ARCHITECTURE_V3.md). The unresolved evidence is experimental: checkpoint access/compatibility, native quality, timing, T4 throughput, relevant diversity and whether the loop beats its controls. No literature result establishes a guaranteed winning architecture.
+The recommendation is [ARCHITECTURE_V4.md](ARCHITECTURE_V4.md). The unresolved evidence is experimental: checkpoint access/compatibility, native quality, timing, T4 throughput, relevant diversity and whether the loop beats its controls. No literature result establishes a guaranteed winning architecture.

@@ -1,0 +1,28 @@
+{
+  "id": "2501.11378",
+  "title": "Investigation of Whisper ASR Hallucinations Induced by Non-Speech Audio",
+  "abstract": "Hallucinations of deep neural models are amongst key challenges in automatic speech recognition (ASR). In this paper, we investigate hallucinations of the Whisper ASR model induced by non-speech audio segments present during inference. By inducting hallucinations with various types of sounds, we show that there exists a set of hallucinations that appear frequently. We then study hallucinations caused by the augmentation of speech with such sounds. Finally, we describe the creation of a bag of hallucinations (BoH) that allows to remove the effect of hallucinations through the post-processing of text transcriptions. The results of our experiments show that such post-processing is capable of reducing word error rate (WER) and acts as a good safeguard against problematic hallucinations.",
+  "published": "2025-01-20T10:14:52Z",
+  "updated": "2025-01-20T10:14:52Z",
+  "authors": [
+    "Mateusz Bara\u0144ski",
+    "Jan Jasi\u0144ski",
+    "Julitta Bartolewska",
+    "Stanis\u0142aw Kacprzak",
+    "Marcin Witkowski",
+    "Konrad Kowalczyk"
+  ],
+  "topics": [
+    "caption_truth"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "caption",
+  "pdf_url": "https://arxiv.org/pdf/2501.11378",
+  "sha256": "8d2f04a6cfe7d9a8d0cc376c82ff8429da61c040e774844dfddaafa99e050f47",
+  "pages": 5,
+  "text_chars": 27565,
+  "snapshot_version": "v1",
+  "retrieved_utc": "2026-11-01T10:04:07.463660+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

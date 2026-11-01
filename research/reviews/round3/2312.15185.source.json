@@ -1,0 +1,29 @@
+{
+  "id": "2312.15185",
+  "title": "emotion2vec: Self-Supervised Pre-Training for Speech Emotion Representation",
+  "abstract": "We propose emotion2vec, a universal speech emotion representation model. emotion2vec is pre-trained on open-source unlabeled emotion data through self-supervised online distillation, combining utterance-level loss and frame-level loss during pre-training. emotion2vec outperforms state-of-the-art pre-trained universal models and emotion specialist models by only training linear layers for the speech emotion recognition task on the mainstream IEMOCAP dataset. In addition, emotion2vec shows consistent improvements among 10 different languages of speech emotion recognition datasets. emotion2vec also shows excellent results on other emotion tasks, such as song emotion recognition, emotion prediction in conversation, and sentiment analysis. Comparison experiments, ablation experiments, and visualization comprehensively demonstrate the universal capability of the proposed emotion2vec. To the best of our knowledge, emotion2vec is the first universal representation model in various emotion-related tasks, filling a gap in the field.",
+  "published": "2023-12-23T07:46:55Z",
+  "updated": "2023-12-23T07:46:55Z",
+  "authors": [
+    "Ziyang Ma",
+    "Zhisheng Zheng",
+    "Jiaxin Ye",
+    "Jinchao Li",
+    "Zhifu Gao",
+    "Shiliang Zhang",
+    "Xie Chen"
+  ],
+  "topics": [
+    "verified_seed"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "representations",
+  "pdf_url": "https://arxiv.org/pdf/2312.15185",
+  "sha256": "6c2ccbbe70260a9b09952f7a14b98af40800f93f3316d9c493012cb46add2c23",
+  "pages": 12,
+  "text_chars": 48310,
+  "snapshot_version": "v1",
+  "retrieved_utc": "2026-11-01T10:05:19.669859+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

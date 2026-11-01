@@ -1,0 +1,37 @@
+{
+  "id": "2309.09510",
+  "title": "Dynamic-SUPERB: Towards A Dynamic, Collaborative, and Comprehensive Instruction-Tuning Benchmark for Speech",
+  "abstract": "Text language models have shown remarkable zero-shot capability in generalizing to unseen tasks when provided with well-formulated instructions. However, existing studies in speech processing primarily focus on limited or specific tasks. Moreover, the lack of standardized benchmarks hinders a fair comparison across different approaches. Thus, we present Dynamic-SUPERB, a benchmark designed for building universal speech models capable of leveraging instruction tuning to perform multiple tasks in a zero-shot fashion. To achieve comprehensive coverage of diverse speech tasks and harness instruction tuning, we invite the community to collaborate and contribute, facilitating the dynamic growth of the benchmark. To initiate, Dynamic-SUPERB features 55 evaluation instances by combining 33 tasks and 22 datasets. This spans a broad spectrum of dimensions, providing a comprehensive platform for evaluation. Additionally, we propose several approaches to establish benchmark baselines. These include the utilization of speech models, text language models, and the multimodal encoder. Evaluation results indicate that while these baselines perform reasonably on seen tasks, they struggle with unseen ones. We release all materials to the public and welcome researchers to collaborate on the project, advancing technologies in the field together.",
+  "published": "2023-09-18T06:43:30Z",
+  "updated": "2024-03-22T15:25:04Z",
+  "authors": [
+    "Chien-yu Huang",
+    "Ke-Han Lu",
+    "Shih-Heng Wang",
+    "Chi-Yuan Hsiao",
+    "Chun-Yi Kuan",
+    "Haibin Wu",
+    "Siddhant Arora",
+    "Kai-Wei Chang",
+    "Jiatong Shi",
+    "Yifan Peng",
+    "Roshan Sharma",
+    "Shinji Watanabe",
+    "Bhiksha Ramakrishnan",
+    "Shady Shehata",
+    "Hung-yi Lee"
+  ],
+  "topics": [
+    "audio_models"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "representations",
+  "pdf_url": "https://arxiv.org/pdf/2309.09510",
+  "sha256": "68025393e4f2fa813b83a456fbc7f4882dcfb46a0ea00f8b47c562daac91a8a8",
+  "pages": 6,
+  "text_chars": 31458,
+  "snapshot_version": "v2",
+  "retrieved_utc": "2026-11-01T10:05:26.251749+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "1808.01410",
+  "title": "Predicting Expressive Speaking Style From Text In End-To-End Speech Synthesis",
+  "abstract": "Global Style Tokens (GSTs) are a recently-proposed method to learn latent disentangled representations of high-dimensional data. GSTs can be used within Tacotron, a state-of-the-art end-to-end text-to-speech synthesis system, to uncover expressive factors of variation in speaking style. In this work, we introduce the Text-Predicted Global Style Token (TP-GST) architecture, which treats GST combination weights or style embeddings as \"virtual\" speaking style labels within Tacotron. TP-GST learns to predict stylistic renderings from text alone, requiring neither explicit labels during training nor auxiliary inputs for inference. We show that, when trained on a dataset of expressive speech, our system generates audio with more pitch and energy variation than two state-of-the-art baseline models. We further demonstrate that TP-GSTs can synthesize speech with background noise removed, and corroborate these analyses with positive results on human-rated listener preference audiobook tasks. Finally, we demonstrate that multi-speaker TP-GST models successfully factorize speaker identity and speaking style. We provide a website with audio samples for each of our findings.",
+  "published": "2018-08-04T02:21:07Z",
+  "updated": "2018-08-04T02:21:07Z",
+  "authors": [
+    "Daisy Stanton",
+    "Yuxuan Wang",
+    "RJ Skerry-Ryan"
+  ],
+  "topics": [
+    "expressive"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "style",
+  "pdf_url": "https://arxiv.org/pdf/1808.01410",
+  "sha256": "b8c18f2894685e2e5da0a45b784f1d1799c5631f0acb5478457a08f27fec3b6e",
+  "pages": 8,
+  "text_chars": 29564,
+  "snapshot_version": "v1",
+  "retrieved_utc": "2026-11-01T10:02:54.586097+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "2106.08321",
+  "title": "ADEPT: A Dataset for Evaluating Prosody Transfer",
+  "abstract": "Text-to-speech is now able to achieve near-human naturalness and research focus has shifted to increasing expressivity. One popular method is to transfer the prosody from a reference speech sample. There have been considerable advances in using prosody transfer to generate more expressive speech, but the field lacks a clear definition of what successful prosody transfer means and a method for measuring it. We introduce a dataset of prosodically-varied reference natural speech samples for evaluating prosody transfer. The samples include global variations reflecting emotion and interpersonal attitude, and local variations reflecting topical emphasis, propositional attitude, syntactic phrasing and marked tonicity. The corpus only includes prosodic variations that listeners are able to distinguish with reasonable accuracy, and we report these figures as a benchmark against which text-to-speech prosody transfer can be compared. We conclude the paper with a demonstration of our proposed evaluation methodology, using the corpus to evaluate two text-to-speech models that perform prosody transfer.",
+  "published": "2021-06-15T17:55:05Z",
+  "updated": "2021-07-21T09:31:17Z",
+  "authors": [
+    "Alexandra Torresquintero",
+    "Tian Huey Teh",
+    "Christopher G. R. Wallis",
+    "Marlene Staib",
+    "Devang S Ram Mohan",
+    "Vivian Hu",
+    "Lorenzo Foglianti",
+    "Jiameng Gao",
+    "Simon King"
+  ],
+  "topics": [
+    "prosody"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "prosody",
+  "pdf_url": "https://arxiv.org/pdf/2106.08321",
+  "sha256": "a924c419385f3315a9283103c526a9c05f2fa2bc28075586ec3ac68c88ce1735",
+  "pages": 5,
+  "text_chars": 32443,
+  "snapshot_version": "v2",
+  "retrieved_utc": "2026-11-01T10:01:58.126604+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

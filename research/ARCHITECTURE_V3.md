@@ -1,5 +1,7 @@
 # Track 2 architecture, version 3
 
+**Historical:** superseded by [architecture v4](ARCHITECTURE_V4.md), based on 103 additional scoped full-text reviews. V4 updates the allocation, shared-feature priority, label contract, calibration alternatives and final-generation policy.
+
 This is the revised research recommendation for **4×T4, 256 GB RAM and 1,000 GPU-hours**, informed by [ten additional detailed main-text readings](reviews/round2/DETAILED_REVIEWS.md). It supersedes [version 2](ARCHITECTURE_V2.md). It has not been trained, profiled on T4s or shown to win the benchmark. The new reading changes the identity sampler, delivery evidence, claim selection, scene rendering and loop evaluation; it does not justify building a larger foundation model.
 
 ## Recommendation

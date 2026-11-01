@@ -1,0 +1,25 @@
+{
+  "id": "2211.08983",
+  "title": "Is my automatic audio captioning system so bad? spider-max: a metric to consider several caption candidates",
+  "abstract": "Automatic Audio Captioning (AAC) is the task that aims to describe an audio signal using natural language. AAC systems take as input an audio signal and output a free-form text sentence, called a caption. Evaluating such systems is not trivial, since there are many ways to express the same idea. For this reason, several complementary metrics, such as BLEU, CIDEr, SPICE and SPIDEr, are used to compare a single automatic caption to one or several captions of reference, produced by a human annotator. Nevertheless, an automatic system can produce several caption candidates, either using some randomness in the sentence generation process, or by considering the various competing hypothesized captions during decoding with beam-search, for instance. If we consider an end-user of an AAC system, presenting several captions instead of a single one seems relevant to provide some diversity, similarly to information retrieval systems. In this work, we explore the possibility to consider several predicted captions in the evaluation process instead of one. For this purpose, we propose SPIDEr-max, a metric that takes the maximum SPIDEr value among the scores of several caption candidates. To advocate for our metric, we report experiments on Clotho v2.1 and AudioCaps, with a transformed-based system. On AudioCaps for example, this system reached a SPIDEr-max value (with 5 candidates) close to the SPIDEr human score of reference.",
+  "published": "2022-11-14T19:16:45Z",
+  "updated": "2022-11-14T19:16:45Z",
+  "authors": [
+    "Etienne Labb\u00e9",
+    "Thomas Pellegrini",
+    "Julien Pinquier"
+  ],
+  "topics": [
+    "verified_seed"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "caption",
+  "pdf_url": "https://arxiv.org/pdf/2211.08983",
+  "sha256": "0ae2daa4d27db498de72d356d84d22f6f550d1b7919abf43c403640a102f7050",
+  "pages": 5,
+  "text_chars": 27143,
+  "snapshot_version": "v1",
+  "retrieved_utc": "2026-11-01T10:04:10.302673+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

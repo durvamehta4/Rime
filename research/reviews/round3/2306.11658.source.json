@@ -1,0 +1,28 @@
+{
+  "id": "2306.11658",
+  "title": "Cross-lingual Prosody Transfer for Expressive Machine Dubbing",
+  "abstract": "Prosody transfer is well-studied in the context of expressive speech synthesis. Cross-lingual prosody transfer, however, is challenging and has been under-explored to date. In this paper, we present a novel solution to learn prosody representations that are transferable across languages and speakers for machine dubbing of expressive multimedia contents. Multimedia contents often contain field recordings. To enable prosody transfer from noisy audios, we introduce a novel noise modelling module that disentangles noise conditioning from prosody conditioning, and thereby gains independent control of noise levels in the synthesised speech. We augment noisy training data with clean data to improve the ability of the model to map the denoised reference audio to clean speech. Our proposed system can generate speech with context-matching prosody and closes the gap between a strong baseline and human expressive dialogs by 11.2%.",
+  "published": "2023-06-20T16:28:03Z",
+  "updated": "2023-06-20T16:28:03Z",
+  "authors": [
+    "Jakub Swiatkowski",
+    "Duo Wang",
+    "Mikolaj Babianski",
+    "Patrick Lumban Tobing",
+    "Ravichander Vipperla",
+    "Vincent Pollet"
+  ],
+  "topics": [
+    "prosody"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "prosody",
+  "pdf_url": "https://arxiv.org/pdf/2306.11658",
+  "sha256": "09fee46db1fdb8af65a9d5202378740fc65dfa2bd642f2c69f66a59d9c38494a",
+  "pages": 5,
+  "text_chars": 27760,
+  "snapshot_version": "v1",
+  "retrieved_utc": "2026-11-01T10:02:08.315914+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

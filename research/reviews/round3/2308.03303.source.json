@@ -1,0 +1,27 @@
+{
+  "id": "2308.03303",
+  "title": "LoRA-FA: Efficient and Effective Low Rank Representation Fine-tuning",
+  "abstract": "Fine-tuning large language models (LLMs) is crucial for improving their performance on downstream tasks, but full-parameter fine-tuning (Full-FT) is computationally expensive and memory-intensive. Parameter-efficient fine-tuning (PEFT) methods, such as Low-Rank Adaptation (LoRA), address this by optimizing only a small subset of parameters. However, LoRA may underperform Full-FT in certain scenarios due to the intrinsic limitations of its low-rank gradients. In this work, we reveal an asymmetric, collapsible structure in LoRA's update: the low-rank modification to W can be reformulated as a single-layer linear regression, implying that one of the LoRA factors can be frozen without sacrificing expressivity. Leveraging this insight, we introduce LoRA-FA, which freezes the projection-down matrix A and trains only the projection-up matrix B. We further close the gap to Full-FT by deriving closed-form gradient corrections that minimize the discrepancy between the induced low-rank gradient and the full gradient. Through extensive experiments on diverse benchmarks, including GLUE, GSM8K, MT-Bench, and HumanEval, we demonstrate that LoRA-FA consistently achieves comparable performance to existing PEFT methods and Full-FT. Experiments on system efficiency show that LoRA-FA significantly reduces activation memory consumption and computational workload in fine-tuning. Our code is available at https://github.com/huggingface/peft.",
+  "published": "2023-08-07T05:12:27Z",
+  "updated": "2026-05-09T05:30:15Z",
+  "authors": [
+    "Longteng Zhang",
+    "Lin Zhang",
+    "Shaohuai Shi",
+    "Xiaowen Chu",
+    "Bo Li"
+  ],
+  "topics": [
+    "verified_seed"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "efficiency",
+  "pdf_url": "https://arxiv.org/pdf/2308.03303",
+  "sha256": "92cbd65b03a4342835c497530b6dc1db58a11222c18a454eec28d9f62f51d55d",
+  "pages": 25,
+  "text_chars": 75325,
+  "snapshot_version": "v3",
+  "retrieved_utc": "2026-11-01T10:06:52.604959+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

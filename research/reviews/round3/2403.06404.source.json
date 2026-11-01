@@ -1,0 +1,24 @@
+{
+  "id": "2403.06404",
+  "title": "Cosine Scoring with Uncertainty for Neural Speaker Embedding",
+  "abstract": "Uncertainty modeling in speaker representation aims to learn the variability present in speech utterances. While the conventional cosine-scoring is computationally efficient and prevalent in speaker recognition, it lacks the capability to handle uncertainty. To address this challenge, this paper proposes an approach for estimating uncertainty at the speaker embedding front-end and propagating it to the cosine scoring back-end. Experiments conducted on the VoxCeleb and SITW datasets confirmed the efficacy of the proposed method in handling uncertainty arising from embedding estimation. It achieved improvement with 8.5% and 9.8% average reductions in EER and minDCF compared to the conventional cosine similarity. It is also computationally efficient in practice.",
+  "published": "2024-03-11T03:31:35Z",
+  "updated": "2024-03-11T03:31:35Z",
+  "authors": [
+    "Qiongqiong Wang",
+    "Kong Aik Lee"
+  ],
+  "topics": [
+    "voice_design"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "identity",
+  "pdf_url": "https://arxiv.org/pdf/2403.06404",
+  "sha256": "a55d112c348a94e41f3a217310a12ff67ccfcbbc10d5b957a712f16561bca08a",
+  "pages": 5,
+  "text_chars": 27294,
+  "snapshot_version": "v1",
+  "retrieved_utc": "2026-11-01T10:01:42.041824+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}

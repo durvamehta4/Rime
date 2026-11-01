@@ -1,30 +1,37 @@
 # Rime Track 2: literature and architecture
 
-**Current recommendation: [architecture version 3](ARCHITECTURE_V3.md).** The additional pass acquired 16 previously absent papers and completed **ten detailed main-text reviews**, including methods, results, ablations and limitations where present. [Detailed new readings](reviews/round2/DETAILED_REVIEWS.md), [source/reading ledger](reviews/round2/ledger.csv), [new-pass status](reviews/round2/STATUS.json) and [acquisition instructions](reviews/round2/REPRODUCIBILITY.md) record the scope. Six acquired papers remain follow-up leads. This adds depth; it does not turn the earlier broad screening into full-paper readings.
+**Current recommendation: [architecture v4](ARCHITECTURE_V4.md)** for **4×T4, 256 GB RAM and 1,000 GPU-hours**.
 
-The breadth-first review inspected **296 distinct publication records**, retained **277 relevant works**, and excluded **19** for scope, duplicate lineage, or unusable extraction. **28 core sources have additional scoped checks and interpretation.**
+The latest pass adds **103 distinct scoped full-text critical reviews**, with methods, author-reported results, limitations and concrete design decisions. None repeats an ID from the previous 312-record corpus. See the [103-paper index](reviews/round3/README.md), [evidence ledger](reviews/round3/ledger.csv), [decision matrix](reviews/round3/DECISIONS.md) and [review status](reviews/round3/STATUS.json).
 
-Review depth is explicit: abstracts plus selected full-text passages for the broad pass, with additional methods/results/limitations checks for core sources. This is **not a claim of 277 cover-to-cover readings**. Some automatically selected passages are introductory context or table captions; the dossier records that limitation. No paper experiments were reproduced and no model was trained. The architecture awaits native-language and T4 validation.
+These are selected method/result/limitation passage reviews, **not cover-to-cover readings of all 103 papers and appendices**. No experiment was reproduced, model trained or T4 benchmark run. The architecture's expected improvements require the proposed native-language tests.
 
-## Start here
+## Read first
 
-- [Literature synthesis](LITERATURE_REVIEW.md): findings that change the design.
-- [Recommended architecture, version 3](ARCHITECTURE_V3.md): hierarchical evidence, independent identity/delivery, bounded claim-risk calibration, source-aware rendering and a falsifiable reciprocal round.
-- [Detailed additional paper reviews](reviews/round2/DETAILED_REVIEWS.md): ten new main-text readings and six explicitly unfinished leads.
-- [Current experiments and 1,000 GPU-hour allocation](ARCHITECTURE_V3.md#7-budget-and-decisive-comparisons); [extended experiment procedures](EXPERIMENTS.md): 4×T4 and 256 GB RAM.
-- [Previous architecture, version 2](ARCHITECTURE_V2.md): preserved first-pass design and implementation-source checks.
-- [Core-paper findings](reviews/CORE_FINDINGS.md): evidence locations, caveats and architecture consequences.
-- [Paper ledger](paper_ledger.csv): all inspected records, exclusions, URLs and snapshot hashes.
-- [Paper-by-paper dossier](reviews/PAPER_BY_PAPER.md): abstracts and inspected evidence passages, with review scope.
-- [Machine-readable evidence](reviews/paper_evidence.jsonl), [BibTeX](references.bib), and [review counts](REVIEW_STATUS.json).
-- [Research protocol](RESEARCH_PROTOCOL.md): original target, search strategy and evidence levels.
+- [Architecture v4](ARCHITECTURE_V4.md): shared encoder readouts, source/polarity-aware claims, stable identity, native delivery, scene rendering and one controlled reciprocal round.
+- [What changed and why](reviews/round3/DECISIONS.md): supporting and conflicting evidence, tests and novelty boundaries.
+- [All 103 additional reviews](reviews/round3/README.md): 13 topic files, source versions/hashes and reading locators.
+- [Experiments and compute allocation](EXPERIMENTS.md): 1,000 GPU-hours, matched controls, all ten final generations and sealed real audits.
+- [Literature synthesis](LITERATURE_REVIEW.md): current findings alongside earlier evidence.
+- [Reproduce this research pass](reviews/round3/REPRODUCIBILITY.md): acquisition, passage inspection, provenance and validation.
 
-The initial [proposal](TRACK2_ARCHITECTURE.md) and version 2 are preserved for context; version 3 is current. The description-native Indic Parler baseline remains first, subject to eligible access and native tests. The new identity prior and delivery expert are gated experiments, not proven improvements. No additional model training or T4 measurements were performed.
+## Evidence depth across passes
 
-## Access and reproducibility
+| Pass | Distinct records | What was done |
+|---|---:|---|
+| Original broad review | 296 | Abstracts and selected passages; 277 retained, 19 excluded; 28 core sources received additional scoped checks |
+| Previous deeper pass | 16 additional | Ten main-text reviews; six acquired-only leads remain unfinished |
+| Latest pass | 103 additional | 103 curated scoped full-text critical reviews, no prior-ID overlap |
+| **All passes** | **415 unique records** | Different evidence depths, not 415 detailed or exhaustive readings |
 
-Research sites became accessible after the user's publication. No environment changes were reapplied and nothing was published by the agent. Searches, acquisition scripts, hashes and evidence are saved. Raw PDFs/extracted text are local caches in `papers/`; public documentation snapshots are in `sources/`. They are excluded from Git to avoid committing a large third-party corpus. Original sources and licenses remain authoritative.
+The two additional passes contain **113 detailed reviews with their separately stated scopes**. This does not upgrade the original screening or the six acquired-only leads. [Original counts](REVIEW_STATUS.json), [previous-pass counts](reviews/round2/STATUS.json), [original ledger](paper_ledger.csv), [original dossier](reviews/PAPER_BY_PAPER.md), [core findings](reviews/CORE_FINDINGS.md), [previous detailed readings](reviews/round2/DETAILED_REVIEWS.md) and [protocol](RESEARCH_PROTOCOL.md) preserve the history. The original [BibTeX](references.bib) and [103 new references](reviews/round3/references.bib) are separate.
 
-Indic Parler's public card/API can be read, but its model is automatically gated and unauthenticated config retrieval returned 401. That affects future execution, not this paper review. No credential values were requested, printed or saved. Indic-Speak is separately gated with a custom license and is not assumed interchangeable with a description-controlled model.
+Versions [3](ARCHITECTURE_V3.md), [2](ARCHITECTURE_V2.md) and the [initial proposal](TRACK2_ARCHITECTURE.md) are historical. V4 supersedes their current recommendations and allocation. The identity prior, local adapters, optional specialists and calibration policies are experiments with stop gates, not proven improvements.
 
-The PS is the user-uploaded **Rime (1).pdf**, `sediment://file_00000000589c82088b96fab02ca758a0`. Its rules are design constraints, not authorization to contact organizers, publish repositories, record people or spend paid GPU compute.
+## Access and source boundaries
+
+Research access works after the user's environment publication. This pass did not reapply onboarding changes or publish environment configuration. Raw PDFs/extracted passages are local ignored caches under `papers/`; source/label provenance and critical notes are tracked. Public metadata and a paper's claims do not establish released weights, native-language support or license eligibility.
+
+The previously inspected Indic Parler card reports Hindi/Tamil, about 938M parameters, Apache-2.0 and automatic gated access; authenticated checkpoint retrieval/execution remains a future feasibility gate. No credential values were requested or saved by the research work.
+
+The PS is the uploaded **Rime (1).pdf**, `sediment://file_00000000589c82088b96fab02ca758a0`. Its rules are reference constraints, not authorization to contact people, record speakers, spend paid GPU compute or publish a cloud environment. The proposed final inference uses open models and no human output selection. All ten final generations are retained under the PS's final-window rule.

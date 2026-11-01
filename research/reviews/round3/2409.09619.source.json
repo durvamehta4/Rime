@@ -1,0 +1,24 @@
+{
+  "id": "2409.09619",
+  "title": "Compositional Audio Representation Learning",
+  "abstract": "Human auditory perception is compositional in nature -- we identify auditory streams from auditory scenes with multiple sound events. However, such auditory scenes are typically represented using clip-level representations that do not disentangle the constituent sound sources. In this work, we learn source-centric audio representations where each sound source is represented using a distinct, disentangled source embedding in the audio representation. We propose two novel approaches to learning source-centric audio representations: a supervised model guided by classification and an unsupervised model guided by feature reconstruction, both of which outperform the baselines. We thoroughly evaluate the design choices of both approaches using an audio classification task. We find that supervision is beneficial to learn source-centric representations, and that reconstructing audio features is more useful than reconstructing spectrograms to learn unsupervised source-centric representations. Leveraging source-centric models can help unlock the potential of greater interpretability and more flexible decoding in machine listening.",
+  "published": "2024-09-15T06:00:42Z",
+  "updated": "2025-03-01T23:24:10Z",
+  "authors": [
+    "Sripathi Sridhar",
+    "Mark Cartwright"
+  ],
+  "topics": [
+    "caption_truth"
+  ],
+  "new_to_prior_corpus": true,
+  "review_group": "composition",
+  "pdf_url": "https://arxiv.org/pdf/2409.09619",
+  "sha256": "c2cc2847800a88c53cd8952a2438231be18232194fd7dfe945f2b4ea151b287f",
+  "pages": 5,
+  "text_chars": 34383,
+  "snapshot_version": "v3",
+  "retrieved_utc": "2026-11-01T10:04:13.811342+00:00",
+  "acquisition_status": "acquired",
+  "review_status": "not_reviewed_by_acquisition"
+}
