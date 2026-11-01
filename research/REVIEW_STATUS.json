@@ -1,0 +1,20 @@
+{
+  "distinct_records_inspected": 296,
+  "excluded_records": 19,
+  "retained_distinct_works": 277,
+  "core_sources_with_additional_scoped_notes": 28,
+  "review_mode": "Abstracts plus selected full-text passages; additional scoped checks for core works. Not cover-to-cover readings.",
+  "reproduced_paper_experiments": 0,
+  "theme_counts": {
+    "Evaluation/reliability": 43,
+    "Speech/audio generation and control": 95,
+    "Loop/data selection": 32,
+    "Captioning/grounding": 60,
+    "Data/Indic speech": 19,
+    "Representations/codecs": 23,
+    "Efficiency/adaptation": 5
+  },
+  "search_cutoff": "2026-11-01",
+  "network_blocker_resolved": true,
+  "model_training_run": false
+}
