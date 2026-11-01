@@ -24,7 +24,7 @@ These papers inform the recording/ecology axis and compositional requests. Their
 
 **Method and evidence.** Match pairwise audio-representation similarities to pairwise text similarities during classifier-free/unconditional training, rather than directly maximizing one audio-text cosine. On the sound-effects model, FAD changes from 1.52 to 1.43 and CLAP from 0.30 to 0.31. Max pooling works better than mean pooling; applying the regularizer in ordinary conditioned steps fails to improve the reported metrics. Training uses 16/32 GPUs and thousands of sound/music hours.
 
-**Limits and decision.** Global pooled similarity still misses negation, count and timing. Small metric gains do not justify reproducing this training recipe on T4s. Keep relational or contrastive losses optional and test single-claim hard negatives against actual realization. Avoid making a global CLAP reward the primary generator objective, especially because description-specific differences can be much smaller than between-example semantic differences.
+**Limits and decision.** Global pooled similarity still misses negation, count and timing. Small metric gains do not justify reproducing this training recipe on L4s. Keep relational or contrastive losses optional and test single-claim hard negatives against actual realization. Avoid making a global CLAP reward the primary generator objective, especially because description-specific differences can be much smaller than between-example semantic differences.
 
 ## 2406.00294 — CTAG: Synthesizer Programming
 

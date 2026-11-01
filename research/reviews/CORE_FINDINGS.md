@@ -30,7 +30,7 @@ Inspected: architecture/training strategy and reasoning procedure pp. 2–7.
 
 UALM uses a 25 Hz acoustic input encoder, MLP adapter, Qwen2.5-7B initialization, and a 50 Hz eight-codebook output representation. Its base waveform path is 16 kHz, with a separate enhancement VAE for 48 kHz stereo. The paper describes rich captions, generate–understand–critique–refine reasoning, task blending, alignment warm-up, and SFT/DPO stages. The authors report that their autoregressive generation needed substantially more data than their diffusion comparisons: 30M examples / about 80K audio hours. The described pretraining uses 128 A100-80GB GPUs and 660K steps.
 
-**Consequence:** rich-caption planning and self-reflection are prior work. Reproducing unified-model pretraining is a poor use of 1,000 T4 GPU-hours. Transfer its training principles, not its compute recipe. A nominal high output sample rate through a separate restoration stage is not proof that every fine acoustic detail was preserved.
+**Consequence:** rich-caption planning and self-reflection are prior work. Reproducing unified-model pretraining is a poor use of 1,000 L4 GPU-hours. Transfer its training principles, not its compute recipe. A nominal high output sample rate through a separate restoration stage is not proof that every fine acoustic detail was preserved.
 
 Source: https://arxiv.org/abs/2510.12000
 
@@ -58,7 +58,7 @@ Source: https://arxiv.org/abs/2402.01912
 
 Inspected: abstract, flow/CFG formulation, training/inference and architecture pp. 3–4, reported NFE results p. 6, limitations p. 9.
 
-F5 trains text-guided mel infilling with conditional flow matching. It pads characters to audio-frame length and improves representations with ConvNeXt before DiT processing. Reference audio/transcript and generated text condition inference; the paper estimates total duration from character-length ratios rather than learning exact phone timing. Sway sampling trades NFE against quality. The reported RTF of 0.15 is an author result, not a T4 measurement. The limitations explicitly name mel-sequence cost and lack of fine-grained paralinguistic control.
+F5 trains text-guided mel infilling with conditional flow matching. It pads characters to audio-frame length and improves representations with ConvNeXt before DiT processing. Reference audio/transcript and generated text condition inference; the paper estimates total duration from character-length ratios rather than learning exact phone timing. Sway sampling trades NFE against quality. The reported RTF of 0.15 is an author result, not a L4 measurement. The limitations explicitly name mel-sequence cost and lack of fine-grained paralinguistic control.
 
 **Consequence:** IndicF5 is a language-capable starting point, not a finished description-controlled generator. Add conditioning only after a native-language baseline; validate local timing rather than assuming text timestamps control a padded sequence. Inspect quality at 8/16/32 NFE locally; do not borrow throughput from the paper.
 
@@ -70,7 +70,7 @@ Inspected: architecture p. 3, data excerpts p. 5, staged training and experiment
 
 AF3 adapts Whisper-large-v3 into AF-Whisper using caption supervision covering speech, sound and music. It couples this encoder through an adapter to a language model and trains in stages: adapter alignment, encoder tuning, broader tuning, and LoRA-based context/reasoning extension. The paper's training uses 128 A100-80GB GPUs. Metadata-driven synthetic captions and external teachers are part of its training recipe.
 
-**Consequence:** a compact 7B frozen-backbone adapter experiment is sensible, but reproducing AF3 from scratch is not. Synthetic source labels need audits. Published broad benchmark results do not establish native Hindi/Tamil intent accuracy, quantized T4 memory fit, or timing calibration. Use a native-language ASR side channel as a tested hypothesis, not a claimed fix.
+**Consequence:** a compact 7B frozen-backbone adapter experiment is sensible, but reproducing AF3 from scratch is not. Synthetic source labels need audits. Published broad benchmark results do not establish native Hindi/Tamil intent accuracy, quantized L4 memory fit, or timing calibration. Use a native-language ASR side channel as a tested hypothesis, not a claimed fix.
 
 Source: https://arxiv.org/abs/2507.08128
 
@@ -152,7 +152,7 @@ Inspected: adaptation/quantization and evaluation excerpts, plus QLoRA evaluatio
 
 LoRA/QLoRA support freezing most weights and adapting limited parameters; their text-model memory/quality results do not guarantee compatibility with any audio stack. Speaker-verification work documents sensitivity to vocal effort and overlapping speakers. QLoRA's own evaluation discussion notes judge/order biases.
 
-**Consequence:** profile the exact T4 audio model, use independent blinded evaluators, and test diversity/identity under channel and delivery shifts. A speaker-embedding difference alone is not proof of a new speaker.
+**Consequence:** profile the exact L4 audio model, use independent blinded evaluators, and test diversity/identity under channel and delivery shifts. A speaker-embedding difference alone is not proof of a new speaker.
 
 ## 16. RASMALAI / IndicParlerTTS — arXiv:2505.18609
 
@@ -160,7 +160,7 @@ Inspected: data construction, model setup, main automatic/subjective results and
 
 The paper constructs speech–transcript–description triples across Indian languages, using measured/available metadata and language-model-generated descriptive, concise, attribute-robust and native-language prompts. It adapts Parler-TTS Mini with an expanded transcript tokenizer, reporting 13K hours of multilingual pretraining and 32 H100 GPUs for 1.5 days. The paper's broad language coverage must be distinguished from the current release card's officially supported languages and tested emotion subset. Reported automatic attribute accuracies are high, including binned C50 control; these are not equivalent to continuous temporal control or full Track 2 evaluation. Perceptual emotion classification has substantial confusion for some classes, especially neutral. Its cross-lingual expressive evaluation also degrades from native to distal-language speakers.
 
-**Consequence:** use the released description-native Hindi/Tamil model as the first G0 candidate. Compare pretrained vs studio-finetuned releases for the quality/diversity tradeoff. Keep IndicF5 with new adapters as an alternative rather than the assumed default. The native voice pool is small, especially Tamil; native pronunciation and diverse passing identities must be evaluated together. The public card can be read unauthenticated, but gated weights/config still require model access. Paper-reported training costs are not a fine-tuning budget estimate for T4s.
+**Consequence:** use the released description-native Hindi/Tamil model as the first G0 candidate. Compare pretrained vs studio-finetuned releases for the quality/diversity tradeoff. Keep IndicF5 with new adapters as an alternative rather than the assumed default. The native voice pool is small, especially Tamil; native pronunciation and diverse passing identities must be evaluated together. The public card can be read unauthenticated, but gated weights/config still require model access. Paper-reported training costs are not a fine-tuning budget estimate for L4s.
 
 Sources: https://arxiv.org/abs/2505.18609 ; https://huggingface.co/ai4bharat/indic-parler-tts
 

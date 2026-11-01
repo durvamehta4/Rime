@@ -1,5 +1,7 @@
 # Proposed architecture for Inter IIT Rime Track 2
 
+**Hardware correction:** this historical draft assumed T4 GPUs. The user has clarified **4×L4 GPUs with 24 GB VRAM each**. Use [architecture v4](ARCHITECTURE_V4.md) and the [current experiment plan](EXPERIMENTS.md) for corrected hardware, precision and memory guidance.
+
 **Historical initial proposal; [ARCHITECTURE_V3.md](ARCHITECTURE_V3.md) is current.** Version 2 superseded this after the first pass; version 3 adds ten detailed main-text reviews and revises the architecture and budget. Indic Parler-TTS precedes IndicF5 adapter development in the generator comparison. The zero-paper statement below describes the initial draft; see [first-pass status](REVIEW_STATUS.json) and [additional-pass status](reviews/round2/STATUS.json).
 
 ## Recommendation and confidence

@@ -1,19 +1,19 @@
 # Experimental plan and compute budget
 
-Status: planned, not executed. Hardware supplied by the user: 4×NVIDIA T4, 256 GB RAM, approximately 1,000 GPU-hours. Confirm actual VRAM and interconnect before execution. A standard T4 has 16 GB; four cards do not form one transparent 64 GB memory pool.
+Status: planned, not executed. Hardware supplied by the user: 4×NVIDIA L4, 256 GB RAM, approximately 1,000 GPU-hours. Confirm actual VRAM and interconnect before execution. Each L4 has 24 GB VRAM; four cards do not form one transparent 96 GB memory pool. Earlier drafts incorrectly assumed T4 hardware; this plan uses the corrected L4 allocation.
 
-Literature update: [architecture v4](ARCHITECTURE_V4.md) is current after [103 new scoped full-text critical reviews](reviews/round3/README.md). V4 supersedes earlier choices and the allocation below is synchronized with it. Compare native description-conditioned Indic Parler releases first, then the IndicF5 alternative if needed. Start with shared frozen-encoder readouts and add a specialist only for a measured native gap. Compute ceilings are allocations, not measured usage. No training or T4 benchmark was run during the literature review.
+Literature update: [architecture v4](ARCHITECTURE_V4.md) is current after [103 new scoped full-text critical reviews](reviews/round3/README.md). V4 supersedes earlier choices and the allocation below is synchronized with it. Compare native description-conditioned Indic Parler releases first, then the IndicF5 alternative if needed. Start with shared frozen-encoder readouts and add a specialist only for a measured native gap. Compute ceilings are allocations, not measured usage. No training or L4 benchmark was run during the literature review.
 
 ## Hardware strategy
 
-- Use FP16 mixed precision with gradient scaling for trainable modules; do not assume native BF16 support. Check numerical stability of flow matching separately.
-- Use tested Turing-compatible attention. Do not make FlashAttention-2 a prerequisite. Pin a PyTorch/CUDA/quantization combination supported by the installed driver and T4 compute capability.
-- For a 7B captioner, start with 4-bit frozen LLM weights, FP16 audio encoder/projector, and LoRA rank 8 or 16. Profile the actual implementation: not every audio-language-model loader supports quantization plus adapter training correctly.
+- Prefer BF16 mixed precision on L4 where the model and installed stack support it; use FP16 with gradient scaling as a compatibility fallback. Check numerical stability of flow matching separately.
+- Use tested Ada-compatible attention. L4 hardware supports FlashAttention-2, but model/library compatibility must be verified; keep a compatible fallback. Pin a PyTorch/CUDA/quantization combination supported by the installed driver and L4 compute capability.
+- For a 7B captioner, start with 4-bit frozen LLM weights, BF16 audio encoder/projector where supported, and LoRA rank 8 or 16. Compare BF16 frozen-LM loading if it fits; test rank 32 and larger microbatches only after the memory pilot. Profile the actual implementation: not every audio-language-model loader supports quantization plus adapter training correctly.
 - Freeze the audio encoder initially; cache audio features for training if augmentation does not invalidate them. Keep global context for 30-second clips. Do not split away the very changes and interactions being tested.
-- Start caption training at microbatch 1, short clips, activation checkpointing, and gradient accumulation. Measure 5-, 15-, and 30-second peaks before selecting batches. Target measured peak below approximately 14 GiB/card for a single-card job, allowing runtime overhead; this is a target, not a proven fit.
+- Start caption training at microbatch 1, short clips, activation checkpointing, and gradient accumulation. Measure 5-, 15-, and 30-second peaks before selecting batches. Target measured peak below approximately 20 GiB/card for a single-card job, allowing runtime overhead; this is a target, not a proven fit.
 - Use independent GPU jobs for annotation/evaluation where possible. Use DDP only when each replicated model fits. Investigate sharding or offload when it does not; neither DDP nor four visible GPUs automatically shards weights.
 - Run generator adapter training separately from captioner training. A sub-billion-scale speech model may be more tractable, but verify the selected IndicF5 checkpoint's actual configuration and training memory rather than quoting a guessed size.
-- A 30B MoE model's active parameter count is not its weight footprint. Qwen3-Omni can be an optional quantized/sharded teacher if supported, not a mandatory replicated T4 model. Skip it if teacher gains do not justify overhead.
+- A 30B MoE model's active parameter count is not its weight footprint. Qwen3-Omni can be an optional quantized/sharded teacher if supported, not a mandatory replicated L4 model. Skip it if teacher gains do not justify overhead.
 - Use RAM to cache manifests/features and stage shards; inspect disk capacity before selecting the pool. Do not store every Vaani waveform and every synthetic derivative by default.
 
 ## Proposed budget

@@ -23,5 +23,12 @@
   "latest_pass_new_scoped_fulltext_reviews": 103,
   "all_passes_unique_records": 415,
   "additional_passes_detailed_reviews_separate_scopes": 113,
-  "historical_counts_above_are_first_pass_only": true
+  "historical_counts_above_are_first_pass_only": true,
+  "user_hardware": {
+    "gpu": "NVIDIA L4",
+    "gpu_count": 4,
+    "vram_gb_per_gpu": 24,
+    "host_ram_gb": 256,
+    "gpu_hour_budget": 1000
+  }
 }

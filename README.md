@@ -10,11 +10,11 @@ The proposed system describes audible voice, recording conditions and intent in 
 - [Research overview](research/README.md): navigation and review scope across all literature passes.
 - [103 additional paper reviews](research/reviews/round3/README.md): critical methods, results, limitations and design implications.
 - [Evidence-to-design decisions](research/reviews/round3/DECISIONS.md): why the architecture changed and what needs testing.
-- [Experiments and compute budget](research/EXPERIMENTS.md): validation plan for **4×T4 GPUs, 256 GB RAM and approximately 1,000 GPU-hours**.
+- [Experiments and compute budget](research/EXPERIMENTS.md): validation plan for **4×L4 GPUs, 256 GB RAM and approximately 1,000 GPU-hours**.
 
 ## Current status
 
-This repository currently contains research documentation and literature-review tooling. Architecture v4 is a proposal awaiting implementation and native-language validation; no model training or T4 benchmarking has been performed as part of these research passes.
+This repository currently contains research documentation and literature-review tooling. Architecture v4 is a proposal awaiting implementation and native-language validation; no model training or L4 benchmarking has been performed as part of these research passes.
 
 The literature collection contains **415 distinct records across passes with different review depths**. The latest pass adds **103 scoped full-text critical reviews** without repeating prior IDs. These cover selected methods, results and limitations rather than exhaustive readings of every appendix. Counts, source hashes and reading locators are available in the [latest review ledger](research/reviews/round3/ledger.csv) and [status](research/reviews/round3/STATUS.json).
 

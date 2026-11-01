@@ -88,7 +88,7 @@ These reviews inspect cited full-text methods, evaluation and limitations. Repor
 
 **Method and evidence.** A small DDPM predicts joint phone-level pitch, energy and log-duration rather than deterministic MSE predictions. The pretrained FastSpeech2 backbone stays frozen. On a private 28.23-hour single-male Mandarin corpus, listeners favor the proposed expressiveness in 76.65% of pairs versus 13.22% for the baseline; feature-distribution JS divergence improves, especially for pitch/duration. Five hundred denoising steps cost RTF 0.47 on a 2080Ti versus 0.00031 for the original predictor.
 
-**Limits and decision.** One training run, one speaker and marginal feature distributions do not establish instruction-constrained or speaker diversity. Fewer parameters do not imply faster inference. For Rime, prioritize small mixture/distributional control heads and measured sample cost; adopt diffusion only if conditional realism gains survive T4 profiling. Compare distributions under a fixed description and verify constraints, rather than rewarding arbitrary prosodic variance or quoting 2080Ti timings as T4 performance.
+**Limits and decision.** One training run, one speaker and marginal feature distributions do not establish instruction-constrained or speaker diversity. Fewer parameters do not imply faster inference. For Rime, prioritize small mixture/distributional control heads and measured sample cost; adopt diffusion only if conditional realism gains survive L4 profiling. Compare distributions under a fixed description and verify constraints, rather than rewarding arbitrary prosodic variance or quoting 2080Ti timings as L4 performance.
 
 ## 1803.09047 — End-to-End Prosody Transfer with Tacotron
 

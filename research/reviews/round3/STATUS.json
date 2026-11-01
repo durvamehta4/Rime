@@ -28,6 +28,6 @@
   "supporting_evidence": "General audio, statistics, efficiency and non-speech studies are identified as transfer evidence, not Hindi/Tamil validation.",
   "reproduced_experiments": 0,
   "model_training_run": false,
-  "t4_benchmark_run": false,
+  "l4_benchmark_run": false,
   "current_architecture": "../../ARCHITECTURE_V4.md"
 }

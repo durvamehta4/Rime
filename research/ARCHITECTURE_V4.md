@@ -1,8 +1,8 @@
 # Track 2 architecture, version 4
 
-**Recommendation for 4×T4, 256 GB RAM and a total 1,000 GPU-hours:** adapt one audio captioner and one native description-conditioned generator around an explicit acoustic evidence record. Share frozen encoder features before adding experts, separate voice identity from delivery and recording conditions, and complete one independently audited reciprocal round.
+**Recommendation for 4×L4, 256 GB RAM and a total 1,000 GPU-hours:** adapt one audio captioner and one native description-conditioned generator around an explicit acoustic evidence record. Share frozen encoder features before adding experts, separate voice identity from delivery and recording conditions, and complete one independently audited reciprocal round.
 
-This revision incorporates **103 additional, distinct scoped full-text critical reviews**: [review index and scope](reviews/round3/README.md), [evidence ledger](reviews/round3/ledger.csv), [decision matrix](reviews/round3/DECISIONS.md). It supersedes [v3](ARCHITECTURE_V3.md). No model training, T4 profiling or task-specific improvement was demonstrated in this research pass. This is the strongest current recommendation from the reviewed evidence, not a proven optimum or a claim of novel component algorithms.
+This revision incorporates **103 additional, distinct scoped full-text critical reviews**: [review index and scope](reviews/round3/README.md), [evidence ledger](reviews/round3/ledger.csv), [decision matrix](reviews/round3/DECISIONS.md). It supersedes [v3](ARCHITECTURE_V3.md). No model training, L4 profiling or task-specific improvement was demonstrated in this research pass. This is the strongest current recommendation from the reviewed evidence, not a proven optimum or a claim of novel component algorithms.
 
 ## 1. Optimize the actual task
 
@@ -172,6 +172,8 @@ Repeated labels, texts or synthetic stems do not equal independent data. Audit a
 
 ## 9. Budget, memory and execution order
 
+**Hardware correction:** the team has **4×NVIDIA L4 (24 GB each)**, not the T4 hardware assumed in earlier drafts. The 256 GB host RAM and 1,000 total GPU-hour ceiling remain unchanged. L4 permits native BF16 and more per-card memory; data scale, batch size and completion time still require actual measurements. No T4-to-L4 speed multiplier is assumed.
+
 These ceilings **replace** v3, keeping the same total. Literature time is separate. No GPU-hours were consumed on model work in this research pass.
 
 | Work package | GPU-hours | Reviewable result |
@@ -187,11 +189,11 @@ These ceilings **replace** v3, keeping the same total. Literature time is separa
 | Failure/variance reserve | 100 | OOMs, reruns and packaging stability |
 | **Total** | **1,000** | |
 
-A GPU-hour counts one occupied GPU for one hour, including failed jobs, annotation, verification and sharded inference. Four busy T4s consume 4 GPU-hours per wall-clock hour. Reserve is not permission to spend outside this total or automatically run another round.
+A GPU-hour counts one occupied GPU for one hour, including failed jobs, annotation, verification and sharded inference. Four busy L4s consume 4 GPU-hours per wall-clock hour. Reserve is not permission to spend outside this total or automatically run another round.
 
-- Standard T4s have separate ~16 GB memories. Start single-card microbatch one, FP16 with scaling, gradient accumulation and activation checkpointing; use supported Turing attention. Do not assume native BF16, FlashAttention-2, or that DDP pools VRAM. Shard/offload only after profiling its overhead.
-- Profile captioner at 5/15/30 seconds, generator at representative native text lengths, and verifier passes separately. Target approximately ≤14 GiB measured peak for single-card jobs with runtime margin. This is a gate, not a proven fit.
-- Initial caption adapter rank 8/16; test a small rank ladder only if useful. rsLoRA is a scaling ablation; DoRA/LoftQ/LoRA-FA are gated alternatives if profiling identifies an actual optimization/quantization/activation problem. Their text/A100/A800 results do not establish T4 acoustic gains.
+- L4 GPUs use the Ada Lovelace architecture and have 24 GB VRAM each. Use BF16 mixed precision where supported by the model and installed stack; retain FP16 with gradient scaling as a compatibility fallback. Start microbatch one, then increase after profiling; use gradient accumulation and activation checkpointing as needed. Test Ada-compatible FlashAttention-2 when supported, with a compatible attention fallback. Four cards provide separate memories, not one transparent 96 GB pool; DDP replicates weights. Shard/offload only after profiling its overhead.
+- Profile captioner at 5/15/30 seconds, generator at representative native text lengths, and verifier passes separately. Target approximately ≤20 GiB measured peak for single-card jobs with runtime margin. This is a gate, not a proven fit.
+- Initial caption adapter rank 8/16; include rank 32 only if measured memory and native validation justify it. Compare a BF16 frozen-LM baseline against four-bit loading during the pilot if both fit; a 7B model fitting its weights alone does not establish training fit at 30 seconds. Test a small rank ladder only if useful. rsLoRA is a scaling ablation; DoRA/LoftQ/LoRA-FA are gated alternatives if profiling identifies an actual optimization/quantization/activation problem. Their text/A100/A800 results do not establish L4 acoustic gains.
 - Start with a balanced five-hour/language pool; expand by error/cost. A 50–150 unique real-hour/language working range is conditional on measured throughput and label capacity, not a promised scale. Do not process all 15,750 Vaani hours just because RAM is large.
 - Cache only useful frozen features. For illustration, 1,500 frames × 1,280 values × FP16 is **3.84 MB per layer per 30-second clip**; 32 layers are 122.88 MB. Four layers across 100,000 clips are ~1.54 TB before metadata. Actual shapes vary. Check disk, aggregate layers on the fly, quantize validated features or reduce the pool. 256 GB RAM is not disk capacity. Hash feature caches with encoder revision/preprocessing/layer recipe and invalidate them when any changes.
 - For H audio hours and measured real-time factor r, one single-device pass costs approximately H·r GPU-hours, plus overhead. Ten generations over N requests cost approximately `10*N*mean_duration_s*r_gen/3600` per-device hours, plus renderer/verifier work. Use measured batch throughput when available.

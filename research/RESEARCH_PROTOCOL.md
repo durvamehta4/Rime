@@ -18,13 +18,13 @@ Target **230 distinct full papers** to allow exclusion of duplicates or weakly r
 |---|---:|---|
 | Speech/audio-language understanding and grounded captioning | 35 | What evidence fusion and training reduce acoustic hallucination? |
 | Controllable, expressive, multilingual and Indic TTS | 45 | How to condition language, identity, phonation, timing, and descriptions? |
-| Audio codecs, flow/diffusion, representations and vocoders | 20 | Which representation fits fidelity, controls, and T4 memory? |
+| Audio codecs, flow/diffusion, representations and vocoders | 20 | Which representation fits fidelity, controls, and L4 memory? |
 | Temporal sound/event localization, prosody and phonation | 25 | How to support timed and numerical claims? |
 | Self-training, back-translation, mutual/dual learning, active curricula | 30 | How can reciprocal models improve without reinforcing errors? |
 | Synthetic data reliability, calibration and distribution collapse | 20 | How to select valid labels and retain real-data grounding? |
 | Evaluation, speech quality, speaker verification and human judgments | 20 | Which tests demonstrate useful improvement and avoid reward gaming? |
 | Indian speech datasets, ASR, code switching and sociophonetics | 25 | What is specifically required for Hindi and Tamil? |
-| Efficient adaptation, quantization and training | 10 | What can actually be trained on four T4s? |
+| Efficient adaptation, quantization and training | 10 | What can actually be trained on four L4s? |
 | **Total** | **230** | |
 
 Cross-topic papers count once toward the total. Do not pad with unrelated music/image papers or duplicate arXiv/conference versions. Include foundational older work when it materially explains dual learning, uncertainty, or prosody. Search through the client date and record the search date; verify purported 2026 papers and venue claims rather than trusting the PS or a collection README as bibliographic authority.
@@ -62,7 +62,7 @@ The final review should produce:
 
 - A deduplicated 201+ paper ledger with explicit evidence levels and per-paper review notes.
 - A compact evidence matrix connecting architecture decisions to supporting and conflicting papers.
-- A backbone comparison on Hindi/Tamil support, description conditioning, timed control, speaker diversity, openness/license, trainability and T4 cost.
+- A backbone comparison on Hindi/Tamil support, description conditioning, timed control, speaker diversity, openness/license, trainability and L4 cost.
 - A loop comparison covering dual learning, pseudo-labeling, curriculum selection, real replay, calibration, and independent verification.
 - A novelty audit separating prior methods, PS suggestions, and the proposed contribution.
 - Revisions to the provisional architecture when papers contradict current assumptions.

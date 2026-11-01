@@ -1,6 +1,6 @@
-# Adapter efficiency under the actual T4 budget
+# Adapter efficiency under the actual L4 budget
 
-These language/vision experiments are transfer evidence. None benchmarks the proposed Hindi/Tamil audio pipeline on T4.
+These language/vision experiments are transfer evidence. None benchmarks the proposed Hindi/Tamil audio pipeline on L4.
 
 ## 2402.09353 — DoRA
 
@@ -32,4 +32,4 @@ These language/vision experiments are transfer evidence. None benchmarks the pro
 
 **Method and evidence.** Freeze the down-projection and optimize the up-projection with a gradient correction, reducing stored activations. In the displayed A800 setup, LoRA-FA uses 52.2 GB while compared methods exceed 80 GB. The paper reports competitive language-task accuracy and identifies activation memory, rather than trainable-parameter count alone, as the bottleneck. The formulation approximates full updates within a fixed low-rank feature subspace.
 
-**Limits and decision.** A fixed column space is not generally exactly equivalent to every jointly learned low-rank update; interpret expressivity claims as approximation under the paper's conditions, not universal equality. A800 timings/kernels and 52.2 GB do not establish 16 GB T4 feasibility. Keep LoRA-FA as a fallback if profiling shows adapter activations dominate. First reduce length/batch, checkpoint activations and freeze the audio encoder; validate specialized optimizer support before promising an activation-memory saving in the selected audio stack.
+**Limits and decision.** A fixed column space is not generally exactly equivalent to every jointly learned low-rank update; interpret expressivity claims as approximation under the paper's conditions, not universal equality. A800 timings/kernels and 52.2 GB do not establish 24 GB L4 feasibility. Keep LoRA-FA as a fallback if profiling shows adapter activations dominate. First reduce length/batch, checkpoint activations and freeze the audio encoder; validate specialized optimizer support before promising an activation-memory saving in the selected audio stack.

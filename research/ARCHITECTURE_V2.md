@@ -1,5 +1,7 @@
 # Track 2 architecture after the literature first pass
 
+**Hardware correction:** this historical draft assumed T4 GPUs. The user has clarified **4×L4 GPUs with 24 GB VRAM each**. Use [architecture v4](ARCHITECTURE_V4.md) and the [current experiment plan](EXPERIMENTS.md) for corrected hardware, precision and memory guidance.
+
 **Historical version:** [version 3](ARCHITECTURE_V3.md) supersedes this recommendation and its budget after ten additional detailed main-text readings. Retain this document for first-pass evidence and model-card checks.
 
 This updates the initial [architecture proposal](TRACK2_ARCHITECTURE.md). It is a research recommendation, not a trained or benchmark-winning system. Evidence comes from the review corpus and the [scoped core-paper notes](reviews/CORE_FINDINGS.md). Broad paper reviews inspect abstracts and selected full-text excerpts; they are not 200 cover-to-cover readings. Source acquisition, review depth, and reproduced experiments are separate statuses.

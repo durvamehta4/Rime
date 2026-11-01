@@ -114,7 +114,7 @@ status = {
     'review_files': counts,
     'depth': 'Critical scoped full-text passage reviews, methods/results/limitations and concrete decisions; not exhaustive full-paper/appendix/visual-figure readings. Original 296-record broad screening retains its original depth.',
     'supporting_evidence': 'General audio, statistics, efficiency and non-speech studies are identified as transfer evidence, not Hindi/Tamil validation.',
-    'reproduced_experiments': 0, 'model_training_run': False, 't4_benchmark_run': False,
+    'reproduced_experiments': 0, 'model_training_run': False, 'l4_benchmark_run': False,
     'current_architecture': '../../ARCHITECTURE_V4.md',
 }
 stream = io.StringIO(newline='')

@@ -1,10 +1,10 @@
 # Rime Track 2: literature and architecture
 
-**Current recommendation: [architecture v4](ARCHITECTURE_V4.md)** for **4×T4, 256 GB RAM and 1,000 GPU-hours**.
+**Current recommendation: [architecture v4](ARCHITECTURE_V4.md)** for **4×L4, 256 GB RAM and 1,000 GPU-hours**.
 
 The latest pass adds **103 distinct scoped full-text critical reviews**, with methods, author-reported results, limitations and concrete design decisions. None repeats an ID from the previous 312-record corpus. See the [103-paper index](reviews/round3/README.md), [evidence ledger](reviews/round3/ledger.csv), [decision matrix](reviews/round3/DECISIONS.md) and [review status](reviews/round3/STATUS.json).
 
-These are selected method/result/limitation passage reviews, **not cover-to-cover readings of all 103 papers and appendices**. No experiment was reproduced, model trained or T4 benchmark run. The architecture's expected improvements require the proposed native-language tests.
+These are selected method/result/limitation passage reviews, **not cover-to-cover readings of all 103 papers and appendices**. No experiment was reproduced, model trained or L4 benchmark run. The architecture's expected improvements require the proposed native-language tests.
 
 ## Read first
 
