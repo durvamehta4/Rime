@@ -11,17 +11,20 @@ Two models improve each other in rounds. The invariant that keeps the loop from 
 
 > **Verified Loop.** A claim enters training data only if it is (a) **measured** by a non-learned tool,
 > (b) **known by construction** (we rendered/transformed the audio), or (c) **agreed** by $\ge 2$ independent
-> sources. Real audio anchors every round; synthetic share $\le 25\%$.
+> sources. Real audio anchors every round; synthetic share ≤ 25 %.
 
-```
-                ┌──────────────────────────── round r ────────────────────────────┐
- real Vaani ──► │ CAPTIONER_r ──► verified claims ──► TTS SFT data ──► GENERATOR_r+1│
- audio          │      ▲                                                  │       │
-                │      └── captioner LoRA/DPO ◄── exact-label synthetic ◄─┘       │
-                │           (weak-area budget n_k)      (ecology renderer)        │
-                └──────────────────── eval on held-out real audio ────────────────┘
-                                         │
-                                         ▼  results.csv (score, 95% CI, GPU-h)
+```mermaid
+flowchart TD
+    V[("Real Vaani audio")] --> C["Captioner (round r)"]
+    C --> VC["Verified claims only"]
+    VC --> SFT["TTS fine-tune data"]
+    SFT --> G["Generator (round r+1)"]
+    G --> R["Ecology renderer<br/>exact-label synthetic audio"]
+    R -->|"weak-area budget n_k"| T["Captioner LoRA / DPO"]
+    T -.->|"next round"| C
+    C --> E{{"Eval on held-out real audio"}}
+    G --> E
+    E --> O[/"results.csv<br/>score · 95% CI · GPU-h"/]
 ```
 
 ---
@@ -51,20 +54,19 @@ Prose ↔ IR:
 
 ## 3. Captioner pipeline — `rimet2/captioner/`
 
-```
-wav ─┬─► evidence/run.py ─────────────► measured claims (p from tool reliability)
-     │     dsp · pitch · timing · voicequality · models(silero, brouhaha, PANNs, age/gender)
-     │
-     └─► omni_raw.py  (Qwen3-Omni-Captioner, K=5 seeded samples, cached)
-            └─► claims.split_caption ─► claims.self_consistency (p ≈ support/K)
-                                              │
-                         fuse.fuse(measured, model_claims)
-                           · conflict with a measurement → drop model claim
-                           · agreement → raise p, agree += 1
-                                              │
-                         calibrate.IsotonicCalibrator (fit on DevReal rubric)
-                                              │
-                         verbalize.select_claims(τ) ─► knapsack ≤ 285 words ─► prose
+```mermaid
+flowchart TD
+    W[("wav")] --> EV["evidence/run.py<br/>dsp · pitch · timing · voice quality<br/>Silero · Brouhaha · PANNs · age/gender"]
+    W --> OM["omni_raw.py<br/>Qwen3-Omni-Captioner<br/>K = 5 seeded samples, cached"]
+    EV --> MC["Measured claims<br/>p from tool reliability"]
+    OM --> SP["claims.split_caption"]
+    SP --> SC["claims.self_consistency<br/>p ≈ support / K"]
+    MC --> FU["fuse.fuse<br/>conflict with measurement → drop<br/>agreement → raise p"]
+    SC --> FU
+    FU --> CA["IsotonicCalibrator<br/>fit on DevReal rubric"]
+    CA --> SE["select_claims: keep if p̂ > τ"]
+    SE --> KN["Knapsack ≤ 285 words"]
+    KN --> PR[/"English prose description"/]
 ```
 
 **Commitment rule.** With $h$ = P(rubric covers the claim), $q$ = P(a false claim is caught),
@@ -72,8 +74,9 @@ $w$ = weight gained if true, $w'$ = weight lost if false:
 
 $$\text{state } c \iff \hat p_c > \tau = \frac{q\,w'}{h\,w + q\,w'}$$
 
-**Budget.** $\displaystyle\max_{S}\sum_{c\in S}\hat p_c\,w_c \quad\text{s.t.}\quad \sum_{c\in S}\ell_c \le 300$
-(greedy on $\hat p_c w_c/\ell_c$).
+**Budget** (greedy on $\hat p_c w_c/\ell_c$):
+
+$$\max_{S}\sum_{c\in S}\hat p_c\,w_c \quad\text{s.t.}\quad \sum_{c\in S}\ell_c \le 300$$
 
 Modes in `captioner/cli.py`: `raw` (round 0 = Omni sample 0 verbatim), `evidence` (tools only), `fused` (full).
 
@@ -81,16 +84,15 @@ Modes in `captioner/cli.py`: `raw` (round 0 = Omni sample 0 verbatim), `evidence
 
 ## 4. Generator pipeline — `rimet2/generator/` + `rimet2/renderer/`
 
-```
-(text, description)
-   │
-   ▼ planner.plan()              Qwen3-8B @ :8000 → RenderPlan (repair() fixes text coverage/timing)
-   ▼ speaker_prior.SpeakerBank   farthest-point sampling over embeddings, attribute-filtered
-   ▼ voices.*                    Qwen3-TTS Base (clone) / VoiceDesign / CustomVoice  |  IndicParler fallback
-   ▼ assemble.assemble()         per-segment synth → trim → WSOLA to target timing → pauses + inline events
-   ▼ renderer.EcologyRenderer    RIR → background bed at SNR (on active speech) → timed Foley → channel codec
-   ▼
- 24 kHz wav  +  construction claims (labels re-measured from the output, not copied from the plan)
+```mermaid
+flowchart TD
+    IN[/"text + description"/] --> PL["planner.plan()<br/>Qwen3-8B → RenderPlan<br/>repair() fixes coverage/timing"]
+    PL --> SPK["SpeakerBank<br/>farthest-point voice sampling"]
+    SPK --> VO["Voice model<br/>Qwen3-TTS Base / VoiceDesign / CustomVoice<br/>fallback: Indic-Parler-TTS"]
+    VO --> AS["assemble()<br/>trim → WSOLA timing → pauses + inline events"]
+    AS --> EC["EcologyRenderer<br/>RIR → background at SNR → timed Foley → codec"]
+    EC --> OUT[/"24 kHz wav"/]
+    EC --> LB[/"Construction claims<br/>re-measured from output"/]
 ```
 
 **Diversity** across the 10 samples per item:
@@ -171,15 +173,21 @@ tests use `mock_llm`. All heavy models are imported lazily and fail soft (return
 
 ## 9. Dependency layering
 
+```mermaid
+flowchart BT
+    common --> scene
+    common --> eval
+    common --> data
+    common --> testset
+    scene --> evidence
+    scene --> renderer
+    evidence --> captioner
+    renderer --> generator
+    captioner --> train
+    generator --> train
+    renderer --> train
 ```
-common  ◄── scene ◄── evidence ◄── captioner
-   ▲          ▲  ▲                     ▲
-   │          │  └── renderer ◄── generator
-   │          │                        ▲
-   └──── eval, data, testset      train ┘ (uses captioner, generator, renderer)
-scripts/ = thin entry points over the package
-```
-Lower layers never import upper ones. `scene` has no heavy dependencies.
+Arrow = "is imported by". Lower layers never import upper ones. `scene` has no heavy dependencies.
 
 ---
 
