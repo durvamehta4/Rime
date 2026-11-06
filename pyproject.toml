@@ -1,0 +1,15 @@
+[project]
+name = "rimet2"
+version = "0.1.0"
+description = "Rime Track 2: verified captioner <-> generator loop for Hindi and Tamil speech"
+requires-python = ">=3.10"
+dependencies = ["numpy", "scipy", "soundfile", "pandas", "pyarrow", "pyyaml"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["rimet2*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

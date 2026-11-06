@@ -1,5 +1,0 @@
-# Local third-party caches; provenance and excerpts are saved in the review files.
-papers/
-sources/
-tools/__pycache__/
-reviews/pending_batch.json

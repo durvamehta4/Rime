@@ -1,0 +1,28 @@
+# GPU server (4x L4, CUDA 12.x). Install into a fresh env:  pip install -r requirements-server.txt
+# Pin exact versions after the first successful install:  pip freeze > requirements-lock.txt  (reproducibility points)
+numpy
+scipy
+soundfile
+pandas
+pyarrow
+pyyaml
+matplotlib
+torch            # CUDA build matching driver (CUDA 13.0 driver supports cu12x wheels)
+torchaudio
+transformers>=4.57   # Qwen3-Omni-MoE classes
+accelerate
+peft
+datasets
+vllm             # Qwen3-Omni captioner + Qwen3-8B / grader serving
+qwen-omni-utils
+qwen-tts         # Qwen3-TTS (Base / VoiceDesign / CustomVoice / Tokenizer)
+parler-tts @ git+https://github.com/huggingface/parler-tts.git   # Indic-Parler-TTS reference row
+onnxruntime-gpu==1.20.1   # IndicConformer
+silero-vad
+pyannote.audio   # Brouhaha (gated: accept terms on HF, then `huggingface-cli login`)
+panns-inference
+torchcrepe       # or: penn
+speechbrain      # ECAPA SV (second diversity metric)
+pyroomacoustics
+utmosv2 @ git+https://github.com/sarulab-speech/UTMOSv2.git
+pytest
